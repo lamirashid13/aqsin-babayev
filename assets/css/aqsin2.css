@@ -237,8 +237,12 @@ button { cursor: pointer; }
 
 .hero-copy {
   padding: 100px 0 120px;
-  max-width: 700px;
+  max-width: 900px;
   color: var(--text-light);
+}
+.hero-copy h2 {
+    font-size: 2rem; /* və ya istədiyin piksel: 32px, 36px və s. */
+    font-weight: 600; /* yazını daha qalın etmək üçün */
 }
 
 .eyebrow, .section-kicker {
