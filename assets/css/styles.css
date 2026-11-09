@@ -5906,10 +5906,11 @@ blockquote,
 }
 
 .photo-gallery-card img {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
-  background: #e8dfd1;
+  object-fit: contain;
+  background: var(--gallery-navy);
 }
 
 .photo-gallery-card figcaption {

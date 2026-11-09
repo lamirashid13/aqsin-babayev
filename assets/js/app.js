@@ -489,44 +489,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("photoGalleryProgress");
   if (!grid || !previous || !next || !count || !progress) return;
 
-  const photos = [
-    {
-      title: "Aqşin Babayevin portreti",
-      category: "Portret",
-      src: "assets/images/portret1.jpg",
-      alt: "Aqşin Babayevin portreti"
-    },
-    {
-      title: "Həyat yolundan bir kadr",
-      category: "Həyat",
-      src: "assets/images/portretlife.jpg",
-      alt: "Aqşin Babayevin həyat yolundan portret"
-    },
-    {
-      title: "Ədəbi irs",
-      category: "Arxiv",
-      src: "assets/images/Picture2.jpg",
-      alt: "Aqşin Babayevin ədəbi irsi ilə bağlı arxiv fotosu"
-    },
-    {
-      title: "Yaradıcılıq yaddaşı",
-      category: "Arxiv",
-      src: "assets/images/picture3.jpg",
-      alt: "Aqşin Babayev haqqında arxiv fotosu"
-    }
+  const captions = [
+    { title: "Mikrofon qarşısında çıxış", category: "ÇIXIŞ", alt: "Aqşin Babayev tədbirdə mikrofon qarşısında çıxış edir" },
+    { title: "Gənclik illərindən portret", category: "PORTRET", alt: "Gənc Aqşin Babayev eynəkli portretdə" },
+    { title: "Söhbət zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev qara geyimdə söhbət zamanı əl hərəkəti edir" },
+    { title: "Gündəlik həyatdan bir an", category: "XATİRƏ", alt: "Aqşin Babayev kafedə masa arxasında əyləşib" },
+    { title: "Çiçəklər arasında", category: "HƏYAT", alt: "Aqşin Babayev parkda çiçək budağının yanında dayanıb" },
+    { title: "Payız parkında", category: "PORTRET", alt: "Aqşin Babayev papaqda parkda oturarkən" },
+    { title: "Arxiv portreti", category: "ARXİV", alt: "Gənc Aqşin Babayevin ağ-qara portreti" },
+    { title: "Uşaqlıq illərindən xatirə", category: "ARXİV", alt: "İki oğlan uşağının ağ-qara arxiv fotosu" },
+    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Gənc yaşlarında üç kişinin studiya fotosu" },
+    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı bir kişi ilə birlikdə" },
+    { title: "Azərbaycan bayrağı önündə", category: "FƏALİYYƏT", alt: "Aqşin Babayev rəsmi geyimdə Azərbaycan bayrağının yanında" },
+    { title: "Rəsmi tədbirdə görüş", category: "TƏDBİR", alt: "Aqşin Babayev rəsmi tədbirdə qonaqlarla söhbət edir" },
+    { title: "Türkiyəli qonaqla görüş", category: "GÖRÜŞ", alt: "Aqşin Babayev Türkiyəli qonaqla görüşüb əl sıxır" },
+    { title: "Həmkarı ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev kostyumlu həmkarı ilə yanaşı dayanıb" },
+    { title: "Rəsmi qəbuldan xatirə", category: "TƏDBİR", alt: "Aqşin Babayev rəsmi otaqda bir qrup qonaqla birlikdə" },
+    { title: "Ədəbi irsə həsr olunmuş tədbir", category: "ƏDƏBİ İRS", alt: "Aqşin Babayev yazıçı portreti və kitab sərgisinin yanında dayanıb" },
+    { title: "Müzakirə zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev həmkarı ilə masa arxasında müzakirə aparır" },
+    { title: "Geniş kollektivlə görüş", category: "ARXİV", alt: "Aqşin Babayevin də iştirak etdiyi böyük qrup fotosu" },
+    { title: "Tədbir zalında", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə başqa bir iştirakçı ilə yanaşı əyləşib" },
+    { title: "Həmkarı ilə açıq havada", category: "XATİRƏ", alt: "Aqşin Babayev və həmkarı bina qarşısında dayanıb" },
+    { title: "Dostlarla bir arada", category: "GÖRÜŞ", alt: "Aqşin Babayev iki dostu ilə birlikdə xatirə fotosunda" },
+    { title: "Sənət dostları ilə", category: "XATİRƏ", alt: "Aqşin Babayev və dostları tədbirdə birlikdə" },
+    { title: "Mədəni görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qadın qonaqla birlikdə xatirə fotosunda" },
+    { title: "Söhbət və fikir mübadiləsi", category: "GÖRÜŞ", alt: "Aqşin Babayev bir qrup kişi ilə söhbət edir" },
+    { title: "Həmkarı ilə bağda", category: "XATİRƏ", alt: "Aqşin Babayev və həmkarı bağda yanaşı dayanıb" },
+    { title: "Yaxınları ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev iki qadınla birlikdə xatirə fotosunda" },
+    { title: "Ədəbi görüşdən sonra", category: "GÖRÜŞ", alt: "Aqşin Babayev bir qrup ziyalı ilə binanın girişində" },
+    { title: "Yaşlı ziyalı ilə görüş", category: "XATİRƏ", alt: "Aqşin Babayev yaşlı ziyalı ilə yanaşı dayanıb" }
   ];
-  const placeholders = window.siteData?.gallery || [];
-  const placeholderSlots = Array.from({ length: 18 }, (_, index) => {
-    const item = placeholders[index % placeholders.length];
-    const slot = index + photos.length + placeholders.length + 1;
-    return {
-      ...item,
-      title: `Foto üçün yer ${String(slot).padStart(2, "0")}`,
-      category: "Foto arxivi",
-      alt: `Foto arxivinə əlavə olunacaq şəkil üçün illüstrativ yer ${slot}`
-    };
-  });
-  const items = [...photos, ...placeholders, ...placeholderSlots];
+  const items = captions.map((photo, index) => ({
+    ...photo,
+    src: `assets/images/gallery/pt${index + 1}.jpg`
+  }));
   const pageSize = 4;
   const pageCount = Math.ceil(items.length / pageSize);
   let currentPage = 0;
