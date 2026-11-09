@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#1f262d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -39,6 +39,7 @@
           <a href="#books-gallery" data-section="books">Kitablar</a>
           <a href="#wisdom" data-section="wisdom">Xatirələr</a>
           <a href="#tributes" data-section="tributes">Müsahibələr</a>
+          <a href="#photo-gallery" data-section="gallery">Foto qalereya</a>
           <a href="#contacts" data-section="contacts">Əlaqə</a>
           <a href="#" class="nav-search" aria-label="Search">⌕</a>
         </nav>
@@ -345,7 +346,7 @@
       </button>
     </div>
 
-    <div class="legacy-details" aria-live="polite">
+    <div class="legacy-details" aria-hidden="true">
       <article class="legacy-detail" id="legacy-journalism" aria-labelledby="legacy-journalism-title" hidden>
         <div class="legacy-detail-heading">
           <div>
@@ -1000,6 +1001,35 @@
   </div>
 </section>
 
+<section class="photo-gallery-section" id="photo-gallery"
+         aria-labelledby="photoGalleryTitle">
+  <div class="photo-gallery-container">
+    <div class="photo-gallery-heading">
+      <div>
+        <span class="photo-gallery-eyebrow">AQŞİN BABAYEV · FOTO ARXİVİ</span>
+        <h2 id="photoGalleryTitle">Xatirələrdən <em>kadrlar</em></h2>
+        <p>Foto arxivindən seçilmiş görüntülər və əlavə fotoşəkillər üçün yerlər.</p>
+      </div>
+      <div class="photo-gallery-controls" aria-label="Foto qalereyasının idarəsi">
+        <button type="button" class="photo-gallery-arrow" id="photoGalleryPrev"
+                aria-label="Əvvəlki fotoşəkillər" disabled>←</button>
+        <button type="button" class="photo-gallery-arrow" id="photoGalleryNext"
+                aria-label="Növbəti fotoşəkillər">Növbəti <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+
+    <div class="photo-gallery-grid" id="photoGalleryGrid"
+         aria-live="polite" aria-atomic="true"></div>
+
+    <div class="photo-gallery-footer">
+      <span class="photo-gallery-count" id="photoGalleryCount"></span>
+      <div class="photo-gallery-progress" aria-hidden="true">
+        <span id="photoGalleryProgress"></span>
+      </div>
+      <span class="photo-gallery-total">28 FOTO YERİ</span>
+    </div>
+  </div>
+</section>
 
       <section class="stats-section">
         <div class="container stats-grid">
@@ -1043,7 +1073,7 @@
             səciyyələnir.
         </p>
 <img
-    src="assets/images/portretetrafli.jpg"
+    src="assets/images/portret1.jpg"
     alt="Aqşin Babayevin portreti"
     class="modal-portrait"
 />

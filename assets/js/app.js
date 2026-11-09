@@ -24,6 +24,7 @@ if (navToggle && mainNav) {
     books: 'books-gallery',
     wisdom: 'wisdom',
     tributes: 'tributes',
+    gallery: 'photo-gallery',
     contacts: 'contacts'
   };
 
@@ -367,44 +368,216 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cards = [...archiveTimeline.querySelectorAll("[data-legacy-target]")];
   const panels = [...archiveTimeline.querySelectorAll(".legacy-detail")];
-  if (!cards.length || !panels.length) return;
+  const overlay = archiveTimeline.querySelector(".legacy-details");
+  if (!cards.length || !panels.length || !overlay) return;
 
-  function closePanel(panel, returnFocus = false) {
-    panel.hidden = true;
-    const card = cards.find((item) => item.dataset.legacyTarget === panel.id);
-    card?.setAttribute("aria-expanded", "false");
-    if (returnFocus) card?.focus();
+  let activePanel = null;
+  let returnFocus = null;
+  let previousBodyOverflow = "";
+
+  function closePanel(shouldReturnFocus = true) {
+    if (!activePanel) return;
+
+    activePanel.hidden = true;
+    const activeCard = cards.find(
+      (card) => card.dataset.legacyTarget === activePanel.id
+    );
+    activeCard?.setAttribute("aria-expanded", "false");
+    activePanel = null;
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = previousBodyOverflow;
+
+    if (shouldReturnFocus && returnFocus instanceof HTMLElement) {
+      returnFocus.focus();
+    }
+    returnFocus = null;
+  }
+
+  function openPanel(card, panel) {
+    if (activePanel) closePanel(false);
+
+    activePanel = panel;
+    returnFocus = card;
+    previousBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    panel.hidden = false;
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.tabIndex = -1;
+    card.setAttribute("aria-expanded", "true");
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    const focusDelay = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 0
+      : 300;
+    window.setTimeout(() => {
+      if (activePanel === panel) {
+        panel.querySelector(".legacy-detail-close")?.focus();
+      }
+    }, focusDelay);
   }
 
   archiveTimeline.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
 
     const closeButton = event.target.closest("[data-close-legacy]");
-    if (closeButton && archiveTimeline.contains(closeButton)) {
-      const panel = closeButton.closest(".legacy-detail");
-      if (panel) closePanel(panel, true);
+    if (closeButton && overlay.contains(closeButton)) {
+      closePanel();
       return;
     }
 
     const card = event.target.closest("[data-legacy-target]");
-    if (!card || !archiveTimeline.contains(card)) return;
+    if (card && archiveTimeline.contains(card)) {
+      const panel = panels.find((item) => item.id === card.dataset.legacyTarget);
+      if (!panel) return;
 
-    const panel = panels.find((item) => item.id === card.dataset.legacyTarget);
-    if (!panel) return;
+      if (activePanel === panel) {
+        closePanel();
+      } else {
+        openPanel(card, panel);
+      }
+    }
+  });
 
-    const shouldOpen = panel.hidden;
-    panels.forEach((item) => {
-      item.hidden = true;
-      const linkedCard = cards.find((candidate) => candidate.dataset.legacyTarget === item.id);
-      linkedCard?.setAttribute("aria-expanded", "false");
-    });
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) closePanel();
+  });
 
-    if (shouldOpen) {
-      panel.hidden = false;
-      card.setAttribute("aria-expanded", "true");
+  document.addEventListener("keydown", (event) => {
+    if (!activePanel) return;
+
+    if (event.key === "Escape") {
+      closePanel();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+    const focusable = [
+      ...activePanel.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ];
+    if (!focusable.length) {
+      event.preventDefault();
+      activePanel.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const activeIndex = focusable.indexOf(document.activeElement);
+    if (activeIndex === -1) {
+      event.preventDefault();
+      overlay.getBoundingClientRect();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && activeIndex === 0) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && activeIndex === focusable.length - 1) {
+      event.preventDefault();
+      first.focus();
     }
   });
 });
+
+(() => {
+  const grid = document.getElementById("photoGalleryGrid");
+  const previous = document.getElementById("photoGalleryPrev");
+  const next = document.getElementById("photoGalleryNext");
+  const count = document.getElementById("photoGalleryCount");
+  const progress = document.getElementById("photoGalleryProgress");
+  if (!grid || !previous || !next || !count || !progress) return;
+
+  const photos = [
+    {
+      title: "Aqşin Babayevin portreti",
+      category: "Portret",
+      src: "assets/images/portret1.jpg",
+      alt: "Aqşin Babayevin portreti"
+    },
+    {
+      title: "Həyat yolundan bir kadr",
+      category: "Həyat",
+      src: "assets/images/portretlife.jpg",
+      alt: "Aqşin Babayevin həyat yolundan portret"
+    },
+    {
+      title: "Ədəbi irs",
+      category: "Arxiv",
+      src: "assets/images/Picture2.jpg",
+      alt: "Aqşin Babayevin ədəbi irsi ilə bağlı arxiv fotosu"
+    },
+    {
+      title: "Yaradıcılıq yaddaşı",
+      category: "Arxiv",
+      src: "assets/images/picture3.jpg",
+      alt: "Aqşin Babayev haqqında arxiv fotosu"
+    }
+  ];
+  const placeholders = window.siteData?.gallery || [];
+  const placeholderSlots = Array.from({ length: 18 }, (_, index) => {
+    const item = placeholders[index % placeholders.length];
+    const slot = index + photos.length + placeholders.length + 1;
+    return {
+      ...item,
+      title: `Foto üçün yer ${String(slot).padStart(2, "0")}`,
+      category: "Foto arxivi",
+      alt: `Foto arxivinə əlavə olunacaq şəkil üçün illüstrativ yer ${slot}`
+    };
+  });
+  const items = [...photos, ...placeholders, ...placeholderSlots];
+  const pageSize = 4;
+  const pageCount = Math.ceil(items.length / pageSize);
+  let currentPage = 0;
+  const captionText = (className, text) => {
+    const element = document.createElement("span");
+    element.className = className;
+    element.textContent = text;
+    return element;
+  };
+
+  function renderPage() {
+    const start = currentPage * pageSize;
+    const cards = items.slice(start, start + pageSize).map((item) => {
+      const figure = document.createElement("figure");
+      figure.className = "photo-gallery-card";
+
+      const image = document.createElement("img");
+      image.src = item.src;
+      image.alt = item.alt;
+      image.loading = "lazy";
+
+      const caption = document.createElement("figcaption");
+      caption.append(
+        captionText("photo-gallery-category", item.category),
+        captionText("photo-gallery-title", item.title)
+      );
+      figure.append(image, caption);
+      return figure;
+    });
+
+    grid.replaceChildren(...cards);
+    const end = Math.min(start + pageSize, items.length);
+    count.textContent =
+      `${String(start + 1).padStart(2, "0")}–${String(end).padStart(2, "0")} / ${items.length}`;
+    progress.style.width = `${((currentPage + 1) / pageCount) * 100}%`;
+    previous.disabled = currentPage === 0;
+  }
+
+  previous.addEventListener("click", () => {
+    if (currentPage === 0) return;
+    currentPage -= 1;
+    renderPage();
+  });
+
+  next.addEventListener("click", () => {
+    currentPage = (currentPage + 1) % pageCount;
+    renderPage();
+  });
+
+  renderPage();
+})();
 
 (() => {
   const track = document.getElementById("booksTrack");
