@@ -546,7 +546,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const image = document.createElement("img");
       image.src = item.src;
       image.alt = item.alt;
-      image.loading = "lazy";
 
       const caption = document.createElement("figcaption");
       caption.append(
