@@ -5679,8 +5679,9 @@ h6,
 .archive-event-title,
 .legacy-title-list li,
 .legacy-work-title,
-.portrait-name {
-  font-family: "DM Sans", sans-serif !important;
+.portrait-name,
+.photo-gallery-heading h2 {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
 }
 
 p,
@@ -5771,14 +5772,14 @@ blockquote,
   --gallery-paper: #faf7f1;
   --gallery-gold: #bd9868;
 
-  padding: 88px 0 78px;
+  padding: 112px 0 96px;
   background: var(--gallery-cream);
   color: var(--gallery-navy);
   scroll-margin-top: 86px;
 }
 
 .photo-gallery-container {
-  width: min(1200px, calc(100% - 64px));
+  width: min(1440px, calc(100% - 64px));
   margin-inline: auto;
 }
 
@@ -5787,7 +5788,7 @@ blockquote,
   align-items: flex-end;
   justify-content: space-between;
   gap: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .photo-gallery-eyebrow,
@@ -5802,9 +5803,10 @@ blockquote,
 .photo-gallery-heading h2 {
   margin: 12px 0 8px;
   color: var(--gallery-navy);
-  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1;
+  letter-spacing: -.025em;
 }
 
 .photo-gallery-heading h2 em {
@@ -5853,7 +5855,7 @@ blockquote,
 .photo-gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 24px;
 }
 
 .photo-gallery-card {
@@ -5875,7 +5877,7 @@ blockquote,
 .photo-gallery-card figcaption {
   display: grid;
   gap: 7px;
-  min-height: 88px;
+  min-height: 104px;
   align-content: center;
   padding: 14px 16px;
 }
@@ -5928,6 +5930,7 @@ blockquote,
 
   .photo-gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
   }
 }
 
@@ -5942,7 +5945,7 @@ blockquote,
   }
 
   .photo-gallery-section {
-    padding: 68px 0 58px;
+    padding: 76px 0 64px;
   }
 
   .photo-gallery-container {
