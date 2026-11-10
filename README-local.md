@@ -12,6 +12,14 @@ Bu layihə Aqşin Babayevin 90 illik yubileyi münasibətilə yaradılmış rəq
    ```
 3. Brauzerdə bu ünvanı açın: http://localhost:8000
 
+## GitHub və Vercel
+
+- Əsas layihə qovluğu bu repository-nin root qovluğudur: `C:\Users\PREDATOR\aqsin-babayev-90`.
+- GitHub repository: `lamirashid13/aqsin-babayev`, branch: `main`.
+- Vercel production saytı: `https://aqsin-babayev.vercel.app/`.
+- Vercel layihəsində Root Directory `.` olmalıdır; build command və output directory override edilməməlidir.
+- Dəyişiklikləri bu qovluqda edin, `main` branch-ə push edin və production deployment-i yoxlayın.
+
 ## Struktur
 
 - `index.html` — əsas ana səhifə
