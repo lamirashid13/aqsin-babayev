@@ -356,6 +356,36 @@ if ('IntersectionObserver' in window) {
   }
 })();
 
+(() => {
+  const list = document.getElementById("aq90ChronologyList");
+  const events = window.siteData?.biographyChronology;
+
+  if (!list || !Array.isArray(events)) return;
+
+  const cards = events.map((event, index) => {
+    const card = document.createElement("article");
+    card.className = "aq90-chronology-item";
+    card.id = `aq90ChronologyEvent${index + 1}`;
+
+    const date = document.createElement("span");
+    date.className = "aq90-chronology-date";
+    date.textContent = event.date;
+
+    const description = document.createElement("p");
+    description.className = "aq90-chronology-description";
+    description.textContent = event.description;
+
+    const divider = document.createElement("div");
+    divider.className = "aq90-chronology-divider";
+    divider.setAttribute("aria-hidden", "true");
+
+    card.append(date, description, divider);
+    return card;
+  });
+
+  list.replaceChildren(...cards);
+})();
+
 window.Aq90Chronology = (() => {
   const openButton = document.getElementById("openTimeline");
   const overlay = document.getElementById("aq90ChronologyOverlay");
@@ -985,23 +1015,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const details = {
-    nazim: {
-      title: "Nazim Hikmət və Azərbaycan",
-      text: "Aqşin Babayev Nazim Hikmətin həyat və yaradıcılığını, şairin Azərbaycanla və Azərbaycan ədəbi mühiti ilə əlaqələrini araşdıran alimlərdən olub. Bu istiqamət onun elmi irsində xüsusi yer tutur.",
-      works: "Əlaqəli əsər: “Nazim Hikmətin yaşamı”."
-    },
-    turk: {
-      title: "Türk ədəbiyyatının tədqiqi",
-      text: "Türk ədəbiyyatı və dramaturgiyası Aqşin Babayevin əsas tədqiqat istiqamətlərindəndir. Onun bu sahədəki kitabları Azərbaycan oxucusunun türk ədəbi irsi ilə tanışlığına xidmət edir.",
-      works: "Əlaqəli kitablar: “Türk dramaturgiyası”, “Türk ədəbiyyatı müntəxəbatı”, “Cümhuriyyət dövrü türk ədəbiyyatında sosial motivlər”."
-    },
-    tehsil: {
-      title: "Elmi və pedaqoji fəaliyyət",
-      text: "Aqşin Babayev professor və pedaqoq kimi uzun illər çalışıb, ədəbi yaradıcılıq və ekran dramaturgiyası sahəsində dərs deyib. Onun elmi-pedaqoji irsi tədqiqatı, tədrisi və ədəbi biliklərin paylaşılmasını bir araya gətirir.",
-      works: "Bu istiqamətə onun dərs vəsaitləri, elmi əsərləri və universitetdəki pedaqoji fəaliyyəti daxildir."
-    }
-  };
+  const details = window.siteData?.researchDetails || {};
 
   let returnFocus = null;
   let detailReturnFocus = null;
@@ -1057,8 +1071,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
     detailReturnFocus = button;
     detailTitle.textContent = item.title;
-    detailText.textContent = item.text;
-    detailWorks.textContent = item.works;
+    detailText.replaceChildren();
+    detailWorks.replaceChildren();
+    detailWorks.hidden = true;
+
+    if (Array.isArray(item.chapters)) {
+      if (item.relatedWork) {
+        const relatedWork = document.createElement("p");
+        relatedWork.className = "research-related-work";
+        relatedWork.textContent = item.relatedWork;
+        detailText.append(relatedWork);
+      }
+
+      item.chapters.forEach((chapter) => {
+        const section = document.createElement("section");
+        section.className = "research-narrative-entry";
+
+        const heading = document.createElement("h3");
+        heading.textContent = chapter.heading;
+        section.append(heading);
+
+        chapter.text.split(/\n\n+/).forEach((paragraphText) => {
+          const paragraph = document.createElement("p");
+          paragraph.textContent = paragraphText;
+          section.append(paragraph);
+        });
+
+        detailText.append(section);
+      });
+    } else if (Array.isArray(item.boxes)) {
+      const boxes = item.boxes.map((box) => {
+        const element = document.createElement("section");
+        element.className = "research-detail-card";
+
+        const heading = document.createElement("h3");
+        heading.textContent = box.title;
+        const paragraph = document.createElement("p");
+        paragraph.textContent = box.text;
+
+        element.append(heading, paragraph);
+        return element;
+      });
+
+      const boxContainer = document.createElement("div");
+      boxContainer.className = "research-detail-boxes";
+      boxContainer.append(...boxes);
+      detailText.append(boxContainer);
+    } else {
+      const paragraph = document.createElement("p");
+      paragraph.className = "research-detail-copy";
+      paragraph.textContent = item.text;
+      detailText.append(paragraph);
+
+      if (item.works) {
+        detailWorks.textContent = item.works;
+        detailWorks.hidden = false;
+      }
+    }
+
+    const detailScroll = document.getElementById("research-detail-scroll");
+    if (detailScroll) detailScroll.scrollTop = 0;
     showModal(detailModal);
     detailCloseButton.focus();
   }

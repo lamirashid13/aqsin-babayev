@@ -1,4 +1,128 @@
 window.siteData = {
+  biographyChronology: [
+    { date: '23.11.1936', description: 'Bakı şəhərində anadan olmuşdur.' },
+    { date: '1943', description: 'Bakı şəhəri, Caparidze (indiki Səbail) rayonunun 1 saylı orta məktəbinə daxil olmuşdur.' },
+    { date: '1954-1959', description: 'Orta məktəbi bitirdikdən sonra Azərbaycan Dövlət Universitetinin filologiya fakültəsində təhsil almışdır.' },
+    { date: '1958', description: '“Azadlıq uğrunda” adlı ilk hekayəsi “Oktyabr işıqları” almanaxında çap olunmuşdur.' },
+    { date: '1958', description: 'Tələbə ikən “Avtomobil nəqliyyatçısı” qəzetində işə başlamışdır.' },
+    { date: '1959', description: 'Azərbaycan Dövlət Televiziya və Radio Verilişləri Komitəsində Türk verilişləri şöbəsində kiçik redaktor işləmişdir.' },
+    { date: '1959', description: 'Müzəyyən xanım Ağabəyova ilə ailə qurmuşdur.' },
+    { date: '1960', description: 'Türk verilişləri şöbəsində redaktor kimi fəaliyyət göstərmişdir.' },
+    { date: '1961', description: 'Azərbaycan Jurnalistlər Birliyinin üzvü.' },
+    { date: '1961-1964', description: 'ADU-nun Şərqşünaslıq fakültəsində türk filologiyası üzrə aspiranturada qiyabi təhsil almışdır.' },
+    { date: '1962', description: 'Ərəb verilişləri şöbəsinin müdiri təyin olunmuşdur.' },
+    { date: '1964', description: '“Cazibəli üfüqlər” adlı ilk hekayələr kitabı çap edilmişdir.' },
+    { date: '1967', description: 'Azərbaycan Televiziya və Radio Komitəsində xarici verilişlər üzrə Baş redaktor müavini kimi çalışmışdır.' },
+    { date: '1967', description: '“Nazim Hikmətin dramaturgiyası” mövzusunda namizədlik dissertasiyasını müdafiə etmiş və filologiya elmləri namizədi alimlik dərəcəsinə layiq görülmüşdür.' },
+    { date: '1967-1972', description: 'Azərbaycan Dövlət Universitetinin Şərqşünaslıq fakültəsində “Türk ədəbiyyatı tarixi” fənnindən mühazirələr oxumuşdur. Aqşin Babayev müxtəlif illərdə ADU (indiki BDU), Mədəniyyət və İncəsənət Universitetində, “Təfəkkür” Universitetində, İctimai Siyasi Universitetdə “Türk ədəbiyyatı tarixi”, “Televiziya və radio jurnalistikası”, “Jurnalist sənətkarlığı”, “Ekran dramaturgiyası” fənlərindən dərs demişdir.' },
+    { date: '1969-1979', description: 'İngilis, fransız, ispan və ərəb dillərində nəşr olunan “Moscow News” qəzetinin Azərbaycan üzrə xüsusi müxbiri olmuşdur.' },
+    { date: '1970', description: '“Əmək rəşadətinə görə” medalı ilə təltif edilmişdir.' },
+    { date: '1970-1972', description: 'Azərbaycan radiosunda Xarici verilişlərin Baş redaktoru olmuşdur.' },
+    { date: '1972-1975', description: 'Türkiyənin İskəndurun şəhərində tərcüməçi işləmişdir (rus-türk dilləri üzrə).' },
+    { date: '1976-1991', description: 'Azərbaycan Dövlət Televiziya və Radio Verilişləri Komitəsində sədr müavini vəzifəsində çalışmışdır. Bu müddətdə Azərbaycan Radiosuna və Xarici verilişlərə başçılıq etmişdir.' },
+    { date: '1977', description: 'Azərbaycan Ali Sovetinin Fəxri fərmanı ilə təltif olunmuşdur.' },
+    { date: '1977-1990', description: 'Türkiyədə “Çörək”, “Bəraət kağızı”, “İmzasız məktub”, “O günəşi sevərdi” və s. hekayələri nəşr edilmişdir.' },
+    { date: '1977-1982', description: 'Azərbaycan Jurnalistlər İttifaqının katibi olmuşdur.' },
+    { date: '1978-ci ildən', description: 'Azərbaycan Yazıçılar Birliyinin üzvü.' },
+    { date: '1978', description: 'İsveçdə keçirilən Azərbaycan mədəniyyəti günlərində rəsmi nümayəndə heyətinin tərkibində olmuşdur.' },
+    { date: '1981', description: 'Gürcüstanda “Müasir türk dramaturgiyası” məqaləsi çap olunmuşdur.' },
+    { date: '1982', description: 'Sülhü Müdafiə Komitəsi Rəyasət Heyətinin üzvü seçilmişdir.' },
+    { date: '1985', description: '“Sovet Sülh Fondunun fəalı” döş nişanı ilə təltif edilmişdir.' },
+    { date: '1986', description: '“Мужчины жили мало” adlı kitabı Moskvanın “Sovetskiy pisatel” nəşriyyatı tərəfindən çap olunmuşdur.' },
+    { date: '1986', description: 'Azərbaycan Ali Sovetinin Fəxri fərmanı ilə təltif edilmişdir.' },
+    { date: '1986', description: '“Əmək veteranı” medalı ilə təltif olunmuşdur.' },
+    { date: '1986', description: '“SSRİ televiziya və radio əlaçısı” nişanı ilə təltif edilmişdir.' },
+    { date: '1986', description: 'Azərbaycan Yazıçılar İttifaqının (Yazıçıların VIII qurultayı tərəfindən seçilmiş) İdarə heyətinin üzvü olmuşdur.' },
+    { date: '1987', description: 'Moldovada “Halal çörək” hekayəsi “Bratstvo” adlı almanaxda çap olunmuşdur.' },
+    { date: '1987', description: '“Azərbaycan Respublikasının Əməkdar jurnalisti” fəxri adına layiq görülmüşdür.' },
+    { date: '1989', description: 'Almaniyada “Nazim Hikmətin yaşamı” kitabı nəşr edilmişdir.' },
+    { date: '1991-2006', description: 'Milli Məclisin Mətbuat xidməti şöbəsinə rəhbərlik edib.' },
+    { date: '1993', description: '“Qızıl qələm” mükafatına layiq görülmüşdür.' },
+    { date: '1994', description: '“Həsən bəy Zərdabi” mükafatına layiq görülmüşdür.' },
+    { date: '1995', description: '“Açıq söz” mükafatına layiq görülmüşdür.' },
+    { date: '1995', description: '“Araz” Ali ədəbi mükafatına layiq görülmüşdür.' },
+    { date: '1996', description: 'Müasir türk dramaturgiyasına həsr etdiyi dissertasiyasına görə filologiya elmləri doktoru alimlik dərəcəsinə layiq görülmüşdür.' },
+    { date: '1998', description: 'Professor elmi adını almışdır.' },
+    { date: '1998', description: 'Azərbaycan Respublikası Milli Məclisinin göndərişi ilə Fransada xidməti ezamiyyətdə olmuşdur.' },
+    { date: '1998', description: '“Ədəbiyyat və incəsənət” qəzetinin redaksiya heyətinin üzvü seçilmişdir.' },
+    { date: '1999', description: 'Azərbaycan Respublikası Əsilzadələr Məclisinin üzvü seçilmişdir.' },
+    { date: '2000', description: 'Türkiyənin “Nazım Hikmet Kültür ve Sanat Vakfı”ndakı Məsləhət Şurasının fəxri üzvü seçilmişdir.' },
+    { date: '2000', description: '“Nurlu qələm ustası” mükafatı almışdır.' },
+    { date: '2001', description: '“Ustad sənətkar” mükafatına layiq görülmüşdür.' },
+    { date: '2001', description: '“Humay–2000” Beynəlxalq Müstəqil Milli Mükafatı ilə təltif edilmişdir.' },
+    { date: '2003', description: 'Müqəddəs Məkkə şəhərinə səfər edib ümrə ziyarətini yerinə yetirmişdir.' },
+    { date: '2003', description: 'Azərbaycan Yazıçılar Birliyinin “Yaddaş” Milli Mükafatının laureatı adına layiq görülmüşdür (Qarabağ probleminə həsr olunmuş “Başımıza gələnlər” sənədli povestinə görə).' },
+    { date: '2003', description: 'Azərbaycan Respublikasının Prezidenti yanında Ali Attestasiya Komissiyasının Filologiya üzrə Ekspert Şurasının üzvü olmuşdur.' },
+    { date: '2004', description: 'Mətbuat günü münasibəti ilə “Qafqaz-Media” Birliyinin “Qafqaz” diplomu ilə təltif olunmuşdur.' },
+    { date: '2005', description: '“Birlik” Maarifçilik, Mədəniyyət və İnformasiya Mərkəzinin İdarə heyətinin üzvü olmuşdur.' },
+    { date: '2006', description: 'Azərbaycan Dövlət Mədəniyyət və İncəsənət Universiteti “Ədəbi yaradıcılıq və ekran dramaturgiyası” kafedrasının müdiri olmuşdur.' },
+    { date: '2006', description: 'Azərbaycan Ali Hərbi Məktəbinin Fəxri fərmanı ilə təltif olunmuşdur (Ulu Öndərimiz Heydər Əliyevə həsr olunmuş “Oğul” pyesinə görə).' },
+    { date: '2008', description: '“Milli Musiqi və Mahnı mükafatı laureatı” diplomu ilə təltif edilmişdir (“Biri var, biri yox” verilişinə görə).' },
+    { date: '2009', description: 'Azərbaycan Respublikasının Prezidenti yanında Ali Attestasiya Komissiyasının Filologiya üzrə Ekspert Şurasının sədr müavini seçilmişdir.' },
+    { date: '2014', description: 'Azərbaycan Dövlət Mədəniyyət və İncəsənət Universiteti rektorunun müşaviri olmuşdur (“Ədəbi yaradıcılıq və ekran dramaturgiyası” kafedrasının müdiri vəzifəsini davam etdirməklə).' },
+    { date: '2015', description: 'Azərbaycanın elm və mədəniyyət xadimlərinə həsr olunmuş əhatəli biblioqrafik nəşr işıq üzü görmüşdür.' },
+    { date: '2016', description: 'Yaradıcılığında məhsuldar illərdən biri olaraq bir neçə əsəri çap olunmuşdur: avtobioqrafik roman xarakterli “O biri dünyanın astanasında”, “Bir yolda gözüm qaldı...” əsəri və “Efir / Səhnə / Ekran” adlı toplusu nəşr edilmişdir.' },
+    { date: '2016', description: 'Müasir türk dramaturgiyasına həsr etdiyi elmi tədqiqatlarına və fəaliyyətinə görə filologiya elmləri doktoru alimlik dərəcəsinə layiq görülmüşdür. (Qeyd: Arxiv xronologiyasına uyğun olaraq elmi dərəcənin təsdiqi və ya yekun rəsmiləşməsi bu dövrə təsadüf edir.)' },
+    { date: '2017', description: 'Azərbaycan Respublikasının ictimai-mədəni həyatında və ali təhsil sistemində səmərəli fəaliyyətini davam etdirmiş, ADMİU-da gənc dramaturqların və jurnalistlərin yetişdirilməsində yaxından iştirak etmişdir.' },
+    { date: '2020', description: 'Uzun sürən xəstəlikdən sonra 10 iyun 2020-ci ildə Bakı şəhərində dünyasını dəyişmişdir. Vəfatı ilə əlaqədar ölkənin tanınmış elm, mədəniyyət və mətbuat nümayəndələri tərəfindən nekroloqlar imzalanmış, xatirəsi dərin ehtiramla yad edilmişdir.' },
+    { date: '2021', description: 'Ölümündən sonra ədəbi irsinin təbliği və gələcək nəsillərə çatdırılması məqsədilə seçilmiş əsərlərindən ibarət “Seçilmiş əsərlər” kitabı yenidən nəşr olunaraq oxuculara təqdim edilmişdir.' }
+  ],
+  researchDetails: {
+    nazim: {
+      title: 'Nazim Hikmət və Azərbaycan',
+      relatedWork: 'Əlaqəli əsər: “Nazim Hikmətə bağlı ömrüm”',
+      chapters: [
+        {
+          heading: '1957-ci il...',
+          text: 'Azərbaycan Dövlət Universitetinin iclas salonu. Nazim Hikmət kürsüdədir. Biz tələbələr uzaqdan-uzağa seyr edirik onu. Gur səsi dalğa-dalğa yayılır: “Bu müqəddəs, bu qutsal evinizə – darülfünunza çağırdığınız üçün təşəkkürlər edirəm. Məni dünyanın ən bəxtiyar insanlarından biri yapdınız. Və mən indi burada düşünürəm ki, bəlkə mən görmədim, amma oğlum görəcək, necə İstanbulda da, bizim universitetdə də belə bir salon olacaq, oraya da Azərbaycandan bir şair gələcək, məsələn, indi burada şeir oxuyan bu qızcığaz gələcək. Siz məni necə qarşılayırsınızsa, onlar da onu elə qarşılayacaqlar. O şairdən bir istəyim var. O, oraya getdiyi vaxt mənim İstanbullu gənclərə desin ki, biz də Nazim Hikmətin gəldiyi, Biz onu qardaş kimi bağrımıza basdıq və biz ona çox şeyi öyrətdik. Nə öyrəndisə bu dünyada, çoxunu bizdən öyrəndi. Bunu söyləməyi unutmasın. Və məndən salam söyləsin. Çünki, bəlkə mən məmləkətimə qovuşa bilmədim. Amma o, mənim məmləkətimi görəcək.”'
+        },
+        { heading: '1961-ci il...', text: 'Moskvadayam. Şairin evində onunla üzbəüz oturmuşam. İnanа bilmirəm ki, “Mavi gözlü dev”lə görüşmüşəm.' },
+        { heading: '1962-ci il...', text: 'Şair Bakıda qonaqdır. Radio jurnalisti kimi səsini lentə yazıram. Ayrılanda deyir: “Müdafiənə məni də çağır. Unutma.”' },
+        { heading: '1963-cü il...', text: 'Nazimin qəfil ölüm xəbərini eşidirəm. Uşaq kimi ağlayıram.' },
+        { heading: '1967-ci il...', text: 'Nazim Hikmətin yaradıcılığına həsr olunmuş namizədlik dissertasiyamı müdafiə edirəm. Nazimşünas, bizim həmyerlimiz Əkbər Babayevdən teleqrafla rəy və təbrik məktubu almışam. Müdafiəmdə Nazim Hikmətin müəllimi hesab olunan, Türkiyənin məşhur jurnalisti Zəkəriyə Şərtəl iştirak edir.' },
+        {
+          heading: '1972-ci il...',
+          text: 'Şairin Vətəni Türkiyədəyəm. Üç illik işləməyə gəlmişəm. Nazimin həsrətində olduğu, bircə dəfə də görmədiyi Toros dağlarından keçirəm.\n\nAdana şəhərində kitab mağazasında mənə bir türk: “Bizdə vətən xaininin kitabı satılmaz” deyir. Bayram bu türkə, ürəyimdən qara qanlar axır. Niyə beləlik biz? Amma çox keçmədən bu xəyal qırıqlığı tərk edir məni. Türkiyədə tanış olduğum dostlar – Ercan, Kamal, Yusif Nazimdən şeirlər deyirlər. Sevinirəm. Demək türklər Nazimi sevirlər.'
+        },
+        {
+          heading: 'Haşiyə:',
+          text: 'Heç ağlıma da gətirə bilməzdim ki, Nazim Hikmətin YUNESKO xətti ilə 2002-ci ilin yanvar ayında keçiriləcək yubileyinin əks-sədası həm Türkiyədə, həm də Azərbaycanda çoxlarını sevindirər, bəzi azərbaycanlı qələm qardaşları, Nazimi sevməyənlər əvvələr sanballı adamlar olub. Məsələn, Orxan Seyfi, Peyami Sefa... İndi Nazimin bədxahları orijinal görünmək üçün dəridən-qabıqdan çıxan tör-töküntülərdir. Ancaq onlar istəsə də, istəməsə də, Nazim Hikmətin 100 illiyi bayram edildi. Dünyanın bir çox ölkələrində, o cümlədən Azərbaycanda da Nazim Hikmət yubileyi təntənə ilə keçirildi. Nəşriyyatlarımız bu böyük sənətkar haqqında kitablar nəşr etdilər. Görkəmli bəstəkarımız Arif Məlikovun Nazim Hikmətin ölməz əsəri əsasında yaratdığı “Məhəbbət əfsanəsi” baleti bir daha İstanbul teatrının səhnəsini bəzədi. Bir sözlə, Nazimin 100 illiyi böyük təntənə ilə keçdi.'
+        },
+        { heading: '1975-ci il...', text: 'Türkiyədən Azərbaycana dönürəm. Nazimin kitabları ilə. Dünya xali deyil. Nazimi sevənlər çoxdur.' },
+        { heading: '1976-1991-ci illər...', text: 'Radioda işlədiyim illərdə Türkiyədən gələn qonaqları – Haldun Taneri, Əziz Nesini, Kamal Bayramı, Vedat Türkəlini, Oqtay Akbalı, Asim Bezercini və başqa sənət xadimlərini qarşılayıram. Sözümüz-söhbətimiz Nazim Hikmətdədir.' },
+        { heading: '1978-ci il...', text: 'Nazim Hikmət haqqında kitabım Bakıda “İşıq” nəşriyyatında çap olunur.' },
+        { heading: '1982-ci il...', text: '“Cümhuriyyət dövrü türk dramaturgiyasında ictimai motivlər” adlı kitabım Azərbaycan Elmlər Akademiyasının “Elm” nəşriyyatı tərəfindən çap olunur. Kitabın Nazimə həsr olunmuş ayrıca fəsli var.' },
+        { heading: '1989-cu il...', text: '“Nazim Hikmət və yaşamı” adlı kitabım Berlində türk dilində işıq üzü görür. (Onu qələm dostum Yüksəl Kaya türkcələşdirmişdir.)' },
+        { heading: '1992-ci il...', text: 'Bakıya jurnalist Mustafa Ekməkçi gəlir. Nazim Hikmət dilindən düşmür. Onu tanıyanlardan müsahibələr alır. Nazim Hikmət haqqında xüsusi reportaj hazırlayır. Şairin Azərbaycanla bağlılığını öyrənir.' },
+        { heading: '1996-cı il...', text: 'Türk dramaturgiyasına həsr olunmuş doktorluq dissertasiyamı müdafiə edirəm. Araşdırmanın böyük bir hissəsi Nazim Hikmətin dram yaradıcılığına həsr olunmuşdur. Televiziya və radio verilişlərində Nazim haqqında danışıram, iftixar hissi keçirirəm.' },
+        { heading: '1998-ci il...', text: '“Azərbaycan və türk dünyası” adlı kitabım çapdan çıxır. Onun böyük bir hissəsi Nazimə həsr olunub.' },
+        { heading: '2000-ci il...', text: 'Mən Nazim Hikmət Kültür və Sənət Vəqfinin Məsləhət Şurasının üzvü seçilmişəm.' },
+        { heading: 'Yenə 2000-ci il...', text: '“100 yaşlı Nazim Hikmət” adlı kitabım kütləvi tirajla işıq üzü görür və bu kitabıma görə 2001-ci il aprelin 11-də Beynəlxalq Mükafatlar Akademiyasının “Humay” mükafatına layiq görülürəm.' },
+        {
+          heading: '2012-ci il...',
+          text: 'Türkiyədə “Nazim və Azərbaycan” kitabım çap olunur.\n\nÜç il həyat yoldaşımla, qızımla Nazim Hikmətin Vətənində yaşamışam. Ömür dostum Müzəyyən xanım Zəkəriyə Şərtənin Nazim Hikmətə həsr etdiyi “Mavi gözlü Dev” kitabını dilimizə çevirib. Oğlum Gündüz ailəsi ilə birlikdə başı ildir ki, Nazimin Vətənindədir. Burada işləyir. Nəvələrimin Nazimə dərin sevgisi var. Qızım Aytən Nazim Hikmətin fəlsəfi görüşlərinə həsr olunmuş dissertasiya müdafiə edib. Fəlsəfə doktorudur. Evdə yazı masamın üstündə əlini çənəsinə söykəyib mənalı gözləri ilə mənə baxan Nazim Hikmətin şəkli var. Audio-kasetlərdə Nazimin səsi var. Bu səslər içərisində onun özünün oxuduğu şeirlər də var, mənim ondan aldığım müsahibələr də...\n\nBütün bu dediklərim ömrümün bir parçasıdır... Tələbəlik illərindən bu günə qədər gəlib çatan Nazim Hikmətə bağlı ömür! İnanıram ki, gündən-günə şöhrəti ucalan Nazim Hikmətin gələcək tədqiqatçıları heç olmasa bir yerdə mənim adımı çəkəcəklər. Bu, mənim üçün böyük qürur olacaq. Həyatda olsam da, olmasam da... Amma hələ ki, torpağın üstündəyəm. Nə qədər ki, torpağın üstündəyəm, Nazimdən deyəcək, Nazimdən yazacağam.'
+        }
+      ]
+    },
+    turk: {
+      title: 'Türk ədəbiyyatının tədqiqi',
+      text: 'Türk ədəbiyyatı və dramaturgiyası Aqşin Babayevin əsas tədqiqat istiqamətlərindəndir. Onun bu sahədəki kitabları Azərbaycan oxucusunun türk ədəbi irsi ilə tanışlığına xidmət edir.',
+      works: 'Əlaqəli kitablar: “Türk dramaturgiyası”, “Türk ədəbiyyatı müntəxəbatı”, “Cümhuriyyət dövrü türk ədəbiyyatında sosial motivlər”.'
+    },
+    tehsil: {
+      title: 'Elmi və pedaqoji fəaliyyət',
+      boxes: [
+        {
+          title: 'Pedaqoji fəaliyyət',
+          text: '1967–1972-ci illərdə Azərbaycan Dövlət Universitetinin Şərqşünaslıq fakültəsində “Türk ədəbiyyatı tarixi” fənnindən mühazirələr oxumuşdur. Müxtəlif illərdə ADU (indiki BDU), Mədəniyyət və İncəsənət Universitetində, “Təfəkkür” Universitetində və İctimai Siyasi Universitetdə dərs demişdir.'
+        },
+        {
+          title: 'Tədris istiqamətləri',
+          text: 'Dərs dediyi fənlər: “Türk ədəbiyyatı tarixi”, “Televiziya və radio jurnalistikası”, “Jurnalist sənətkarlığı” və “Ekran dramaturgiyası”. Bu fəaliyyət elmi biliklərin gələcək nəsillərə ötürülməsinə xidmət etmişdir.'
+        }
+      ]
+    }
+  },
   timelineEvents: [
     {
       year: '23.11.1936',
