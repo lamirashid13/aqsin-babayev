@@ -209,6 +209,49 @@ if ('IntersectionObserver' in window) {
     renderBooks();
   }
 
+  const bookTrack = document.getElementById("booksTrack");
+  if (bookTrack && Array.isArray(data.bookCovers)) {
+    const coverStyles = ["one", "two", "three", "four", "five", "six"];
+    const cards = data.bookCovers.map((book, index) => {
+      const card = document.createElement("article");
+      card.className = "book-card";
+      card.dataset.title = book.title;
+      card.dataset.category = book.category;
+      card.dataset.description = book.description;
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "book-open";
+      button.setAttribute("aria-label", `${book.title} haqqında`);
+
+      const cover = document.createElement("div");
+      cover.className = `book-cover cover-${coverStyles[index % coverStyles.length]}`;
+      cover.append(
+        textElement("span", "cover-index", `${String(index + 1).padStart(2, "0")} / ƏSƏR`)
+      );
+
+      const image = document.createElement("img");
+      image.className = "book-cover-image";
+      image.src = book.src;
+      image.alt = `${book.title} kitabının üz qabığı`;
+      cover.append(image);
+
+      const info = document.createElement("div");
+      info.className = "book-info";
+      info.append(
+        textElement("span", "book-category", book.category),
+        textElement("h3", "", book.title),
+        textElement("span", "book-discover", "Əsəri kəşf et ↗")
+      );
+
+      button.append(cover, info);
+      card.append(button);
+      return card;
+    });
+
+    bookTrack.replaceChildren(...cards);
+  }
+
   const gallery = document.querySelector("[data-gallery-grid]");
   if (gallery && Array.isArray(data.gallery)) {
     const filter = document.querySelector("[data-gallery-filter]");
@@ -292,7 +335,7 @@ if ('IntersectionObserver' in window) {
 
   const wisdomQuotes = document.querySelector("#wisdomQuotes");
   if (wisdomQuotes && Array.isArray(data.quotes)) {
-    const quotes = data.quotes.map((item, index) => {
+    const quotes = data.quotes.slice(0, 10).map((item, index) => {
       const quote = document.createElement("article");
       quote.className = `wisdom-quote${index === 0 ? " is-active" : ""}`;
       quote.dataset.index = String(index);
@@ -489,35 +532,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("photoGalleryProgress");
   if (!grid || !previous || !next || !count || !progress) return;
 
+  const lightbox = document.getElementById("photoGalleryLightbox");
+  const lightboxImage = lightbox?.querySelector("img");
+  const lightboxTitle = document.getElementById("photoGalleryLightboxTitle");
+  const lightboxCount = document.getElementById("photoGalleryLightboxCount");
+  const lightboxClose = document.getElementById("photoGalleryLightboxClose");
+  let previousFocus = null;
+  let previousBodyOverflow = "";
+
   const captions = [
-    { title: "Mikrofon qarşısında çıxış", category: "ÇIXIŞ", alt: "Aqşin Babayev tədbirdə mikrofon qarşısında çıxış edir" },
-    { title: "Gənclik illərindən portret", category: "PORTRET", alt: "Gənc Aqşin Babayev eynəkli portretdə" },
-    { title: "Söhbət zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev qara geyimdə söhbət zamanı əl hərəkəti edir" },
-    { title: "Gündəlik həyatdan bir an", category: "XATİRƏ", alt: "Aqşin Babayev kafedə masa arxasında əyləşib" },
-    { title: "Çiçəklər arasında", category: "HƏYAT", alt: "Aqşin Babayev parkda çiçək budağının yanında dayanıb" },
-    { title: "Payız parkında", category: "PORTRET", alt: "Aqşin Babayev papaqda parkda oturarkən" },
-    { title: "Arxiv portreti", category: "ARXİV", alt: "Gənc Aqşin Babayevin ağ-qara portreti" },
     { title: "Uşaqlıq illərindən xatirə", category: "ARXİV", alt: "İki oğlan uşağının ağ-qara arxiv fotosu" },
-    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Gənc yaşlarında üç kişinin studiya fotosu" },
-    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı bir kişi ilə birlikdə" },
-    { title: "Azərbaycan bayrağı önündə", category: "FƏALİYYƏT", alt: "Aqşin Babayev rəsmi geyimdə Azərbaycan bayrağının yanında" },
-    { title: "Rəsmi tədbirdə görüş", category: "TƏDBİR", alt: "Aqşin Babayev rəsmi tədbirdə qonaqlarla söhbət edir" },
-    { title: "Türkiyəli qonaqla görüş", category: "GÖRÜŞ", alt: "Aqşin Babayev Türkiyəli qonaqla görüşüb əl sıxır" },
+    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Gənc Aqşin Babayev dostları ilə birlikdə" },
+    { title: "Söhbət zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev gənc yaşlarında bir nəfərlə söhbət edir" },
+    { title: "Gənclik illərindən xatirə", category: "ARXİV", alt: "Gənc Aqşin Babayev iki dostu ilə arxiv fotosunda" },
+    { title: "Yaxınları ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev və yaxınları arxiv fotosunda" },
+    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı sənət dostu ilə yanaşı dayanıb" },
+    { title: "Azərbaycan bayrağı önündə", category: "FƏALİYYƏT", alt: "Aqşin Babayev Azərbaycan bayrağının yanında dayanıb" },
+    { title: "Rəsmi tədbirdə", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə qonaqlarla söhbət edir" },
+    { title: "Görüş zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev rəsmi görüşdə qonaqla əl sıxır" },
+    { title: "Rəsmi portret", category: "PORTRET", alt: "Aqşin Babayev rəsmi geyimdə Azərbaycan bayrağının qarşısında" },
+    { title: "Şəhər mənzərəsi", category: "XATİRƏ", alt: "Aqşin Babayev şəhərə yuxarıdan baxarkən" },
+    { title: "Rəsmi görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qonaqlarla rəsmi görüşdə" },
+    { title: "Ədəbi irs tədbirində", category: "ƏDƏBİ İRS", alt: "Aqşin Babayev yazıçı portretinin önündə keçirilən tədbirdə" },
+    { title: "Həmkarı ilə söhbət", category: "GÖRÜŞ", alt: "Aqşin Babayev bir həmkarı ilə masa arxasında söhbət edir" },
+    { title: "Kollektivlə birlikdə", category: "ARXİV", alt: "Aqşin Babayevin də yer aldığı ağ-qara kollektiv fotosu" },
+    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı ziyalı ilə birlikdə" },
+    { title: "Həmkarı ilə açıq havada", category: "XATİRƏ", alt: "Aqşin Babayev həmkarı ilə açıq havada dayanıb" },
+    { title: "Rəsmi qəbuldan xatirə", category: "TƏDBİR", alt: "Aqşin Babayev bir ziyalı ilə xatirə fotosunda" },
     { title: "Həmkarı ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev kostyumlu həmkarı ilə yanaşı dayanıb" },
-    { title: "Rəsmi qəbuldan xatirə", category: "TƏDBİR", alt: "Aqşin Babayev rəsmi otaqda bir qrup qonaqla birlikdə" },
-    { title: "Ədəbi irsə həsr olunmuş tədbir", category: "ƏDƏBİ İRS", alt: "Aqşin Babayev yazıçı portreti və kitab sərgisinin yanında dayanıb" },
-    { title: "Müzakirə zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev həmkarı ilə masa arxasında müzakirə aparır" },
-    { title: "Geniş kollektivlə görüş", category: "ARXİV", alt: "Aqşin Babayevin də iştirak etdiyi böyük qrup fotosu" },
-    { title: "Tədbir zalında", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə başqa bir iştirakçı ilə yanaşı əyləşib" },
-    { title: "Həmkarı ilə açıq havada", category: "XATİRƏ", alt: "Aqşin Babayev və həmkarı bina qarşısında dayanıb" },
-    { title: "Dostlarla bir arada", category: "GÖRÜŞ", alt: "Aqşin Babayev iki dostu ilə birlikdə xatirə fotosunda" },
-    { title: "Sənət dostları ilə", category: "XATİRƏ", alt: "Aqşin Babayev və dostları tədbirdə birlikdə" },
-    { title: "Mədəni görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qadın qonaqla birlikdə xatirə fotosunda" },
-    { title: "Söhbət və fikir mübadiləsi", category: "GÖRÜŞ", alt: "Aqşin Babayev bir qrup kişi ilə söhbət edir" },
-    { title: "Həmkarı ilə bağda", category: "XATİRƏ", alt: "Aqşin Babayev və həmkarı bağda yanaşı dayanıb" },
-    { title: "Yaxınları ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev iki qadınla birlikdə xatirə fotosunda" },
-    { title: "Ədəbi görüşdən sonra", category: "GÖRÜŞ", alt: "Aqşin Babayev bir qrup ziyalı ilə binanın girişində" },
-    { title: "Yaşlı ziyalı ilə görüş", category: "XATİRƏ", alt: "Aqşin Babayev yaşlı ziyalı ilə yanaşı dayanıb" }
+    { title: "Tədbir zalında", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə qonaqlarla birlikdə" },
+    { title: "Tədbirdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qadın qonaqlarla xatirə fotosunda" },
+    { title: "Rəsmi görüş", category: "GÖRÜŞ", alt: "Aqşin Babayev qonaqlarla koridorda söhbət edir" },
+    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Aqşin Babayev gəncliyində dostu ilə ağ-qara açıq hava fotosunda" },
+    { title: "Sənət dostu ilə", category: "XATİRƏ", alt: "Aqşin Babayev yaşlı ziyalı ilə birlikdə" },
+    { title: "Rəsmi görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə bir ziyalı ilə" },
+    { title: "Dostlarla bir arada", category: "GÖRÜŞ", alt: "Aqşin Babayev dostları ilə masa arxasında" },
+    { title: "Təltif mərasimindən xatirə", category: "TƏDBİR", alt: "Aqşin Babayevə tədbirdə gül təqdim olunur" },
+    { title: "Xatirə fotosu", category: "ARXİV", alt: "Aqşin Babayev başqa bir ziyalı ilə arxiv fotosunda" },
+    { title: "Gündəlik həyatdan xatirə", category: "XATİRƏ", alt: "Aqşin Babayev kafedə masa arxasında əyləşib" }
   ];
   const items = captions.map((photo, index) => ({
     ...photo,
@@ -533,11 +585,40 @@ document.addEventListener("DOMContentLoaded", () => {
     return element;
   };
 
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.removeAttribute("src");
+    document.body.style.overflow = previousBodyOverflow;
+    previousFocus?.focus();
+  }
+
+  function openLightbox(item, index, trigger) {
+    if (!lightbox || !lightboxImage || !lightboxTitle || !lightboxCount || !lightboxClose) return;
+
+    previousFocus = trigger;
+    previousBodyOverflow = document.body.style.overflow;
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt;
+    lightboxTitle.textContent = item.title;
+    lightboxCount.textContent =
+      `${String(index + 1).padStart(2, "0")} / ${String(items.length).padStart(2, "0")}`;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    lightboxClose.focus();
+  }
+
   function renderPage() {
     const start = currentPage * pageSize;
-    const cards = items.slice(start, start + pageSize).map((item) => {
+    const cards = items.slice(start, start + pageSize).map((item, index) => {
       const figure = document.createElement("figure");
       figure.className = "photo-gallery-card";
+      figure.setAttribute("role", "button");
+      figure.setAttribute("aria-label", `${item.title} — böyüt`);
+      figure.tabIndex = 0;
 
       const image = document.createElement("img");
       image.src = item.src;
@@ -549,6 +630,13 @@ document.addEventListener("DOMContentLoaded", () => {
         captionText("photo-gallery-title", item.title)
       );
       figure.append(image, caption);
+      figure.addEventListener("click", () => openLightbox(item, start + index, figure));
+      figure.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(item, start + index, figure);
+        }
+      });
       return figure;
     });
 
@@ -569,6 +657,16 @@ document.addEventListener("DOMContentLoaded", () => {
   next.addEventListener("click", () => {
     currentPage = (currentPage + 1) % pageCount;
     renderPage();
+  });
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox?.classList.contains("is-open")) {
+      closeLightbox();
+    }
   });
 
   renderPage();
