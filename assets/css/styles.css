@@ -4880,6 +4880,10 @@ html {
   border-color: white;
 }
 
+.tribute-source[hidden] {
+  display: none;
+}
+
 .tribute-card-decoration {
   position: absolute;
   right: -75px;
@@ -5643,6 +5647,15 @@ html {
   display: none;
 }
 
+.research-detail-works-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.research-detail-works-list li {
+  margin-bottom: 8px;
+}
+
 .research-narrative-entry h3,
 .research-detail-card h3 {
   margin: 24px 0 8px;
@@ -5986,6 +5999,8 @@ blockquote,
   color: var(--gallery-navy);
   font-size: .95rem;
   font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .photo-gallery-footer {

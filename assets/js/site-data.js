@@ -105,9 +105,16 @@ window.siteData = {
       ]
     },
     turk: {
-      title: 'Türk ədəbiyyatının tədqiqi',
-      text: 'Türk ədəbiyyatı və dramaturgiyası Aqşin Babayevin əsas tədqiqat istiqamətlərindəndir. Onun bu sahədəki kitabları Azərbaycan oxucusunun türk ədəbi irsi ilə tanışlığına xidmət edir.',
-      works: 'Əlaqəli kitablar: “Türk dramaturgiyası”, “Türk ədəbiyyatı müntəxəbatı”, “Cümhuriyyət dövrü türk ədəbiyyatında sosial motivlər”.'
+      title: 'Türk ədəbiyyatı və Azərbaycan–Türkiyə ədəbi əlaqələri',
+      text: 'Aqşin Babayev türk ədəbiyyatının tarixi, inkişaf mərhələləri və Azərbaycan–Türkiyə ədəbi əlaqələrinin tədqiqi sahəsində mühüm fəaliyyət göstərmişdir. Alim türk ədəbiyyatının müxtəlif dövrlərini, xalq ədəbiyyatından klassik divan ədəbiyyatına, Tənzimat dövründən Cümhuriyyət dövrü ədəbiyyatına qədər geniş bir ədəbi irsi araşdırmışdır.\n\nOnun elmi və pedaqoji fəaliyyətində türk ədəbiyyatının öyrənilməsi xüsusi yer tutmuşdur. 1967–1972-ci illərdə Azərbaycan Dövlət Universitetinin Şərqşünaslıq fakültəsində “Türk ədəbiyyatı tarixi” fənnindən mühazirələr oxumuş, sonrakı illərdə də müxtəlif ali təhsil müəssisələrində bu istiqamətdə dərs demişdir.\n\nAqşin Babayev türk ədəbiyyatının görkəmli nümayəndələrinin yaradıcılığına xüsusi diqqət yetirmiş, İbrahim Şinasi, Namiq Kamal, Əbdülhəq Hamid, Tofiq Fikrət, Rəşad Nuri Güntəkin, Nazim Hikmət, Səbahəddin Əli, Orxan Kamal və Əziz Nesin kimi sənətkarların ədəbi irsinin öyrənilməsinə töhfə vermişdir.\n\nAlimin bu sahədəki fəaliyyətinin mühüm nümunələrindən biri 2001-ci ildə nəşr olunmuş “Türkiyə ədəbiyyatı müntəxəbatı” kitabıdır. Nəşrdə türk ədəbiyyatının müxtəlif tarixi mərhələləri və görkəmli nümayəndələri sistemli şəkildə təqdim edilmişdir.\n\nAqşin Babayev türk ədəbiyyatını yalnız araşdırmaqla kifayətlənməmiş, onun Azərbaycan oxucusuna çatdırılması istiqamətində də çalışmışdır. Türk dramaturqu Haldun Tanerin “Keşanlı Əli dastanı” pyesini və Əziz Nesinin “Hekayələr” kitabını Azərbaycan dilinə tərcümə etmişdir.\n\nOnun tədqiqatları Azərbaycan və türk xalqları arasında ədəbi-mədəni əlaqələrin öyrənilməsi və möhkəmləndirilməsi baxımından əhəmiyyətli elmi irsdir.',
+      works: [
+        '“Türkiyə ədəbiyyatı müntəxəbatı” (2001)',
+        '“Türk ədəbiyyatı tarixi proqramı” (1962)',
+        '“Müasir türk dramaturgiyasının ictimai motivləri” (1982)',
+        '“Azərbaycan və türk dünyası” (1998)',
+        'Haldun Taner – “Keşanlı Əli dastanı” (translation)',
+        'Əziz Nesin – “Hekayələr” (translation)'
+      ]
     },
     tehsil: {
       title: 'Elmi və pedaqoji fəaliyyət',
@@ -268,8 +275,13 @@ window.siteData = {
     { text: 'Ən böyük faciə insanın özünün öz gözündən düşməsidir...', source: 'Aqşin Babayev' },
     { text: 'Çalışmaq da ibadətdir.', source: 'Aqşin Babayev' },
     { text: 'Dostluq yamaq götürmür. Onu yamamaq olmaz.', source: 'Aqşin Babayev' },
+    { text: 'Dünya vəfalıdır... Sən yaxşılıq elə həmişə, yaxşı işlər gör, onda baxarsan ki, necə vəfalıdır bu dünya.', source: 'Aqşin Babayev' },
     { text: 'Ən mühüm məsələ dildir... Dilimizin ifadə tərzini, nitq mədəniyyətini hifz etməliyik.', source: 'Aqşin Babayev' },
-    { text: 'Azərbaycan dilini yaşatmaq, varlığımızı, ənənələrimizi yaşatmaq deməkdir.', source: 'Aqşin Babayev' }
+    { text: 'Mənim həyat prinsipim belədir: çox yüksəklərdə uçmamaq, gerçəkçi olmaq.', source: 'Aqşin Babayev' },
+    { text: 'Hər insan ömrü bir kitabdır.', source: 'Aqşin Babayev' },
+    { text: 'Həyatdan kim doyar?... Həyat çox şirindir. Heç kəs həyatdan ayrılmaq istəmir.', source: 'Aqşin Babayev' },
+    { text: 'Allah amanında! Bu iki kəlmə nə gözəl, nə müqəddəs, nə ülvidir.', source: 'Aqşin Babayev' },
+    { text: 'Sənətkar üçün ən böyük xoşbəxtlik xalqın ürəyinə yol tapa bilməsidir.', source: 'Aqşin Babayev' }
   ],
   gallery: [
     { title: 'Aqşin Babayevin portreti', category: 'Portret', src: 'assets/images/placeholder/portrait-placeholder.svg', alt: 'Aqşin Babayevin portreti' },

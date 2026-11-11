@@ -561,6 +561,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const count = document.getElementById("photoGalleryCount");
   const progress = document.getElementById("photoGalleryProgress");
   if (!grid || !previous || !next || !count || !progress) return;
+  const total = document.querySelector(".photo-gallery-total");
+  const summary = document.querySelector(".photo-gallery-heading p");
 
   const lightbox = document.getElementById("photoGalleryLightbox");
   const lightboxImage = lightbox?.querySelector("img");
@@ -571,40 +573,45 @@ document.addEventListener("DOMContentLoaded", () => {
   let previousBodyOverflow = "";
 
   const captions = [
-    { title: "Uşaqlıq illərindən xatirə", category: "ARXİV", alt: "İki oğlan uşağının ağ-qara arxiv fotosu" },
-    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Gənc Aqşin Babayev dostları ilə birlikdə" },
-    { title: "Söhbət zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev gənc yaşlarında bir nəfərlə söhbət edir" },
-    { title: "Gənclik illərindən xatirə", category: "ARXİV", alt: "Gənc Aqşin Babayev iki dostu ilə arxiv fotosunda" },
-    { title: "Yaxınları ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev və yaxınları arxiv fotosunda" },
-    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı sənət dostu ilə yanaşı dayanıb" },
-    { title: "Azərbaycan bayrağı önündə", category: "FƏALİYYƏT", alt: "Aqşin Babayev Azərbaycan bayrağının yanında dayanıb" },
-    { title: "Rəsmi tədbirdə", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə qonaqlarla söhbət edir" },
-    { title: "Görüş zamanı", category: "GÖRÜŞ", alt: "Aqşin Babayev rəsmi görüşdə qonaqla əl sıxır" },
-    { title: "Rəsmi portret", category: "PORTRET", alt: "Aqşin Babayev rəsmi geyimdə Azərbaycan bayrağının qarşısında" },
-    { title: "Şəhər mənzərəsi", category: "XATİRƏ", alt: "Aqşin Babayev şəhərə yuxarıdan baxarkən" },
-    { title: "Rəsmi görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qonaqlarla rəsmi görüşdə" },
-    { title: "Ədəbi irs tədbirində", category: "ƏDƏBİ İRS", alt: "Aqşin Babayev yazıçı portretinin önündə keçirilən tədbirdə" },
-    { title: "Həmkarı ilə söhbət", category: "GÖRÜŞ", alt: "Aqşin Babayev bir həmkarı ilə masa arxasında söhbət edir" },
-    { title: "Kollektivlə birlikdə", category: "ARXİV", alt: "Aqşin Babayevin də yer aldığı ağ-qara kollektiv fotosu" },
-    { title: "Sənət dostu ilə", category: "GÖRÜŞ", alt: "Aqşin Babayev yaşlı ziyalı ilə birlikdə" },
-    { title: "Həmkarı ilə açıq havada", category: "XATİRƏ", alt: "Aqşin Babayev həmkarı ilə açıq havada dayanıb" },
-    { title: "Rəsmi qəbuldan xatirə", category: "TƏDBİR", alt: "Aqşin Babayev bir ziyalı ilə xatirə fotosunda" },
-    { title: "Həmkarı ilə xatirə fotosu", category: "XATİRƏ", alt: "Aqşin Babayev kostyumlu həmkarı ilə yanaşı dayanıb" },
-    { title: "Tədbir zalında", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə qonaqlarla birlikdə" },
-    { title: "Tədbirdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev qadın qonaqlarla xatirə fotosunda" },
-    { title: "Rəsmi görüş", category: "GÖRÜŞ", alt: "Aqşin Babayev qonaqlarla koridorda söhbət edir" },
-    { title: "Gənclik dostları ilə", category: "ARXİV", alt: "Aqşin Babayev gəncliyində dostu ilə ağ-qara açıq hava fotosunda" },
-    { title: "Sənət dostu ilə", category: "XATİRƏ", alt: "Aqşin Babayev yaşlı ziyalı ilə birlikdə" },
-    { title: "Rəsmi görüşdən xatirə", category: "TƏDBİR", alt: "Aqşin Babayev tədbirdə bir ziyalı ilə" },
-    { title: "Dostlarla bir arada", category: "GÖRÜŞ", alt: "Aqşin Babayev dostları ilə masa arxasında" },
-    { title: "Təltif mərasimindən xatirə", category: "TƏDBİR", alt: "Aqşin Babayevə tədbirdə gül təqdim olunur" },
-    { title: "Xatirə fotosu", category: "ARXİV", alt: "Aqşin Babayev başqa bir ziyalı ilə arxiv fotosunda" },
-    { title: "Gündəlik həyatdan xatirə", category: "XATİRƏ", alt: "Aqşin Babayev kafedə masa arxasında əyləşib" }
+    "Məktəb illəri",
+    "Fikrət Qoca, Aqşin Babayev, Fikrət Sadıq",
+    "İlk və son məhəbbəti Müzəyyən xanım",
+    "Gənclik dostları Tofiq və Ağami ilə",
+    "Xoşbəxt ailə",
+    "“Qurban olum atama, ana ürəkli atama”",
+    "II dərəcəli dövlət qulluqçusu Aqşin Babayev",
+    "“Ümummilli Liderimizin mətbuat katibi olduğum günləri həyatımın ən şərəfli və unudulmaz anları hesab edirəm”",
+    "Türkiyə Respublikasının prezidenti Rəcəb Tayyib Ərdoğanı Milli Məclisdə qarşılayarkən",
+    "Yaşar Əliyevlə",
+    "Məkkə. Kəbə məscidinin önündə.",
+    "Fikrət Qoca, Anar və başqaları ilə",
+    "Fikrət Sadığın xatirə gecəsində oğlu Orxan Fikrətoğlu ilə",
+    "Ramiz Həsənoğlu ilə",
+    "Azərbaycan Dövlət Televiziya və Radio Komitəsinin kollektivi",
+    "Tariyel Həsənovla",
+    "Fərhad Bədəlbəyli ilə",
+    "Arif Məlikov və Çingiz Abbasovla",
+    "Rafiq Hüseynovla",
+    "Qardaşı Elxan Babayevlə",
+    "Ceyran xanım Mahmudova ilə",
+    "Azərbaycan Dövlət Mədəniyyət və İncəsənət Universitetində",
+    "Vaqif Səmədoğlu ilə",
+    "Bəxtiyar Vahabzadə ilə",
+    "Nəbi Xəzri ilə",
+    "Müzəyyən xanım, Həsən Həsənov və Zeynəb xanım Xanlarova ilə",
+    "Amaliya Pənahova ilə",
+    "Bir yazıçının ən gözəl əsəri öz həyatıdır. Aqşin Babayevin təbəssümü kimi səmimi və aydın..."
   ];
   const items = captions.map((photo, index) => ({
-    ...photo,
+    title: photo,
+    category: "XATİRƏ",
+    alt: photo,
     src: `assets/images/gallery/pt${index + 1}.jpg`
   }));
+  if (total) total.textContent = `${items.length} FOTOŞƏKİL`;
+  if (summary) {
+    summary.textContent = `Aqşin Babayevin həyat və yaradıcılıq yolundan ${items.length} arxiv fotosu.`;
+  }
   const pageSize = 4;
   const pageCount = Math.ceil(items.length / pageSize);
   let currentPage = 0;
@@ -903,6 +910,41 @@ document.addEventListener("DOMContentLoaded", () => {
       role: "Azpost.info internet qəzetinin baş redaktoru",
       initials: "XS",
       source: "https://kaspi.az/az/hardan-gelib-hara-getdi-bu-iller"
+    },
+    {
+      quote: "Onun yaradıcılığı milli ruhun, Vətən sevgisinin və dərin fəlsəfi düşüncələrin tərənnümünə həsr olunub.",
+      name: "Bəxtiyar Vahabzadə",
+      initials: "BV"
+    },
+    {
+      quote: "O, müasir Azərbaycan ədəbiyyatına və dramaturgiyasına özünəməxsus imza atan, novator ideyaları ilə seçilən dəyərli yazıçıdır.",
+      name: "Anar",
+      initials: "A"
+    },
+    {
+      quote: "Aqşin Babayevin şeirə, sənətə olan sevgisi vətən torpağına, el-obaya bağlanan tükənməz bir məhəbbətin təzahürüdür.",
+      name: "Zəlimxan Yaqub",
+      initials: "ZY"
+    },
+    {
+      quote: "Aqşin Babayev ana dilinin zənginliyini, incəliklərini dərindən duyan və əsərlərində onu yüksək sənətkarlıqla yaşadan qələm sahibidir.",
+      name: "Əkrəm Cəfər",
+      initials: "ƏC"
+    },
+    {
+      quote: "Aqşin Babayevin publisistikası cəsarətli düşüncə tərzinin və obyektiv gerçəkliyin carçısıdır.",
+      name: "Osman Mirzəyev",
+      initials: "OM"
+    },
+    {
+      quote: "Aqşin Babayev dramaturq kimi insan xarakterlərinin ziddiyyətlərini və cəmiyyət problemlərini ustalıqla səhnəyə daşımağı bacarıb.",
+      name: "Əli Əmirli",
+      initials: "ƏƏ"
+    },
+    {
+      quote: "Aqşin Babayevin əsərləri təkcə Azərbaycan ədəbiyyatının deyil, bütövlükdə Türk dünyası mədəniyyətinin ortaq mənəvi sərvətidir.",
+      name: "Aslan Kavlak",
+      initials: "AK"
     }
   ];
 
@@ -933,7 +975,13 @@ document.addEventListener("DOMContentLoaded", () => {
     name.textContent = item.name;
     role.textContent = item.role;
     avatar.textContent = item.initials;
-    source.href = item.source;
+    role.hidden = !item.role;
+    source.hidden = !item.source;
+    if (item.source) {
+      source.href = item.source;
+    } else {
+      source.removeAttribute("href");
+    }
     index.textContent =
       `${String(current + 1).padStart(2, "0")} / ${String(items.length).padStart(2, "0")}`;
   }
@@ -1118,12 +1166,27 @@ document.addEventListener("DOMContentLoaded", () => {
       boxContainer.append(...boxes);
       detailText.append(boxContainer);
     } else {
-      const paragraph = document.createElement("p");
-      paragraph.className = "research-detail-copy";
-      paragraph.textContent = item.text;
-      detailText.append(paragraph);
+      item.text.split(/\n\n+/).forEach((paragraphText) => {
+        const paragraph = document.createElement("p");
+        paragraph.className = "research-detail-copy";
+        paragraph.textContent = paragraphText;
+        detailText.append(paragraph);
+      });
 
-      if (item.works) {
+      if (Array.isArray(item.works)) {
+        const heading = document.createElement("p");
+        heading.className = "research-works-heading";
+        heading.textContent = "Əlaqəli əsərlər və nəşrlər:";
+        const list = document.createElement("ul");
+        list.className = "research-detail-works-list";
+        item.works.forEach((work) => {
+          const entry = document.createElement("li");
+          entry.textContent = work;
+          list.append(entry);
+        });
+        detailWorks.append(heading, list);
+        detailWorks.hidden = false;
+      } else if (item.works) {
         detailWorks.textContent = item.works;
         detailWorks.hidden = false;
       }
