@@ -4177,6 +4177,9 @@ html {
 /* Book modal — solid luxury design */
 
 .book-modal .modal-content {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: #F0E5D4;
   color: #303238;
   border: 1px solid #BD9868;

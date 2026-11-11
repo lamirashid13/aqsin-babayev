@@ -247,29 +247,190 @@ window.siteData = {
     { id: 8, title: 'Nazim və Azərbaycan', genre: 'Publisistika', year: '—', description: 'Nâzım Hikmət ilə Azərbaycan ədəbiyyatı arasında əlaqənin şərhi.', type: 'Publisistika' }
   ],
   bookCovers: [
-    { year: '1964', src: 'assets/images/kitablar/1964.png', title: 'Cazibəli üfüqlər', category: 'İlk kitab', description: 'Aqşin Babayevin ilk hekayələr kitabı.' },
-    { year: '1967', src: 'assets/images/kitablar/1967.png', title: 'Həmişə bahar', category: 'Nəsr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan nəsr əsəri.' },
-    { year: '1971', src: 'assets/images/kitablar/1971.png', title: 'Bir başqa həyat', category: 'Nəsr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan nəsr əsəri.' },
-    { year: '1977', src: 'assets/images/kitablar/1977.png', title: 'Ağ ulduzlar', category: 'Ədəbi əsər', description: 'Aqşin Babayevin ədəbi irsinə daxil olan əsər.' },
-    { year: '1978', src: 'assets/images/kitablar/1978.png', title: 'Nazim Hikmət', category: 'Elmi tədqiqat', description: 'Nazim Hikmətin yaradıcılığına həsr olunmuş nəşr.' },
-    { year: '1979', src: 'assets/images/kitablar/1979.png', title: 'Bir ürəyin hərarəti', category: 'Nəsr', description: 'İnsan qəlbinin səmimiyyətini, mərhəməti və insani münasibətlərin dəyərini əks etdirən hekayə və povestlər toplusudur.' },
-    { year: '1981', src: 'assets/images/kitablar/1981.png', title: 'Kişilər az yaşadı', category: 'Povest', description: 'İnsanların həyati seçimləri və məsuliyyət mövzusunu əhatə edir.' },
-    { year: '1982', src: 'assets/images/kitablar/1982.png', title: 'Ayrılıq', category: 'Şeir toplusu', description: 'Duyğuların və yaddaşın lirik ifası.' },
-    { year: '1982a', src: 'assets/images/kitablar/1982a.png', title: 'Müasir türk dramaturgiyasında sosial motivlər', category: 'Elmi tədqiqat', description: 'Türk dramaturgiyasını araşdıran elmi tədqiqat əsəri.' },
-    { year: '1986', src: 'assets/images/kitablar/1986.png', title: 'Sünbül ətri', category: 'Şeir toplusu', description: 'Təbiət və duyğu atmosferi ilə əlaqəli şeir toplusu.' },
-    { year: '1989', src: 'assets/images/kitablar/1989.png', title: 'Söz gülləsi', category: 'Ədəbi əsər', description: 'Aqşin Babayevin nəşr olunmuş əsərlərindən biri.' },
-    { year: '1992', src: 'assets/images/kitablar/1992.png', title: 'Dünyanın axırı', category: 'Nəsr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan əsər.' },
-    { year: '1995', src: 'assets/images/kitablar/1995.png', title: 'Başımıza gələnlər', category: 'Nəsr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan əsər.' },
-    { year: '1998', src: 'assets/images/kitablar/1998.png', title: 'Azərbaycan və türk dünyası', category: 'Elmi tədqiqat', description: 'Dil və ədəbi-mədəni əlaqələrin geniş kontekstində tədqiqat.' },
-    { year: '1999', src: 'assets/images/kitablar/1999.png', title: 'Yanan Zürafə', category: 'Dramaturgiya', description: 'Aqşin Babayevin dramaturji irsinə aid əsərlərindən biri.' },
-    { year: '2000', src: 'assets/images/kitablar/2000.png', title: '100 yaşlı Nazim Hikmət', category: 'Publisistika', description: 'Nazim Hikmətə həsr olunmuş nəşr.' },
-    { year: '2005', src: 'assets/images/kitablar/2005.png', title: 'Seçilmiş əsərlər', category: 'Seçilmiş əsərlər', description: 'Aqşin Babayevin seçilmiş əsərləri.' },
-    { year: '2011', src: 'assets/images/kitablar/2011.png', title: 'Aqşin Babayev: həyatı, yaradıcılığı', category: 'Bioqrafiya', description: 'Aqşin Babayevin həyatı və yaradıcılığı haqqında bioqrafik nəşr.' },
-    { year: '2012', src: 'assets/images/kitablar/2012.png', title: 'Nazim və Azərbaycan', category: 'Publisistika', description: 'Nazim Hikmət və Azərbaycan ədəbiyyatı arasında əlaqəyə həsr olunmuş əsər.' },
-    { year: '2015', src: 'assets/images/kitablar/2015.png', title: 'Azərbaycanın elm və mədəniyyət xadimləri: biblioqrafiya', category: 'Biblioqrafiya', description: 'Azərbaycanın elm və mədəniyyət xadimlərinə həsr olunmuş biblioqrafik nəşr.' },
-    { year: '2016', src: 'assets/images/kitablar/2016.png', title: 'Səhnə ekran efir', category: 'Publisistika', description: 'Aqşin Babayevin səhnə, ekran və efir mövzularına həsr olunmuş əsəri.' },
-    { year: '2016a', src: 'assets/images/kitablar/2016a.png', title: 'O biri dünyanın astanasında', category: 'Nəsr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan əsər.' },
-    { year: '2016b', src: 'assets/images/kitablar/2016b.png', title: 'Bir yolda gözüm qaldı...', category: 'Xatirələr', description: 'Aqşin Babayevin ədəbi irsinə daxil olan əsər.' }
+    {
+      id: 'book-01',
+      year: '1964',
+      src: 'assets/images/kitablar/1964.png',
+      title: 'Cazibəli üfüqlər',
+      category: 'Hekayələr toplusu',
+      description: `Aqşin Babayevin ilk hekayələr toplusu olan bu kitab insan münasibətlərini, həyatın müxtəlif çalarlarını və mənəvi axtarışları əks etdirir. Burada insanın daxili dünyası, keçmişə bağlılığı və ətrafında baş verən hadisələrə münasibəti ön plana çıxır. Müəllif gündəlik həyatda diqqətdən kənarda qalan hissləri və düşüncələri bədii dillə təqdim edir. Kitabda səmimiyyət, sevgi, axtarış və ümid mövzuları əsas yer tutur. Əsər yazıçının erkən yaradıcılıq üslubunu tanımaq üçün əhəmiyyətlidir.`
+    },
+    {
+      id: 'book-02',
+      year: '1967',
+      src: 'assets/images/kitablar/1967.png',
+      title: 'Həmişəbahar',
+      category: 'Hekayələr toplusu',
+      description: `Bu hekayələr toplusunda insan həyatının gözəlliyi, qayğıkeşlik və mənəvi dəyərlər əsas mövzulardır. Müəllif insanların bir-birinə göstərdiyi diqqəti, sevgini və xeyirxahlığı müxtəlif həyat hadisələri vasitəsilə təsvir edir. Kitabda təbiət, zəhmət, dostluq və insan münasibətləri xüsusi yer tutur. Hekayələr oxucunu sadə görünən hadisələrin arxasındakı dərin mənaları görməyə çağırır. Əsərin ümumi ruhunda həyat eşqi və insanlığa inam hiss olunur.`
+    },
+    {
+      id: 'book-03',
+      year: '1971',
+      src: 'assets/images/kitablar/1971.png',
+      title: 'Bir parça həyat',
+      category: 'Povest',
+      description: `Bu povest insan həyatının müxtəlif tərəflərini və gündəlik gerçəkliklərin arxasında gizlənən mənəvi məsələləri əks etdirir. Müəllif həyat hadisələrinə insan taleyi və cəmiyyət münasibətləri prizmasından yanaşır. Əsərdə insanın qarşılaşdığı çətinliklər, seçimləri və daxili düşüncələri mühüm əhəmiyyət daşıyır. Yazıçı adi həyat epizodlarından istifadə edərək oxucunu daha geniş düşüncələrə yönəldir. Kitab insan həyatının hər bir parçasının özünəməxsus dəyərə malik olduğunu xatırladır.`
+    },
+    {
+      id: 'book-04',
+      year: '1977',
+      src: 'assets/images/kitablar/1977.png',
+      title: 'Ağ ulduzlar',
+      category: 'Hekayələr toplusu',
+      description: `Aqşin Babayevin bu hekayələr kitabında müharibə, ailə, sevgi, həsrət və insanlıq mövzuları bir araya gəlir. Müəllif xüsusilə müharibənin insan talelərində buraxdığı izləri və ailə münasibətlərinin mənəvi gücünü təsvir edir. Hekayələrdə ana sevgisi, itkilər, xatirələr və ümid hissi diqqət çəkir. Müxtəlif obrazlar vasitəsilə insanın çətinliklər qarşısında göstərdiyi dözüm və mərhəmət nümayiş etdirilir. Kitabın əsas ideyası insan qəlbindəki işığın və yaxşılığın qorunmasıdır.`
+    },
+    {
+      id: 'book-05',
+      year: '1978',
+      src: 'assets/images/kitablar/1978.png',
+      title: 'Nazim Hikmət',
+      category: 'Elmi-tədqiqat / ədəbi araşdırma',
+      description: `Bu kitab böyük türk şairi və dramaturqu Nazim Hikmətin həyatına və yaradıcılığına həsr olunub. Aqşin Babayev onun ədəbi irsini, sənət dünyasını və türk ədəbiyyatındakı mövqeyini araşdırır. Əsərdə şairin yaradıcılıq xüsusiyyətləri və dramaturgiyaya gətirdiyi yeniliklər diqqət mərkəzindədir. Müəllif Nazim Hikmətin həyatını və sənətə münasibətini elmi yanaşma ilə təqdim edir. Kitab türk ədəbiyyatının görkəmli nümayəndələrindən birini daha yaxından tanımaq istəyən oxucular üçün dəyərli mənbədir.`
+    },
+    {
+      id: 'book-06',
+      year: '1979',
+      src: 'assets/images/kitablar/1979.png',
+      title: 'Bir ürəyin hərarəti',
+      category: 'Hekayə və povestlər toplusu',
+      description: `Bu kitab insan qəlbinin istiliyini, mərhəməti və mənəvi zənginliyi əks etdirən hekayə və povestlərdən ibarətdir. Əsərlərdə ailə sevgisi, insanlıq, müharibənin ağrıları və həyatın çətin sınaqları təsvir olunur. Müəllif kiçik gündəlik hadisələr vasitəsilə böyük mənəvi həqiqətləri oxucuya çatdırır. Kitabda ata sevgisi, dostluq, vətən həsrəti və insanın yaşamaq mübarizəsi xüsusi yer tutur. Əsərin əsas qayəsi insanı insan edən duyğuların və mərhəmətin əhəmiyyətini göstərməkdir.`
+    },
+    {
+      id: 'book-07',
+      year: '1981',
+      src: 'assets/images/kitablar/1981.png',
+      title: 'Kişilər az yaşadı',
+      category: 'Povest və hekayələr toplusu',
+      description: `Eyni adlı povest və müxtəlif hekayələrdən ibarət olan bu kitab insan talelərinə və həyatın ağır sınaqlarına həsr olunub. Müəllif insan ömrünün qısalığını, müharibənin yaratdığı faciələri və itkilərin insanların həyatında qoyduğu izləri əks etdirir. Əsərlərdə yaddaş, sədaqət, ailə, vətən və insanlıq mövzuları ön plana çıxır. Yazıçı hadisələri emosional və düşündürücü üslubda təqdim edərək oxucunu həyatın dəyəri haqqında düşünməyə vadar edir. Kitabın ümumi ruhunda itkilərə baxmayaraq insanlıq dəyərlərini qorumaq fikri dayanır.`
+    },
+    {
+      id: 'book-08',
+      year: '1982',
+      src: 'assets/images/kitablar/1982.png',
+      title: 'Ayrılıq',
+      category: 'Povest və hekayələr toplusu',
+      description: `Bu kitabda ayrılıq, həsrət, vətən sevgisi və insan taleləri əsas mövzular kimi təqdim olunur. Eyni adlı povestlə yanaşı, "Xalqın oğlu" povesti və müxtəlif hekayələr insan münasibətlərinin mürəkkəbliyini açır. "Təbriz əfsanəsi", "Unutmaq olmur" və "Sabaha açılan pəncərə" kimi hekayələrdə yaddaş, ümid və keçmişə bağlılıq motivləri diqqət çəkir. Kitabda yumoristik hekayələrə də yer verilməsi əsərin mövzu müxtəlifliyini artırır. Müəllif həm düşündürür, həm də insan həyatının fərqli tərəflərini göstərir.`
+    },
+    {
+      id: 'book-09',
+      year: '1984',
+      src: 'assets/images/kitablar/1982a.png',
+      title: 'Dünya vəfalıdır',
+      category: 'Povest və hekayələr toplusu',
+      description: `Bu kitab insanın həyata, yaxşılığa və mənəvi dəyərlərə inamını əks etdirən povest və hekayələr toplusudur. Əsərlərdə yaxşılıq, sədaqət, ailə, müharibə, qürbət və insan münasibətləri kimi mövzular işlənir. Müəllif insanların qarşılaşdığı çətinlikləri və bu çətinliklərə verdikləri reaksiyaları təsvir edir. Kitabın qürbət hekayələrində vətən həsrəti və yad mühitdə yaşamağın çətinlikləri xüsusi yer tutur. Əsərin əsas ideyası insanın yaxşılıq etdikcə dünyaya və həyata olan inamını qorumasıdır.`
+    },
+    {
+      id: 'book-10',
+      year: '1986',
+      src: 'assets/images/kitablar/1986.png',
+      title: 'Sünbül ətri',
+      category: 'Povest və hekayələr toplusu',
+      description: `Bu povest və hekayələr toplusunda uşaqlıq xatirələri, ailə münasibətləri və insanın keçmişlə bağlı duyğuları əks olunur. "O illərin uşaqları" povesti kitabın əsas əsərlərindən biridir. Hekayələrdə ana və ata sevgisi, uşaqlıq dünyası, dostluq və insan yaddaşı kimi mövzulara toxunulur. Müəllif sadə həyat hadisələrindən istifadə edərək oxucuda nostalji və səmimiyyət hissi yaradır. Kitab insanın keçmişinə, köklərinə və onu formalaşdıran dəyərlərə bağlılığını ön plana çıxarır.`
+    },
+    {
+      id: 'book-11',
+      year: '1989',
+      src: 'assets/images/kitablar/1989.png',
+      title: 'Söz gülləsi',
+      category: 'Roman və povestlər toplusu',
+      description: `Roman və povestlərdən ibarət olan bu kitabda cəmiyyət, insan münasibətləri və həyatın ziddiyyətləri bədii şəkildə təqdim edilir. Topluda "Zəlzələ" romanı ilə yanaşı, "Kişilər az yaşadı" və "Söz gülləsi" povestləri yer alır. Müəllif insan xarakterlərini, ictimai hadisələri və mənəvi qarşıdurmaları əsərlərinin əsas xəttinə çevirir. Kitabın adı sözün gücünə, onun insanlara təsirinə və bəzən silah qədər kəskin ola bilməsinə işarə edir. Əsərlər oxucunu sözün məsuliyyəti və insan davranışları haqqında düşünməyə dəvət edir.`
+    },
+    {
+      id: 'book-12',
+      year: '1992',
+      src: 'assets/images/kitablar/1992.png',
+      title: 'Dünyanın axırı',
+      category: 'Roman, sənədli povest, povest və hekayələr toplusu',
+      description: `Bu kitabda eyni adlı roman, sənədli povest, povest və hekayələr toplanıb. Müəllif həyatın mürəkkəb tərəflərini, ictimai dəyişiklikləri və insanın çətin şəraitdə verdiyi qərarları təsvir edir. "Ceviz ağacı" sənədli povestində Nazim Hikmətin həyatı və mübarizəsi diqqət mərkəzindədir. Digər əsərlərdə insan xarakteri, qorxu, cəsarət və həyatın gözlənilməz hadisələri ön plana çıxır. Kitabın ümumi məzmunu insanın həm şəxsi, həm də ictimai sınaqlar qarşısında mövqeyini araşdırır.`
+    },
+    {
+      id: 'book-13',
+      year: '1994',
+      src: 'assets/images/kitablar/1995.png',
+      title: 'Başımıza gələnlər',
+      category: 'Sənədli povest',
+      description: `Bu sənədli povest Qarabağ problemi və Azərbaycan xalqının üzləşdiyi faciəli hadisələrə həsr olunub. Müəllif baş verənləri sənədli yanaşma ilə təqdim edərək xalqın yaşadığı ağrıları və tarixi reallıqları əks etdirir. Kitabda milli yaddaş, vətən sevgisi və torpaq itkisi əsas mövzular kimi çıxış edir. Əsərə əlavə edilmiş portret cizgilərində Niyazi, Qara Qarayev və Fikrət Əmirov kimi görkəmli şəxsiyyətlər haqqında da məlumatlar yer alır. Kitab həm tarixi yaddaşın qorunmasına, həm də milli düşüncənin güclənməsinə xidmət edir.`
+    },
+    {
+      id: 'book-14',
+      year: '1998',
+      src: 'assets/images/kitablar/1998.png',
+      title: 'Azərbaycan və türk dünyası',
+      category: 'Elmi-tədqiqat',
+      description: `Bu kitab Azərbaycan və Türkiyə arasında ədəbi-mədəni əlaqələrin araşdırılmasına həsr olunub. Müəllif XX əsr türk ədəbiyyatının Azərbaycanda tədqiqi məsələlərinə diqqət yetirir. Eyni zamanda, radionun türkcə verilişlərinin iki xalq arasındakı münasibətlərin inkişafındakı rolunu araşdırır. Kitabda ortaq dil, ədəbiyyat, mədəniyyət və tarixi bağlar əsas istiqamətləri təşkil edir. Əsər Azərbaycan və türk dünyasının mənəvi yaxınlığını elmi baxımdan təqdim edən dəyərli tədqiqatdır.`
+    },
+    {
+      id: 'book-15',
+      year: '1998',
+      src: 'assets/images/kitablar/1999.png',
+      title: 'Müasir türk dramaturgiyası',
+      category: 'Elmi-tədqiqat',
+      description: `Bu elmi əsər türk ədəbiyyatında dramaturgiyanın formalaşması və inkişafı prosesini araşdırır. Kitabda müasir türk dramaturgiyasının mövzu dairəsi və bədii xüsusiyyətləri təhlil olunur. Nazim Hikmət, Əziz Nesin, Haldun Taner və Necati Cumalı kimi dramaturqların yaradıcılığına xüsusi diqqət yetirilir. Müəllif onların əsərləri vasitəsilə türk teatrının inkişaf istiqamətlərini və dramaturji yeniliklərini izah edir. Kitab türk dramaturgiyasını öyrənən tələbələr, tədqiqatçılar və ədəbiyyatsevərlər üçün əhəmiyyətli mənbədir.`
+    },
+    {
+      id: 'book-16',
+      year: '1999',
+      src: 'assets/images/kitablar/2000.png',
+      title: 'Yanan zürafə',
+      category: 'Xatirələr',
+      description: `"Yanan zürafə" Aqşin Babayevin xatirələr janrında qələmə aldığı əsərdir. Kitab müəllifin şəxsi yaddaşını, həyat təcrübəsini və müxtəlif dövrlərdə qarşılaşdığı insanlarla bağlı xatirələrini əks etdirir. Burada onun dünyagörüşünün formalaşmasına təsir edən hadisələr və mənəvi düşüncələri ön plana çıxır. Əsər yazıçının həyatına və şəxsiyyətinə daha yaxından nəzər salmaq imkanı yaradır. Kitabın əsas dəyəri şəxsi xatirələr vasitəsilə bir dövrün və insanların yaddaşını yaşatmasıdır.`
+    },
+    {
+      id: 'book-17',
+      year: '1999',
+      src: 'assets/images/kitablar/2005.png',
+      title: 'Kino sənətinin təməl daşı',
+      category: 'Metodik vəsait',
+      description: `Bu kitab kino sənətinin əsasını təşkil edən ssenari yaradıcılığına həsr olunmuş metodik vəsaitdir. Müəllif ssenarinin mahiyyəti, quruluşu və ekran əsərinin hazırlanmasındakı əhəmiyyətini izah edir. Kitabda Aqşin Babayevin "Ürəkdən ürəyə yollar görünür", "Pikasso", "Vida", "Bir parça həyat" və "Azərbaycandan ayrı" ssenariləri təqdim olunur. Nəzəri məlumatlarla yanaşı, müəllifin öz yaradıcılıq nümunələri də oxucuya praktiki təsəvvür qazandırır. Nəşr kino və ssenari sənəti ilə maraqlananlar üçün faydalı mənbədir.`
+    },
+    {
+      id: 'book-18',
+      year: '1999',
+      src: 'assets/images/kitablar/2011.png',
+      title: 'Kino... Kino...',
+      category: 'Kino sənəti haqqında publisistik yazılar',
+      description: `Bu kitab Azərbaycan və türk kino sənətinin tanınmış nümayəndələrinə, onların yaradıcılığına və sənətdəki xidmətlərinə həsr olunub. Müəllif kino tarixini ayrı-ayrı sənətkarların həyat və fəaliyyətləri vasitəsilə təqdim edir. Kitabda Eldar Quliyev, Kamil Rüstəmbəyov, Eldəniz Zeynalov və Türkan Şoray kimi sənət adamları haqqında yazılar yer alır. Teatr və kino sənətinin qarşılıqlı əlaqələri, rejissor üslubu və aktyor sənətkarlığı da diqqət mərkəzindədir. Əsər kino mədəniyyətinin inkişafına töhfə vermiş şəxsiyyətlərin yaradıcılıq irsini tanıdır.`
+    },
+    {
+      id: 'book-19',
+      year: '2000',
+      src: 'assets/images/kitablar/2012.png',
+      title: '100 yaşlı Nazim Hikmət',
+      category: 'Ədəbi-tədqiqat və xatirələr',
+      description: `Bu kitab böyük türk şairi Nazim Hikmətin həyatını və yaradıcılığını əhatə edən geniş tədqiqat və xatirələr toplusudur. Aqşin Babayev şairlə bağlı şəxsi görüşlərini, onun haqqında apardığı araşdırmaları və müxtəlif sənət adamlarının xatirələrini oxucuya çatdırır. Əsərdə Nazim Hikmətin Azərbaycanla əlaqələri, dostluqları, ədəbi fəaliyyəti və əsərlərinin müxtəlif ölkələrdəki taleyi araşdırılır. Şairin yaradıcılığının kino, teatr və musiqi ilə əlaqələri də geniş şəkildə təqdim olunur. Kitab Nazim Hikmətin həyatını və ədəbi irsini dərindən öyrənmək istəyənlər üçün mühüm mənbədir.`
+    },
+    {
+      id: 'book-20',
+      year: '2000',
+      src: 'assets/images/kitablar/2015.png',
+      title: 'Azərbaycan kino sənətində ədəbi əsərlərin təcəssümü',
+      category: 'Elmi-tədqiqat',
+      description: `Aydın Kazımzadə ilə birlikdə yazılmış bu kitab Azərbaycan ədəbiyyatı ilə kino sənəti arasındakı əlaqələri araşdırır. Müəlliflər müxtəlif yazıçıların əsərlərinin ekranlaşdırılmasını və ədəbi mətnlərin kino dilində necə ifadə olunduğunu təhlil edirlər. Kitabda Abdulla Şaiq, Anar, Bəxtiyar Vahabzadə, İlyas Əfəndiyev, Cəfər Cabbarlı və digər ədiblərin yaradıcılığına müraciət olunur. Əsərdə ədəbiyyat və kino münasibətləri tarixilik və müasirlik baxımından nəzərdən keçirilir. Nəşr Azərbaycan kino tarixini və ədəbi əsərlərin ekran taleyini araşdıranlar üçün dəyərli tədqiqatdır.`
+    },
+    {
+      id: 'book-21',
+      year: '2001',
+      src: 'assets/images/kitablar/2016.png',
+      title: 'Türkiyə ədəbiyyatı müntəxəbatı',
+      category: 'Ədəbi müntəxəbat',
+      description: `Bu kitab türk ədəbiyyatının müxtəlif dövrlərini və görkəmli nümayəndələrini əhatə edən ədəbi müntəxəbatdır. Burada qədim türk ədəbiyyatından başlayaraq müasir dövrə qədər uzanan zəngin ədəbi inkişaf yolu təqdim olunur. Yunus Əmrə, Cəlaləddin Rumi, Namiq Kamal, Tofiq Fikrət, Nazim Hikmət və digər tanınmış müəlliflər haqqında məlumat verilir. Kitab türk ədəbiyyatının janrlarını, ədəbi cərəyanlarını və əsas nümayəndələrini tanımaq üçün hazırlanıb. Əsər tələbələr və türk ədəbiyyatına maraq göstərən oxucular üçün maarifləndirici mənbədir.`
+    },
+    {
+      id: 'book-22',
+      year: '2002',
+      src: 'assets/images/kitablar/2016a.png',
+      title: 'Qələm və mikrofon',
+      category: 'Publisistik yazılar və radio-jurnalistika',
+      description: `Bu kitab Aqşin Babayevin jurnalistika və radio sahəsindəki çoxillik təcrübəsini əks etdirən publisistik yazılar toplusudur. Müəllif Azərbaycan radiosunun inkişafı, informasiya fəaliyyəti və jurnalistikanın cəmiyyətdəki rolu haqqında fikirlərini bölüşür. Kitabda "Körpü" radio verilişinin yaranması, Azərbaycan radiosunun janr xüsusiyyətləri və milli musiqinin təbliği kimi mövzulara geniş yer verilir. Müsahibələr və yol qeydləri vasitəsilə müəllifin peşəkar fəaliyyəti və müxtəlif görüşlərdən aldığı təəssüratlar təqdim olunur. Əsər jurnalistika və radio tarixini öyrənmək istəyənlər üçün əhəmiyyətli mənbədir.`
+    },
+    {
+      id: 'book-23',
+      year: '2002',
+      src: 'assets/images/kitablar/2016b.png',
+      title: 'Bir içim su istədim',
+      category: 'Şeirlər toplusu',
+      description: `Bu kitab Aqşin Babayevin poetik düşüncələrini bir araya gətirən şeirlər toplusudur. Şeirlərdə Vətən sevgisi, məhəbbət, ayrılıq, qürbət, ailə və həyat haqqında fəlsəfi düşüncələr əsas yer tutur. Müəllif insanın daxili dünyasını, zamanın keçiciliyini və ömür boyu yaşadığı duyğuları səmimi poetik dillə ifadə edir. Bəzi şeirlərdə ictimai məsələlərə, milli dəyərlərə və insanın mənəvi məsuliyyətinə də toxunulur. Kitabın ümumi ruhu insanın sevgi, ümid və mənəvi dayaq axtarışını əks etdirir.`
+    }
   ],
   quotes: [
     { text: 'Ən böyük faciə insanın özünün öz gözündən düşməsidir...', source: 'Aqşin Babayev' },

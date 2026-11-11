@@ -215,9 +215,7 @@ if ('IntersectionObserver' in window) {
     const cards = data.bookCovers.map((book, index) => {
       const card = document.createElement("article");
       card.className = "book-card";
-      card.dataset.title = book.title;
-      card.dataset.category = book.category;
-      card.dataset.description = book.description;
+      card.dataset.bookId = book.id;
 
       const button = document.createElement("button");
       button.type = "button";
@@ -728,6 +726,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ) return;
 
   const cards = [...track.querySelectorAll(".book-card")];
+  const booksById = new Map(window.siteData.bookCovers.map((book) => [book.id, book]));
   let lastFocused = null;
   let requestedScrollLeft = track.scrollLeft;
 
@@ -797,13 +796,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateGallery();
 
-  function openBook(card) {
+  function openBook(bookId) {
+    const book = booksById.get(bookId);
+    if (!book) {
+      console.error(`Kitab məlumatı tapılmadı: ${bookId}`);
+      return;
+    }
+
     lastFocused = document.activeElement;
 
-    modalTitle.textContent = card.dataset.title || "Aqşin Babayev";
-    modalCategory.textContent = card.dataset.category || "Ədəbi irs";
-    modalDescription.textContent =
-      card.dataset.description || "Əsər haqqında məlumat hazırlanır.";
+    modalTitle.textContent = book.title;
+    modalCategory.textContent = `${book.year} · ${book.category}`;
+    modalDescription.textContent = book.description;
 
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
@@ -824,7 +828,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   track.querySelectorAll(".book-card").forEach(card => {
     const button = card.querySelector(".book-open");
-    if (button) button.addEventListener("click", () => openBook(card));
+    if (button) button.addEventListener("click", () => openBook(card.dataset.bookId));
   });
 
   modalClose.addEventListener("click", closeBook);
