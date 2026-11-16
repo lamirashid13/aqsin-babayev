@@ -6228,7 +6228,7 @@ blockquote,
 
 .audio-page {
   color: #202a33;
-  background: #f2ede5;
+  background: #202a33;
 }
 
 .audio-back-wrap {
@@ -6236,6 +6236,9 @@ blockquote,
 }
 
 .audio-back-link {
+  position: relative;
+  top: 6px;
+  left: -6px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
