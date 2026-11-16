@@ -5161,7 +5161,8 @@ html {
 .gallery-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   background: #e9dfcf;
 }
 
@@ -6010,8 +6011,8 @@ blockquote,
   flex: 0 0 auto;
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: center center;
   background: var(--gallery-navy);
 }
 
