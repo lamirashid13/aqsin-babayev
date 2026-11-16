@@ -6593,38 +6593,6 @@ blockquote,
   margin-bottom: 12px;
 }
 
-.audio-playlist-toggle {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 9px 0;
-  color: #202a33;
-  border: 0;
-  background: transparent;
-  text-align: left;
-  font: 500 1.45rem/1.2 "Cormorant Garamond", Georgia, serif;
-}
-
-.audio-playlist-toggle svg {
-  width: 19px;
-  height: 19px;
-  flex: 0 0 auto;
-  stroke: #a77f53;
-  stroke-width: 1.6;
-  transition: transform 180ms ease;
-}
-
-.audio-playlist-toggle[aria-expanded="true"] svg {
-  transform: rotate(180deg);
-}
-
-.audio-playlist-toggle:focus-visible {
-  outline: 2px solid #b58b60;
-  outline-offset: 4px;
-}
-
 .audio-playlist {
   display: grid;
   flex: 0 0 250px;
@@ -6633,7 +6601,7 @@ blockquote,
   min-height: 250px;
   max-height: 250px;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   overscroll-behavior: contain;
   padding: 0;
   margin: 0;
@@ -6659,33 +6627,8 @@ blockquote,
   background: rgba(167, 127, 83, 0.55);
 }
 
-.audio-playlist.is-expanded {
-  overflow-y: auto;
-}
-
 .audio-playlist-item {
   border-top: 1px solid rgba(32, 42, 51, 0.1);
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.audio-playlist.is-expanded .audio-playlist-item:nth-child(n+6) {
-  animation: audio-playlist-item-reveal 220ms ease both;
-}
-
-.audio-playlist.is-collapsing .audio-playlist-item:nth-child(n+6) {
-  opacity: 0;
-  transform: translateY(-3px);
-}
-
-@keyframes audio-playlist-item-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(3px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .audio-track-button {
@@ -6832,11 +6775,9 @@ blockquote,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .audio-playlist-toggle svg,
   .audio-back-link,
   .audio-control,
   .audio-playlist,
-  .audio-playlist-item,
   .audio-control.is-primary svg {
     transition: none;
     animation: none;

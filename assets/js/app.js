@@ -1244,7 +1244,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 (() => {
   const playlistRoot = document.getElementById("audioPlaylist");
-  const playlistToggle = document.getElementById("audioPlaylistToggle");
   const titleElement = document.getElementById("audioTrackTitle");
   const progressElement = document.getElementById("audioProgress");
   const currentTimeElement = document.getElementById("audioCurrentTime");
@@ -1254,7 +1253,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const forwardButton = document.getElementById("forwardButton");
   const statusElement = document.getElementById("audioStatus");
 
-  if (!playlistRoot || !playlistToggle || !titleElement || !progressElement ||
+  if (!playlistRoot || !titleElement || !progressElement ||
       !currentTimeElement || !remainingElement || !playPauseButton ||
       !rewindButton || !forwardButton || !statusElement) return;
 
@@ -1303,11 +1302,6 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.preload = "metadata";
   let currentIndex = 0;
   let isPlaying = false;
-  const playlistItems = [];
-  const initialVisibleTrackCount = 5;
-  let playlistExpanded = false;
-  let playlistAnimationTimer;
-  const playlistCollapseAnimationDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 220;
 
   const playIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M8 5.5v13l10-6.5L8 5.5z' /></svg>";
   const pauseIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M7 5h4v14H7zm6 0h4v14h-4z' /></svg>";
@@ -1387,43 +1381,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateProgressBar();
   }
 
-  playlistToggle.addEventListener("click", () => {
-    const expanded = !playlistExpanded;
-    if (playlistAnimationTimer) window.clearTimeout(playlistAnimationTimer);
-    if (expanded) {
-      playlistItems.forEach((item) => {
-        item.hidden = false;
-      });
-      playlistRoot.scrollTop = 0;
-      playlistRoot.style.overflowY = "auto";
-    } else {
-      playlistRoot.scrollTop = 0;
-      playlistRoot.style.overflowY = "hidden";
-    }
-
-    playlistExpanded = expanded;
-    playlistToggle.setAttribute("aria-expanded", String(expanded));
-    playlistToggle.querySelector("span").textContent =
-      expanded ? "Daha az səs göstər" : "Bütün səsləri göstər";
-    playlistRoot.classList.toggle("is-expanded", expanded);
-    playlistRoot.classList.toggle("is-collapsing", !expanded);
-
-    if (!expanded) {
-      playlistAnimationTimer = window.setTimeout(() => {
-        if (!playlistExpanded) {
-          playlistItems.forEach((item, index) => {
-            item.hidden = index >= initialVisibleTrackCount;
-          });
-          playlistRoot.classList.remove("is-collapsing");
-        }
-      }, playlistCollapseAnimationDuration);
-    }
-  });
-
   tracks.forEach((track, index) => {
     const item = document.createElement("li");
     item.className = "audio-playlist-item";
-    item.hidden = index >= initialVisibleTrackCount;
     const button = document.createElement("button");
     button.type = "button";
     button.className = "audio-track-button";
@@ -1436,7 +1396,6 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => loadTrack(index, true));
     item.appendChild(button);
     playlistRoot.appendChild(item);
-    playlistItems.push(item);
   });
 
   playPauseButton.addEventListener("click", () => {
