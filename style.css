@@ -792,6 +792,13 @@ button { cursor: pointer; }
   color: rgba(255,255,255,0.66);
 }
 
+.site-footer--compact {
+  padding-top: 0;
+}
+
+.site-footer--compact .footer-bottom {
+  margin-top: 0;
+}
 
 @media (max-width: 1024px) {
   .topbar-inner { flex-wrap: wrap; justify-content: center; }
@@ -5963,10 +5970,14 @@ blockquote,
 .photo-gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 24px;
 }
 
 .photo-gallery-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   min-width: 0;
   margin: 0;
   cursor: pointer;
@@ -5996,17 +6007,22 @@ blockquote,
 
 .photo-gallery-card img {
   display: block;
+  flex: 0 0 auto;
   width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background: var(--gallery-navy);
 }
 
 .photo-gallery-card figcaption {
   display: grid;
   gap: 7px;
-  min-height: 104px;
+  height: 132px;
+  min-height: 132px;
+  flex: 0 0 132px;
   align-content: center;
+  overflow: hidden;
   padding: 14px 16px;
 }
 
@@ -6068,7 +6084,7 @@ blockquote,
   line-height: 1.9;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
   .photo-gallery-container {
     width: calc(100% - 40px);
   }
@@ -6120,7 +6136,9 @@ blockquote,
   }
 
   .photo-gallery-card figcaption {
-    min-height: 76px;
+    height: 158px;
+    min-height: 158px;
+    flex-basis: 158px;
     padding: 10px;
   }
 
@@ -6150,37 +6168,6 @@ blockquote,
   }
 }
 
-.audio-archive-entry {
-  padding: 46px 0;
-  background: #eee7dc;
-  border-top: 1px solid rgba(32, 42, 51, 0.1);
-  border-bottom: 1px solid rgba(32, 42, 51, 0.1);
-}
-
-.audio-archive-entry__inner {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 24px;
-}
-
-.audio-archive-entry__icon {
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  color: #b58b60;
-  border: 1px solid rgba(181, 139, 96, 0.42);
-}
-
-.audio-archive-entry__icon svg {
-  width: 38px;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-}
-
-.audio-archive-entry__eyebrow,
 .audio-playlist-label {
   color: #9c7951;
   font-size: 0.68rem;
@@ -6188,100 +6175,8 @@ blockquote,
   letter-spacing: 0.16em;
 }
 
-.audio-archive-entry__copy h2 {
-  margin: 3px 0 0;
-  color: #202a33;
-  font: 400 clamp(2rem, 3vw, 2.8rem)/1 "Cormorant Garamond", Georgia, serif;
-}
-
-.audio-archive-entry__copy h2 em {
-  color: #B89568;
-}
-
-.audio-archive-entry__copy p {
-  margin: 8px 0 0;
-  color: #56616a;
-  font-size: 0.9rem;
-}
-
-.audio-archive-entry__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 0;
-  color: #202a33;
-  border-bottom: 1px solid #b58b60;
-  font-size: 0.77rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.audio-archive-entry__link span {
-  color: #b58b60;
-  font-size: 1rem;
-}
-
-.audio-page-body {
-  background: #f2ede5;
-}
-
-.audio-page {
-  color: #202a33;
-  background: #202a33;
-}
-
-.audio-back-wrap {
-  padding: 24px 0 6px;
-}
-
-.audio-back-link {
-  position: relative;
-  top: 10px;
-  left: -8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 19px;
-  color: #d3b48e;
-  border: 1px solid rgba(211, 180, 142, 0.48);
-  border-radius: 999px;
-  background: #2a343d;
-  font: 500 1.05rem/1 "Cormorant Garamond", Georgia, serif;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: color 180ms ease, border-color 180ms ease,
-    background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.audio-back-link svg {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 auto;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 180ms ease;
-}
-
-.audio-back-link:hover,
-.audio-back-link:focus-visible {
-  color: #efd2a8;
-  border-color: rgba(211, 180, 142, 0.9);
-  background: rgba(211, 180, 142, 0.14);
-  box-shadow: 0 0 14px rgba(211, 180, 142, 0.18);
-  transform: translateY(-1px);
-}
-
-.audio-back-link:hover svg,
-.audio-back-link:focus-visible svg {
-  transform: translateX(-3px);
-}
-
-.audio-back-link:focus-visible {
-  outline: 2px solid rgba(167, 127, 83, 0.55);
-  outline-offset: 4px;
+.audio-archive {
+  scroll-margin-top: 86px;
 }
 
 .audio-hero {
@@ -6319,7 +6214,7 @@ blockquote,
   color: #d3b48e;
 }
 
-.audio-hero-copy h1 {
+.audio-hero-copy h2 {
   max-width: 900px;
   margin: 8px 0 0;
   color: #f3eee6;
@@ -6328,7 +6223,7 @@ blockquote,
   text-wrap: balance;
 }
 
-.audio-hero-copy h1 em {
+.audio-hero-copy h2 em {
   color: #B89568;
   font-style: italic;
   font-weight: 400;
@@ -6681,43 +6576,6 @@ blockquote,
 }
 
 @media (max-width: 700px) {
-  .audio-back-wrap {
-    padding: 18px 0 4px;
-  }
-
-  .audio-back-link {
-    padding: 10px 15px;
-    font-size: 1rem;
-  }
-
-  .audio-archive-entry {
-    padding: 30px 0;
-  }
-
-  .audio-archive-entry__inner {
-    grid-template-columns: 54px minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .audio-archive-entry__icon {
-    width: 52px;
-    height: 52px;
-  }
-
-  .audio-archive-entry__icon svg {
-    width: 30px;
-  }
-
-  .audio-archive-entry__copy p {
-    font-size: 0.8rem;
-  }
-
-  .audio-archive-entry__link {
-    grid-column: 2;
-    justify-self: start;
-    padding-top: 4px;
-  }
-
   .audio-hero {
     padding: 34px 0;
   }
@@ -6737,7 +6595,7 @@ blockquote,
     height: 54px;
   }
 
-  .audio-hero-copy h1 {
+  .audio-hero-copy h2 {
     font-size: clamp(2rem, 8vw, 2.7rem);
     line-height: 1.04;
   }
@@ -6779,7 +6637,6 @@ blockquote,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .audio-back-link,
   .audio-control,
   .audio-playlist,
   .audio-control.is-primary svg {

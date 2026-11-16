@@ -24,8 +24,8 @@ Bu layihə Aqşin Babayevin 90 illik yubileyi münasibətilə yaradılmış rəq
 
 - `index.html` — əsas ana səhifə
 - `pages/` — əlavə səhifələr
-- `assets/css/styles.css` — stil və dizayn sistemi
-- `assets/js/app.js` — interaktivlik və filtrlər
+- `style.css` — stil və dizayn sistemi
+- `app.js` — interaktivlik və filtrlər
 - `assets/js/site-data.js` — məlumatlar və fotoqalereya siyahısı
 - `assets/images/placeholder/` — yer tutucu qrafiklər
 

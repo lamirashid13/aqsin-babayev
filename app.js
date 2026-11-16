@@ -25,6 +25,7 @@ if (navToggle && mainNav) {
     wisdom: 'wisdom',
     tributes: 'tributes',
     gallery: 'photo-gallery',
+    audio: 'audio-archive',
     contacts: 'contacts'
   };
 

@@ -9,16 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-social" aria-label="Sosial media">
-          <!-- <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="X">x</a> -->
-        </div>
       </div>
+    </div>
     </div>
 
     <header class="site-header" id="top">
@@ -39,7 +37,7 @@
           <a href="#wisdom" data-section="wisdom">Xatirələr</a>
           <a href="#tributes" data-section="tributes">Müsahibələr</a>
           <a href="#photo-gallery" data-section="gallery">Qalereya</a>
-          <a href="audio.html">Audio arxiv</a>
+          <a href="#audio-archive" data-section="audio">Audio Arxivi</a>
 
         </nav>
       </div>
@@ -284,7 +282,7 @@
         AQŞİN BABAYEV · ELMİ İRS
       </span>
 
-      <h1>İrs yaradan <em>alim</em>.</h1>
+      <h1>İrs yaradan <em>alim</em></h1>
 
       <p>
         Aqşin Babayevin elmi fəaliyyəti Azərbaycan və türk
@@ -401,8 +399,6 @@
         <article class="topic-card">
           <span class="topic-number">03</span>
           <span class="topic-icon">⌘</span>
-
-          <h3 class="topic-title">Elmi-pedaqoji irs</h3>
 
           <p class="topic-description">
             Dərs vəsaitləri, pedaqoji fəaliyyət və
@@ -646,6 +642,93 @@
   </div>
 </section>
 
+<section class="stats-section">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <strong data-count="42">0</strong>
+      <span>Kitab</span>
+    </div>
+    <div class="stat-item">
+      <strong data-count="100">0</strong>
+      <span>Povest və hekayə</span>
+    </div>
+    <div class="stat-item">
+      <strong data-count="27">0</strong>
+      <span>Pyes</span>
+    </div>
+    <div class="stat-item">
+      <strong data-count="212">0</strong>
+      <span>Oçerk və məqalə</span>
+    </div>
+    <div class="stat-item">
+      <strong data-count="42">0</strong>
+      <span>Elmi məqalə</span>
+    </div>
+    <div class="stat-item">
+      <strong data-count="236">0</strong>
+      <span>Aqşin Babayevə həsr olunmuş məqalələr</span>
+    </div>
+  </div>
+</section>
+
+<section class="audio-archive" id="audio-archive" aria-labelledby="audioArchiveHeading">
+  <div class="audio-hero">
+    <div class="container audio-hero-inner">
+      <div class="audio-hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 96 96" fill="none">
+          <rect x="12" y="21" width="72" height="54" rx="3" />
+          <path d="M22 33h12M22 41h12M22 49h12M22 57h12" />
+          <circle cx="60" cy="48" r="15" />
+          <circle cx="60" cy="48" r="7" />
+          <path d="M46 69h28M48 15v6M60 11v10M72 15v6" />
+        </svg>
+      </div>
+      <div class="audio-hero-copy">
+        <span class="section-kicker">AQŞİN BABAYEV · AUDIO ARXİV</span>
+        <h2 id="audioArchiveHeading">Yazıçı və publisist Aqşin Babayevin <em>'Biri var, biri yox'</em> radiolayihəsi</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="audio-player-section" aria-label="Audio dinləmə paneli">
+    <div class="container audio-player-shell">
+      <div class="audio-player">
+        <div class="audio-player-header">
+          <span class="audio-player-label">Biri var, biri yox</span>
+          <svg class="audio-player-wave" viewBox="0 0 96 32" fill="none" aria-hidden="true">
+            <path d="M2 16h4m4-8v16m6-12v8m6-18v28m6-21v14m6-8v4m6-13v22m6-17v12m6-22v32m6-19v6m6-12v18m6-25v32m6-21v10m6-15v20m6-12v4" />
+          </svg>
+        </div>
+
+        <h2 id="audioTrackTitle" class="audio-track-title">Aqşin Babayev</h2>
+        <p id="audioStatus" class="audio-status" aria-live="polite">Audio yüklənir</p>
+
+        <div class="audio-progress-wrap">
+          <input id="audioProgress" class="audio-progress" type="range" min="0" max="0" value="0" step="0.1" aria-label="İfa mövqeyi" />
+        </div>
+
+        <div class="audio-time-row" aria-live="polite">
+          <span id="audioCurrentTime">00:00</span>
+          <span id="audioRemaining">-00:00</span>
+        </div>
+
+        <div class="audio-controls">
+          <button type="button" id="rewindButton" class="audio-control audio-skip-control" aria-label="10 saniyə geri" title="10 saniyə geri"></button>
+          <button type="button" id="playPauseButton" class="audio-control is-primary" aria-label="Səsi başlat" title="Başlat"></button>
+          <button type="button" id="forwardButton" class="audio-control audio-skip-control" aria-label="10 saniyə irəli" title="10 saniyə irəli"></button>
+        </div>
+      </div>
+
+      <aside class="audio-playlist-shell" aria-label="Audio siyahısı">
+        <div class="audio-playlist-heading">
+          <span class="audio-playlist-label">AUDIO ARXİVİ · 38 SƏS YAZISI</span>
+        </div>
+        <ul id="audioPlaylist" class="audio-playlist"></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
 <section class="photo-gallery-section" id="photo-gallery"
          aria-labelledby="photoGalleryTitle">
   <div class="photo-gallery-container">
@@ -689,53 +772,6 @@
   </div>
 </div>
 
-<section class="audio-archive-entry" aria-labelledby="audioArchiveTitle">
-  <div class="container audio-archive-entry__inner">
-    <div class="audio-archive-entry__icon" aria-hidden="true">
-      <svg viewBox="0 0 64 64" fill="none">
-        <path d="M8 25v14M16 18v28M24 25v14M40 25v14M48 18v28M56 25v14" />
-        <path d="M32 10v44" />
-      </svg>
-    </div>
-    <div class="audio-archive-entry__copy">
-      <span class="audio-archive-entry__eyebrow">AQŞİN BABAYEV · RADIO İRSİ</span>
-      <h2 id="audioArchiveTitle">Sözün <em>səsi</em></h2>
-      <p>“Biri var, biri yox” radiolayihəsinin və audio arxivinin səs yazılarını dinləyin.</p>
-    </div>
-    <a class="audio-archive-entry__link" href="audio.html">
-      Audio arxivə keçid <span aria-hidden="true">↗</span>
-    </a>
-  </div>
-</section>
-
-      <section class="stats-section">
-        <div class="container stats-grid">
-          <div class="stat-item">
-            <strong data-count="42">0</strong>
-            <span>Kitab</span>
-          </div>
-          <div class="stat-item">
-            <strong data-count="100">0</strong>
-            <span>Povest və hekayə</span>
-          </div>
-          <div class="stat-item">
-            <strong data-count="27">0</strong>
-            <span>Pyes</span>
-          </div>
-          <div class="stat-item">
-            <strong data-count="212">0</strong>
-            <span>Oçerk və məqalə</span>
-          </div>
-          <div class="stat-item">
-            <strong data-count="42">0</strong>
-            <span>Elmi məqalə</span>
-          </div>
-          <div class="stat-item">
-            <strong data-count="236">0</strong>
-            <span>Aqşin Babayevə həsr olunmuş məqalələr</span>
-          </div>
-        </div>
-      </section>
     </main>
     <div class="modal-overlay" id="aboutModal">
       
@@ -790,27 +826,12 @@
     </div>
 </div>
 
-    <!-- <footer class="site-footer" id="contacts">
-      <div class="container footer-inner">
-        <h2>Aqşin Babayev</h2>
-        <div class="footer-social" aria-label="Sosial media">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="X">x</a>
-          <a href="#" aria-label="TikTok">♪</a>
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Pinterest">P</a>
-        </div>
-        <div class="footer-contact">
-          <span>Aqşin Babayev@demolink.org</span>
-          <span>800-2345-6789</span>
-        </div> -->
-      </div>
-      <div class="footer-bottom">© 2026 Aqşin Babayev</div>
-    </footer>
+<footer class="site-footer site-footer--compact" id="contacts">
+  <div class="footer-bottom">© 2026 Aqşin Babayev</div>
+</footer>
 
     <script src="assets/js/site-data.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="app.js"></script>
 
 
   </body>
