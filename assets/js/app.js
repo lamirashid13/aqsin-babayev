@@ -1062,7 +1062,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const detailText = document.getElementById("research-detail-text");
   const detailWorks = document.getElementById("research-detail-works");
 
-  if (!section || !openButton || !modal || !closeButton) {
+  if (!section) return;
+  if (!openButton || !modal || !closeButton) {
     console.error("Tədqiqat düyməsi və ya modal elementləri tapılmadı.");
     return;
   }
@@ -1239,4 +1240,258 @@ document.addEventListener("DOMContentLoaded", () => {
       closeTopics();
     }
   });
+})();
+
+(() => {
+  const playlistRoot = document.getElementById("audioPlaylist");
+  const playlistToggle = document.getElementById("audioPlaylistToggle");
+  const titleElement = document.getElementById("audioTrackTitle");
+  const progressElement = document.getElementById("audioProgress");
+  const currentTimeElement = document.getElementById("audioCurrentTime");
+  const remainingElement = document.getElementById("audioRemaining");
+  const playPauseButton = document.getElementById("playPauseButton");
+  const rewindButton = document.getElementById("rewindButton");
+  const forwardButton = document.getElementById("forwardButton");
+  const statusElement = document.getElementById("audioStatus");
+
+  if (!playlistRoot || !playlistToggle || !titleElement || !progressElement ||
+      !currentTimeElement || !remainingElement || !playPauseButton ||
+      !rewindButton || !forwardButton || !statusElement) return;
+
+  const tracks = [
+    { title: "Adil İsgəndərov", src: "assets/mp3/Adil İsgəndərov.mp3" },
+    { title: "Aqşin Babayev", src: "assets/mp3/Aqşin Babayev.mp3" },
+    { title: "Cahangir Cahangirov", src: "assets/mp3/Cahangir Cahangirov.mp3" },
+    { title: "Emin Sabitoğlu", src: "assets/mp3/Emin Sabitoğlu.mp3" },
+    { title: "Gülarə Əliyeva", src: "assets/mp3/Gülarə Əliyeva.mp3" },
+    { title: "Gülağa Məmmədov", src: "assets/mp3/Gülağa Məmmədov.mp3" },
+    { title: "Hacıbaba Bağırov", src: "assets/mp3/Hacıbaba Bağırov.mp3" },
+    { title: "Hacıbaba Hüseynov", src: "assets/mp3/Hacıbaba Hüseynov.mp3" },
+    { title: "Həkim Qəni", src: "assets/mp3/Həkim Qəni.mp3" },
+    { title: "Həsən Ebluc", src: "assets/mp3/Həsən Ebluc.mp3" },
+    { title: "Mirzə Babayev", src: "assets/mp3/Mirzə Babayev.mp3" },
+    { title: "Müslüm Maqomayev", src: "assets/mp3/Müslüm Maqomayev.mp3" },
+    { title: "Məmmədbağır Bagırzadə", src: "assets/mp3/Məmmədbağır Bagırzadə.mp3" },
+    { title: "Nazim Hikmət", src: "assets/mp3/Nazim Hikmət.mp3" },
+    { title: "Niyazi", src: "assets/mp3/Niyazi.mp3" },
+    { title: "Nüsrət Kəsəmənli", src: "assets/mp3/Nüsrət Kəsəmənli.mp3" },
+    { title: "Nəsibə Zeynalova", src: "assets/mp3/Nəsibə Zeynalova.mp3" },
+    { title: "Nəsir İmanquliyev", src: "assets/mp3/Nəsir İmanquliyev.mp3" },
+    { title: "Osman Mirzəyev", src: "assets/mp3/Osman Mirzəyev.mp3" },
+    { title: "Qara Qarayev", src: "assets/mp3/Qara Qarayev.mp3" },
+    { title: "Qasım Qasımzadə", src: "assets/mp3/Qasım Qasımzadə.mp3" },
+    { title: "Rafiq Babayev", src: "assets/mp3/Rafiq Babayev.mp3" },
+    { title: "Rauf Kazimovski", src: "assets/mp3/Rauf Kazimovski.mp3" },
+    { title: "Rübabə Muradova", src: "assets/mp3/Rübabə Muradova.mp3" },
+    { title: "Sabit Rəhman", src: "assets/mp3/Sabit Rəhman.mp3" },
+    { title: "Salam & Qəmər Salamzadə", src: "assets/mp3/Salam & Qəmər Salamzadə.mp3" },
+    { title: "Sara Qədimova", src: "assets/mp3/Sara Qədimova.mp3" },
+    { title: "Səid Rüstəmov", src: "assets/mp3/Səid Rüstəmov.mp3" },
+    { title: "Vasif Adıgözəlov", src: "assets/mp3/Vasif Adıgözəlov.mp3" },
+    { title: "Xəlil Rza Ulutürk", src: "assets/mp3/Xəlil Rza Ulutürk.mp3" },
+    { title: "Zeynal Cabbarzadə", src: "assets/mp3/Zeynal Cabbarzadə.mp3" },
+    { title: "İlyas Əfəndiyev", src: "assets/mp3/İlyas Əfəndiyev.mp3" },
+    { title: "Əhsən Dadaşov", src: "assets/mp3/Əhsən Dadaşov.mp3" },
+    { title: "Əkrəm Cəfər", src: "assets/mp3/Əkrəm Cəfər.mp3" },
+    { title: "Əli Kərim", src: "assets/mp3/Əli Kərim.mp3" },
+    { title: "Əliağa Vahid", src: "assets/mp3/Əliağa Vahid.mp3" },
+    { title: "Ələsgər Ələkbərov", src: "assets/mp3/Ələsgər Ələkbərov.mp3" },
+    { title: "Ənvər Əlibəyli", src: "assets/mp3/Ənvər Əlibəyli.mp3" }
+  ];
+
+  const audio = new Audio();
+  audio.preload = "metadata";
+  let currentIndex = 0;
+  let isPlaying = false;
+  const playlistItems = [];
+  const initialVisibleTrackCount = 5;
+  let playlistExpanded = false;
+  let playlistAnimationTimer;
+
+  const playIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M8 5.5v13l10-6.5L8 5.5z' /></svg>";
+  const pauseIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M7 5h4v14H7zm6 0h4v14h-4z' /></svg>";
+  const rewindIcon = "<svg viewBox='0 0 20 14' fill='none' aria-hidden='true'><path d='M8 2 3 6l5 4M3.5 6H10a6 6 0 1 1-3.7 4.7' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg><span class='audio-skip-label' aria-hidden='true'>10</span>";
+  const forwardIcon = "<svg viewBox='0 0 20 14' fill='none' aria-hidden='true'><path d='m12 2 5 4-5 4m4.5-4H10a6 6 0 1 0 3.7 4.7' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg><span class='audio-skip-label' aria-hidden='true'>10</span>";
+
+  function getCollapsedPlaylistHeight() {
+    return playlistItems.slice(0, initialVisibleTrackCount)
+      .reduce((height, item) => height + item.getBoundingClientRect().height, 0);
+  }
+
+  function formatTime(value) {
+    if (!Number.isFinite(value) || value < 0) return "00:00";
+    const totalSeconds = Math.floor(value);
+    return `${String(Math.floor(totalSeconds / 60)).padStart(2, "0")}:${String(totalSeconds % 60).padStart(2, "0")}`;
+  }
+
+  function setStatus(message, isError = false) {
+    statusElement.textContent = message;
+    statusElement.classList.toggle("is-error", isError);
+  }
+
+  function syncPlayButton() {
+    playPauseButton.innerHTML = isPlaying ? pauseIcon : playIcon;
+    playPauseButton.setAttribute("aria-label", isPlaying ? "İfanı dayandır" : "İfanı başlat");
+    playPauseButton.title = isPlaying ? "Dayandır" : "Başlat";
+  }
+
+  function updatePlaylist() {
+    playlistRoot.querySelectorAll(".audio-track-button").forEach((button, index) => {
+      const selected = index === currentIndex;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  }
+
+  function updateProgressBar() {
+    const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+    const current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+    const safeCurrent = Math.min(Math.max(current, 0), duration);
+    const percent = duration > 0 ? (safeCurrent / duration) * 100 : 0;
+
+    progressElement.style.setProperty("--progress", `${percent}%`);
+    progressElement.max = String(duration);
+    progressElement.value = String(safeCurrent);
+    currentTimeElement.textContent = formatTime(safeCurrent);
+    remainingElement.textContent = `-${formatTime(Math.max(0, duration - safeCurrent))}`;
+  }
+
+  function startPlayback() {
+    const result = audio.play();
+    result.then(() => {
+      isPlaying = true;
+      syncPlayButton();
+      setStatus("İfa olunur");
+    }).catch((error) => {
+      isPlaying = false;
+      syncPlayButton();
+      setStatus("Audio başlatıla bilmədi. Fayl yolunu və brauzer icazələrini yoxlayın.", true);
+      console.error(`Audio playback failed for "${tracks[currentIndex].title}".`, error);
+    });
+  }
+
+  function loadTrack(index, autoplay = false) {
+    audio.pause();
+    currentIndex = index;
+    const track = tracks[currentIndex];
+    titleElement.textContent = track.title;
+    isPlaying = false;
+    syncPlayButton();
+    updatePlaylist();
+    setStatus("Audio yüklənir");
+    audio.src = track.src;
+    audio.load();
+    updateProgressBar();
+    if (autoplay) startPlayback();
+  }
+
+  function seekBy(offset) {
+    if (!Number.isFinite(audio.duration)) return;
+    audio.currentTime = Math.min(Math.max(audio.currentTime + offset, 0), audio.duration);
+    updateProgressBar();
+  }
+
+  playlistToggle.addEventListener("click", () => {
+    const expanded = !playlistExpanded;
+    playlistRoot.style.maxHeight = `${playlistRoot.getBoundingClientRect().height}px`;
+    playlistRoot.style.overflowY = "hidden";
+    if (playlistAnimationTimer) window.clearTimeout(playlistAnimationTimer);
+    if (expanded) {
+      playlistItems.forEach((item) => {
+        item.hidden = false;
+      });
+    }
+
+    playlistExpanded = expanded;
+    playlistToggle.setAttribute("aria-expanded", String(expanded));
+    playlistToggle.querySelector("span").textContent =
+      expanded ? "Daha az səs göstər" : "Bütün səsləri göstər";
+    playlistRoot.classList.toggle("is-expanded", expanded);
+    void playlistRoot.offsetHeight;
+
+    window.requestAnimationFrame(() => {
+      const maximumHeight = Math.min(window.innerHeight * 0.54, 500);
+      const targetHeight = expanded
+        ? Math.min(playlistRoot.scrollHeight, maximumHeight)
+        : getCollapsedPlaylistHeight();
+      playlistRoot.style.maxHeight = `${targetHeight}px`;
+      if (expanded) playlistRoot.style.overflowY = "auto";
+    });
+
+    if (!expanded) {
+      playlistAnimationTimer = window.setTimeout(() => {
+        if (!playlistExpanded) {
+          playlistItems.forEach((item, index) => {
+            item.hidden = index >= initialVisibleTrackCount;
+          });
+        }
+      }, 350);
+    }
+  });
+
+  tracks.forEach((track, index) => {
+    const item = document.createElement("li");
+    item.className = "audio-playlist-item";
+    item.hidden = index >= initialVisibleTrackCount;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "audio-track-button";
+    button.setAttribute("aria-label", `Səsi seç: ${track.title}`);
+
+    const name = document.createElement("span");
+    name.className = "audio-track-name";
+    name.textContent = track.title;
+    button.appendChild(name);
+    button.addEventListener("click", () => loadTrack(index, true));
+    item.appendChild(button);
+    playlistRoot.appendChild(item);
+    playlistItems.push(item);
+  });
+  playlistRoot.style.maxHeight = `${getCollapsedPlaylistHeight()}px`;
+
+  playPauseButton.addEventListener("click", () => {
+    if (audio.paused) startPlayback();
+    else {
+      audio.pause();
+      setStatus("İfa dayandırıldı");
+    }
+  });
+  rewindButton.addEventListener("click", () => seekBy(-10));
+  forwardButton.addEventListener("click", () => seekBy(10));
+  progressElement.addEventListener("input", () => {
+    const position = Number(progressElement.value);
+    if (!Number.isFinite(position) || !Number.isFinite(audio.duration)) return;
+    audio.currentTime = Math.min(Math.max(position, 0), audio.duration);
+    updateProgressBar();
+  });
+
+  audio.addEventListener("loadedmetadata", () => {
+    updateProgressBar();
+    if (!isPlaying) setStatus("Audio hazırdır");
+  });
+  audio.addEventListener("timeupdate", updateProgressBar);
+  audio.addEventListener("play", () => {
+    isPlaying = true;
+    syncPlayButton();
+  });
+  audio.addEventListener("pause", () => {
+    isPlaying = false;
+    syncPlayButton();
+  });
+  audio.addEventListener("ended", () => {
+    isPlaying = false;
+    syncPlayButton();
+    audio.currentTime = 0;
+    updateProgressBar();
+    setStatus("İfa tamamlandı");
+  });
+  audio.addEventListener("error", () => {
+    const mediaError = audio.error;
+    setStatus(`Audio faylı yüklənmədi: ${tracks[currentIndex].title}`, true);
+    console.error(`Audio file failed to load: "${tracks[currentIndex].src}".`, mediaError);
+  });
+
+  rewindButton.innerHTML = rewindIcon;
+  forwardButton.innerHTML = forwardIcon;
+  loadTrack(0);
 })();
