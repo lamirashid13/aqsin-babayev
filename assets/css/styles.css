@@ -5297,13 +5297,14 @@ html {
   margin-bottom: 24px;
 }
 
-.research-heading h2 {
-  font: 400 clamp(38px, 4.2vw, 60px)/1.12 "Cormorant Garamond", Georgia, serif;
-  letter-spacing: -1.5px;
+.research-heading h1 {
   margin: 0 0 25px;
+  font: 400 clamp(54px, 6vw, 82px)/0.98 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -2px;
+  text-wrap: balance;
 }
 
-.research-heading h2 em {
+.research-heading h1 em {
   color: #B89568;
   font-style: italic;
   font-weight: 400;
@@ -5704,6 +5705,10 @@ html {
     padding: 70px 6%;
   }
 
+  .research-heading h1 {
+    font-size: clamp(48px, 9vw, 68px);
+  }
+
   .research-inner {
     grid-template-columns: 1fr;
     gap: 35px;
@@ -5723,6 +5728,11 @@ html {
 }
 
 @media (max-width: 480px) {
+  .research-heading h1 {
+    font-size: clamp(44px, 12vw, 56px);
+    letter-spacing: -1px;
+  }
+
   .research-book {
     width: 190px;
     height: 285px;
@@ -6222,32 +6232,46 @@ blockquote,
 }
 
 .audio-back-wrap {
-  padding-top: 20px;
+  padding: 22px 0 16px;
 }
 
 .audio-back-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
+  padding: 12px 19px;
   color: #a77f53;
-  font: 500 0.78rem/1 "DM Sans", sans-serif;
+  border: 1px solid rgba(167, 127, 83, 0.42);
+  border-radius: 999px;
+  background: rgba(181, 139, 96, 0.06);
+  font: 500 1.05rem/1 "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.04em;
   text-decoration: none;
-  transition: color 180ms ease, transform 180ms ease;
+  transition: color 180ms ease, border-color 180ms ease,
+    background-color 180ms ease, transform 180ms ease;
 }
 
 .audio-back-link svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
   stroke: currentColor;
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: transform 180ms ease;
 }
 
 .audio-back-link:hover,
 .audio-back-link:focus-visible {
   color: #755838;
+  border-color: rgba(167, 127, 83, 0.68);
+  background: rgba(181, 139, 96, 0.13);
+  transform: translateY(-1px);
+}
+
+.audio-back-link:hover svg,
+.audio-back-link:focus-visible svg {
   transform: translateX(-3px);
 }
 
@@ -6603,16 +6627,36 @@ blockquote,
 
 .audio-playlist {
   display: grid;
-  max-height: 220px;
+  flex: 0 0 250px;
+  width: 100%;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
   overflow-x: hidden;
   overflow-y: hidden;
   overscroll-behavior: contain;
   padding: 0;
   margin: 0;
   list-style: none;
-  scrollbar-color: #b58b60 rgba(32, 42, 51, 0.08);
+  scrollbar-color: rgba(167, 127, 83, 0.34) transparent;
   scrollbar-width: thin;
-  transition: max-height 320ms ease;
+}
+
+.audio-playlist::-webkit-scrollbar {
+  width: 4px;
+}
+
+.audio-playlist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.audio-playlist::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(167, 127, 83, 0.34);
+}
+
+.audio-playlist::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 127, 83, 0.55);
 }
 
 .audio-playlist.is-expanded {
@@ -6621,6 +6665,27 @@ blockquote,
 
 .audio-playlist-item {
   border-top: 1px solid rgba(32, 42, 51, 0.1);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.audio-playlist.is-expanded .audio-playlist-item:nth-child(n+6) {
+  animation: audio-playlist-item-reveal 220ms ease both;
+}
+
+.audio-playlist.is-collapsing .audio-playlist-item:nth-child(n+6) {
+  opacity: 0;
+  transform: translateY(-3px);
+}
+
+@keyframes audio-playlist-item-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .audio-track-button {
@@ -6669,6 +6734,15 @@ blockquote,
 }
 
 @media (max-width: 700px) {
+  .audio-back-wrap {
+    padding: 16px 0 12px;
+  }
+
+  .audio-back-link {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
   .audio-archive-entry {
     padding: 30px 0;
   }
@@ -6742,10 +6816,6 @@ blockquote,
     margin-bottom: 24px;
   }
 
-  .audio-playlist {
-    max-height: min(54vh, 500px);
-  }
-
   .audio-controls {
     gap: clamp(20px, 7vw, 30px);
   }
@@ -6766,6 +6836,7 @@ blockquote,
   .audio-back-link,
   .audio-control,
   .audio-playlist,
+  .audio-playlist-item,
   .audio-control.is-primary svg {
     transition: none;
     animation: none;

@@ -1307,16 +1307,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialVisibleTrackCount = 5;
   let playlistExpanded = false;
   let playlistAnimationTimer;
+  const playlistCollapseAnimationDuration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 220;
 
   const playIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M8 5.5v13l10-6.5L8 5.5z' /></svg>";
   const pauseIcon = "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M7 5h4v14H7zm6 0h4v14h-4z' /></svg>";
   const rewindIcon = "<svg viewBox='0 0 20 14' fill='none' aria-hidden='true'><path d='M8 2 3 6l5 4M3.5 6H10a6 6 0 1 1-3.7 4.7' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg><span class='audio-skip-label' aria-hidden='true'>10</span>";
   const forwardIcon = "<svg viewBox='0 0 20 14' fill='none' aria-hidden='true'><path d='m12 2 5 4-5 4m4.5-4H10a6 6 0 1 0 3.7 4.7' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg><span class='audio-skip-label' aria-hidden='true'>10</span>";
-
-  function getCollapsedPlaylistHeight() {
-    return playlistItems.slice(0, initialVisibleTrackCount)
-      .reduce((height, item) => height + item.getBoundingClientRect().height, 0);
-  }
 
   function formatTime(value) {
     if (!Number.isFinite(value) || value < 0) return "00:00";
@@ -1393,13 +1389,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   playlistToggle.addEventListener("click", () => {
     const expanded = !playlistExpanded;
-    playlistRoot.style.maxHeight = `${playlistRoot.getBoundingClientRect().height}px`;
-    playlistRoot.style.overflowY = "hidden";
     if (playlistAnimationTimer) window.clearTimeout(playlistAnimationTimer);
     if (expanded) {
       playlistItems.forEach((item) => {
         item.hidden = false;
       });
+      playlistRoot.scrollTop = 0;
+      playlistRoot.style.overflowY = "auto";
+    } else {
+      playlistRoot.scrollTop = 0;
+      playlistRoot.style.overflowY = "hidden";
     }
 
     playlistExpanded = expanded;
@@ -1407,16 +1406,7 @@ document.addEventListener("DOMContentLoaded", () => {
     playlistToggle.querySelector("span").textContent =
       expanded ? "Daha az səs göstər" : "Bütün səsləri göstər";
     playlistRoot.classList.toggle("is-expanded", expanded);
-    void playlistRoot.offsetHeight;
-
-    window.requestAnimationFrame(() => {
-      const maximumHeight = Math.min(window.innerHeight * 0.54, 500);
-      const targetHeight = expanded
-        ? Math.min(playlistRoot.scrollHeight, maximumHeight)
-        : getCollapsedPlaylistHeight();
-      playlistRoot.style.maxHeight = `${targetHeight}px`;
-      if (expanded) playlistRoot.style.overflowY = "auto";
-    });
+    playlistRoot.classList.toggle("is-collapsing", !expanded);
 
     if (!expanded) {
       playlistAnimationTimer = window.setTimeout(() => {
@@ -1424,8 +1414,9 @@ document.addEventListener("DOMContentLoaded", () => {
           playlistItems.forEach((item, index) => {
             item.hidden = index >= initialVisibleTrackCount;
           });
+          playlistRoot.classList.remove("is-collapsing");
         }
-      }, 350);
+      }, playlistCollapseAnimationDuration);
     }
   });
 
@@ -1447,7 +1438,6 @@ document.addEventListener("DOMContentLoaded", () => {
     playlistRoot.appendChild(item);
     playlistItems.push(item);
   });
-  playlistRoot.style.maxHeight = `${getCollapsedPlaylistHeight()}px`;
 
   playPauseButton.addEventListener("click", () => {
     if (audio.paused) startPlayback();
