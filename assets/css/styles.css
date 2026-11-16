@@ -6232,26 +6232,26 @@ blockquote,
 }
 
 .audio-back-wrap {
-  padding: 22px 0 16px;
+  padding: 24px 0 6px;
 }
 
 .audio-back-link {
   position: relative;
-  top: 6px;
-  left: -6px;
+  top: 10px;
+  left: -8px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 12px 19px;
-  color: #a77f53;
-  border: 1px solid rgba(167, 127, 83, 0.42);
+  color: #d3b48e;
+  border: 1px solid rgba(211, 180, 142, 0.48);
   border-radius: 999px;
-  background: rgba(181, 139, 96, 0.06);
+  background: #2a343d;
   font: 500 1.05rem/1 "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.04em;
   text-decoration: none;
   transition: color 180ms ease, border-color 180ms ease,
-    background-color 180ms ease, transform 180ms ease;
+    background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .audio-back-link svg {
@@ -6267,9 +6267,10 @@ blockquote,
 
 .audio-back-link:hover,
 .audio-back-link:focus-visible {
-  color: #755838;
-  border-color: rgba(167, 127, 83, 0.68);
-  background: rgba(181, 139, 96, 0.13);
+  color: #efd2a8;
+  border-color: rgba(211, 180, 142, 0.9);
+  background: rgba(211, 180, 142, 0.14);
+  box-shadow: 0 0 14px rgba(211, 180, 142, 0.18);
   transform: translateY(-1px);
 }
 
@@ -6681,7 +6682,7 @@ blockquote,
 
 @media (max-width: 700px) {
   .audio-back-wrap {
-    padding: 16px 0 12px;
+    padding: 18px 0 4px;
   }
 
   .audio-back-link {
