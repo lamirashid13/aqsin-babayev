@@ -331,7 +331,7 @@ window.siteData = {
       id: 'book-11',
       year: '1989',
       src: 'assets/images/kitablar/1989.png',
-      title: '200 gülləsi',
+      title: 'Söz gülləsi',
       category: 'Roman və povestlər toplusu',
       description: `Roman və povestlərdən ibarət olan bu kitabda cəmiyyət, insan münasibətləri və həyatın ziddiyyətləri bədii şəkildə təqdim edilir. Topluda "Zəlzələ" romanı ilə yanaşı, "Kişilər az yaşadı" və "Söz gülləsi" povestləri yer alır. Müəllif insan xarakterlərini, ictimai hadisələri və mənəvi qarşıdurmaları əsərlərinin əsas xəttinə çevirir. Kitabın adı sözün gücünə, onun insanlara təsirinə və bəzən silah qədər kəskin ola bilməsinə işarə edir. Əsərlər oxucunu sözün məsuliyyəti və insan davranışları haqqında düşünməyə dəvət edir.`
     },
@@ -339,7 +339,7 @@ window.siteData = {
       id: 'book-12',
       year: '1992',
       src: 'assets/images/kitablar/1992.png',
-      title: 'Dünyanın axırımı',
+      title: 'Dünyanın axırı',
       category: 'Roman, sənədli povest, povest və hekayələr toplusu',
       description: `Bu kitabda eyni adlı roman, sənədli povest, povest və hekayələr toplanıb. Müəllif həyatın mürəkkəb tərəflərini, ictimai dəyişiklikləri və insanın çətin şəraitdə verdiyi qərarları təsvir edir. "Ceviz ağacı" sənədli povestində Nazim Hikmətin həyatı və mübarizəsi diqqət mərkəzindədir. Digər əsərlərdə insan xarakteri, qorxu, cəsarət və həyatın gözlənilməz hadisələri ön plana çıxır. Kitabın ümumi məzmunu insanın həm şəxsi, həm də ictimai sınaqlar qarşısında mövqeyini araşdırır.`
     },
