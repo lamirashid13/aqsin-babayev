@@ -313,9 +313,9 @@ window.siteData = {
     },
     {
       id: 'book-09',
-      year: '1984',
+      year: '1982a',
       src: 'assets/images/kitablar/1982a.png',
-      title: 'Dünya vəfalıdır',
+      title: 'Социальные мотивы в современной турецкой драматургии',
       category: 'Povest və hekayələr toplusu',
       description: `Bu kitab insanın həyata, yaxşılığa və mənəvi dəyərlərə inamını əks etdirən povest və hekayələr toplusudur. Əsərlərdə yaxşılıq, sədaqət, ailə, müharibə, qürbət və insan münasibətləri kimi mövzular işlənir. Müəllif insanların qarşılaşdığı çətinlikləri və bu çətinliklərə verdikləri reaksiyaları təsvir edir. Kitabın qürbət hekayələrində vətən həsrəti və yad mühitdə yaşamağın çətinlikləri xüsusi yer tutur. Əsərin əsas ideyası insanın yaxşılıq etdikcə dünyaya və həyata olan inamını qorumasıdır.`
     },
@@ -331,7 +331,7 @@ window.siteData = {
       id: 'book-11',
       year: '1989',
       src: 'assets/images/kitablar/1989.png',
-      title: 'Söz gülləsi',
+      title: '200 gülləsi',
       category: 'Roman və povestlər toplusu',
       description: `Roman və povestlərdən ibarət olan bu kitabda cəmiyyət, insan münasibətləri və həyatın ziddiyyətləri bədii şəkildə təqdim edilir. Topluda "Zəlzələ" romanı ilə yanaşı, "Kişilər az yaşadı" və "Söz gülləsi" povestləri yer alır. Müəllif insan xarakterlərini, ictimai hadisələri və mənəvi qarşıdurmaları əsərlərinin əsas xəttinə çevirir. Kitabın adı sözün gücünə, onun insanlara təsirinə və bəzən silah qədər kəskin ola bilməsinə işarə edir. Əsərlər oxucunu sözün məsuliyyəti və insan davranışları haqqında düşünməyə dəvət edir.`
     },
@@ -339,13 +339,13 @@ window.siteData = {
       id: 'book-12',
       year: '1992',
       src: 'assets/images/kitablar/1992.png',
-      title: 'Dünyanın axırı',
+      title: 'Dünyanın axırımı',
       category: 'Roman, sənədli povest, povest və hekayələr toplusu',
       description: `Bu kitabda eyni adlı roman, sənədli povest, povest və hekayələr toplanıb. Müəllif həyatın mürəkkəb tərəflərini, ictimai dəyişiklikləri və insanın çətin şəraitdə verdiyi qərarları təsvir edir. "Ceviz ağacı" sənədli povestində Nazim Hikmətin həyatı və mübarizəsi diqqət mərkəzindədir. Digər əsərlərdə insan xarakteri, qorxu, cəsarət və həyatın gözlənilməz hadisələri ön plana çıxır. Kitabın ümumi məzmunu insanın həm şəxsi, həm də ictimai sınaqlar qarşısında mövqeyini araşdırır.`
     },
     {
       id: 'book-13',
-      year: '1994',
+      year: '1995',
       src: 'assets/images/kitablar/1995.png',
       title: 'Başımıza gələnlər',
       category: 'Sənədli povest',
@@ -361,75 +361,83 @@ window.siteData = {
     },
     {
       id: 'book-15',
-      year: '1998',
+      year: '1999',
       src: 'assets/images/kitablar/1999.png',
-      title: 'Müasir türk dramaturgiyası',
+      title: 'Yanan zürafə',
       category: 'Elmi-tədqiqat',
       description: `Bu elmi əsər türk ədəbiyyatında dramaturgiyanın formalaşması və inkişafı prosesini araşdırır. Kitabda müasir türk dramaturgiyasının mövzu dairəsi və bədii xüsusiyyətləri təhlil olunur. Nazim Hikmət, Əziz Nesin, Haldun Taner və Necati Cumalı kimi dramaturqların yaradıcılığına xüsusi diqqət yetirilir. Müəllif onların əsərləri vasitəsilə türk teatrının inkişaf istiqamətlərini və dramaturji yeniliklərini izah edir. Kitab türk dramaturgiyasını öyrənən tələbələr, tədqiqatçılar və ədəbiyyatsevərlər üçün əhəmiyyətli mənbədir.`
     },
     {
       id: 'book-16',
-      year: '1999',
+      year: '2000',
       src: 'assets/images/kitablar/2000.png',
-      title: 'Yanan zürafə',
+      title: '100 yaşlı Nazim Hikmət',
       category: 'Xatirələr',
       description: `"Yanan zürafə" Aqşin Babayevin xatirələr janrında qələmə aldığı əsərdir. Kitab müəllifin şəxsi yaddaşını, həyat təcrübəsini və müxtəlif dövrlərdə qarşılaşdığı insanlarla bağlı xatirələrini əks etdirir. Burada onun dünyagörüşünün formalaşmasına təsir edən hadisələr və mənəvi düşüncələri ön plana çıxır. Əsər yazıçının həyatına və şəxsiyyətinə daha yaxından nəzər salmaq imkanı yaradır. Kitabın əsas dəyəri şəxsi xatirələr vasitəsilə bir dövrün və insanların yaddaşını yaşatmasıdır.`
     },
     {
       id: 'book-17',
-      year: '1999',
+      year: '2005',
       src: 'assets/images/kitablar/2005.png',
-      title: 'Kino sənətinin təməl daşı',
+      title: 'Seçilmiş əsərlər',
       category: 'Metodik vəsait',
       description: `Bu kitab kino sənətinin əsasını təşkil edən ssenari yaradıcılığına həsr olunmuş metodik vəsaitdir. Müəllif ssenarinin mahiyyəti, quruluşu və ekran əsərinin hazırlanmasındakı əhəmiyyətini izah edir. Kitabda Aqşin Babayevin "Ürəkdən ürəyə yollar görünür", "Pikasso", "Vida", "Bir parça həyat" və "Azərbaycandan ayrı" ssenariləri təqdim olunur. Nəzəri məlumatlarla yanaşı, müəllifin öz yaradıcılıq nümunələri də oxucuya praktiki təsəvvür qazandırır. Nəşr kino və ssenari sənəti ilə maraqlananlar üçün faydalı mənbədir.`
     },
     {
       id: 'book-18',
-      year: '1999',
+      year: '2011',
       src: 'assets/images/kitablar/2011.png',
-      title: 'Kino... Kino...',
+      title: 'Həyatı, yaradıcılığı',
       category: 'Kino sənəti haqqında publisistik yazılar',
       description: `Bu kitab Azərbaycan və türk kino sənətinin tanınmış nümayəndələrinə, onların yaradıcılığına və sənətdəki xidmətlərinə həsr olunub. Müəllif kino tarixini ayrı-ayrı sənətkarların həyat və fəaliyyətləri vasitəsilə təqdim edir. Kitabda Eldar Quliyev, Kamil Rüstəmbəyov, Eldəniz Zeynalov və Türkan Şoray kimi sənət adamları haqqında yazılar yer alır. Teatr və kino sənətinin qarşılıqlı əlaqələri, rejissor üslubu və aktyor sənətkarlığı da diqqət mərkəzindədir. Əsər kino mədəniyyətinin inkişafına töhfə vermiş şəxsiyyətlərin yaradıcılıq irsini tanıdır.`
     },
     {
       id: 'book-19',
-      year: '2000',
+      year: '2012',
       src: 'assets/images/kitablar/2012.png',
-      title: '100 yaşlı Nazim Hikmət',
+      title: 'Nazim və Azərbaycan',
       category: 'Ədəbi-tədqiqat və xatirələr',
       description: `Bu kitab böyük türk şairi Nazim Hikmətin həyatını və yaradıcılığını əhatə edən geniş tədqiqat və xatirələr toplusudur. Aqşin Babayev şairlə bağlı şəxsi görüşlərini, onun haqqında apardığı araşdırmaları və müxtəlif sənət adamlarının xatirələrini oxucuya çatdırır. Əsərdə Nazim Hikmətin Azərbaycanla əlaqələri, dostluqları, ədəbi fəaliyyəti və əsərlərinin müxtəlif ölkələrdəki taleyi araşdırılır. Şairin yaradıcılığının kino, teatr və musiqi ilə əlaqələri də geniş şəkildə təqdim olunur. Kitab Nazim Hikmətin həyatını və ədəbi irsini dərindən öyrənmək istəyənlər üçün mühüm mənbədir.`
     },
     {
       id: 'book-20',
-      year: '2000',
+      year: '2015',
       src: 'assets/images/kitablar/2015.png',
-      title: 'Azərbaycan kino sənətində ədəbi əsərlərin təcəssümü',
+      title: 'Azərbaycanın elm və mədəniyyət xadimləri (biblioqrafiya)',
       category: 'Elmi-tədqiqat',
       description: `Aydın Kazımzadə ilə birlikdə yazılmış bu kitab Azərbaycan ədəbiyyatı ilə kino sənəti arasındakı əlaqələri araşdırır. Müəlliflər müxtəlif yazıçıların əsərlərinin ekranlaşdırılmasını və ədəbi mətnlərin kino dilində necə ifadə olunduğunu təhlil edirlər. Kitabda Abdulla Şaiq, Anar, Bəxtiyar Vahabzadə, İlyas Əfəndiyev, Cəfər Cabbarlı və digər ədiblərin yaradıcılığına müraciət olunur. Əsərdə ədəbiyyat və kino münasibətləri tarixilik və müasirlik baxımından nəzərdən keçirilir. Nəşr Azərbaycan kino tarixini və ədəbi əsərlərin ekran taleyini araşdıranlar üçün dəyərli tədqiqatdır.`
     },
     {
       id: 'book-21',
-      year: '2001',
+      year: '2016',
       src: 'assets/images/kitablar/2016.png',
-      title: 'Türkiyə ədəbiyyatı müntəxəbatı',
+      title: 'Efir / Səhnə / Ekran',
       category: 'Ədəbi müntəxəbat',
       description: `Bu kitab türk ədəbiyyatının müxtəlif dövrlərini və görkəmli nümayəndələrini əhatə edən ədəbi müntəxəbatdır. Burada qədim türk ədəbiyyatından başlayaraq müasir dövrə qədər uzanan zəngin ədəbi inkişaf yolu təqdim olunur. Yunus Əmrə, Cəlaləddin Rumi, Namiq Kamal, Tofiq Fikrət, Nazim Hikmət və digər tanınmış müəlliflər haqqında məlumat verilir. Kitab türk ədəbiyyatının janrlarını, ədəbi cərəyanlarını və əsas nümayəndələrini tanımaq üçün hazırlanıb. Əsər tələbələr və türk ədəbiyyatına maraq göstərən oxucular üçün maarifləndirici mənbədir.`
     },
     {
       id: 'book-22',
-      year: '2002',
+      year: '2016a',
       src: 'assets/images/kitablar/2016a.png',
-      title: 'Qələm və mikrofon',
+      title: 'O biri dünyanın astanasında',
       category: 'Publisistik yazılar və radio-jurnalistika',
       description: `Bu kitab Aqşin Babayevin jurnalistika və radio sahəsindəki çoxillik təcrübəsini əks etdirən publisistik yazılar toplusudur. Müəllif Azərbaycan radiosunun inkişafı, informasiya fəaliyyəti və jurnalistikanın cəmiyyətdəki rolu haqqında fikirlərini bölüşür. Kitabda "Körpü" radio verilişinin yaranması, Azərbaycan radiosunun janr xüsusiyyətləri və milli musiqinin təbliği kimi mövzulara geniş yer verilir. Müsahibələr və yol qeydləri vasitəsilə müəllifin peşəkar fəaliyyəti və müxtəlif görüşlərdən aldığı təəssüratlar təqdim olunur. Əsər jurnalistika və radio tarixini öyrənmək istəyənlər üçün əhəmiyyətli mənbədir.`
     },
     {
       id: 'book-23',
-      year: '2002',
+      year: '2016b',
       src: 'assets/images/kitablar/2016b.png',
-      title: 'Bir içim su istədim',
+      title: 'Bir yolda gözüm qaldı...',
       category: 'Şeirlər toplusu',
       description: `Bu kitab Aqşin Babayevin poetik düşüncələrini bir araya gətirən şeirlər toplusudur. Şeirlərdə Vətən sevgisi, məhəbbət, ayrılıq, qürbət, ailə və həyat haqqında fəlsəfi düşüncələr əsas yer tutur. Müəllif insanın daxili dünyasını, zamanın keçiciliyini və ömür boyu yaşadığı duyğuları səmimi poetik dillə ifadə edir. Bəzi şeirlərdə ictimai məsələlərə, milli dəyərlərə və insanın mənəvi məsuliyyətinə də toxunulur. Kitabın ümumi ruhu insanın sevgi, ümid və mənəvi dayaq axtarışını əks etdirir.`
+    },
+    {
+      id: 'book-24',
+      year: '2021',
+      src: 'assets/images/kitablar/2021.png',
+      title: 'Seçilmiş əsərlər',
+      category: 'Seçilmiş əsərlər toplusu',
+      description: `Aqşin Babayevin seçilmiş əsərlərindən ibarət kitab.`
     }
   ],
   quotes: [

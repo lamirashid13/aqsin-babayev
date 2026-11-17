@@ -29,7 +29,8 @@ if (navToggle && mainNav) {
     contacts: 'contacts'
   };
 
-  mainNav.querySelectorAll('a[data-section]').forEach((link) => {
+  const sectionLinks = [...mainNav.querySelectorAll('a[data-section]')];
+  sectionLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       const targetId = sectionTargets[link.dataset.section];
       const target = targetId && document.getElementById(targetId);
@@ -46,6 +47,48 @@ if (navToggle && mainNav) {
       }
     });
   });
+
+  const navSections = sectionLinks
+    .map((link) => ({
+      link,
+      section: document.getElementById(sectionTargets[link.dataset.section])
+    }))
+    .filter(({ section }) => section);
+
+  let activeNavFrame = 0;
+  function updateActiveNav() {
+    const header = document.querySelector('.site-header');
+    const activationLine = (header?.getBoundingClientRect().bottom || 0) + 1;
+    let activeSection = navSections[0];
+
+    navSections.forEach((item) => {
+      if (item.section.getBoundingClientRect().top <= activationLine) {
+        activeSection = item;
+      }
+    });
+
+    navSections.forEach(({ link }) => {
+      const isActive = link === activeSection?.link;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function scheduleActiveNavUpdate() {
+    if (activeNavFrame) return;
+    activeNavFrame = window.requestAnimationFrame(() => {
+      activeNavFrame = 0;
+      updateActiveNav();
+    });
+  }
+
+  window.addEventListener('scroll', scheduleActiveNavUpdate, { passive: true });
+  window.addEventListener('resize', scheduleActiveNavUpdate);
+  updateActiveNav();
 }
 
 if (acceptCookie && cookieBanner) {
