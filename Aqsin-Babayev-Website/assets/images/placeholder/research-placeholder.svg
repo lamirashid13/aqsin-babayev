@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f1ea"/>
+  <rect x="120" y="120" width="560" height="300" rx="18" fill="#ded3c1"/>
+  <path d="M200 300c40-80 90-120 150-120s110 40 150 120" fill="none" stroke="#7d101a" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="400" cy="280" r="60" fill="#fff" opacity="0.75"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5f0c14" letter-spacing="5">RESEARCH</text>
+</svg>

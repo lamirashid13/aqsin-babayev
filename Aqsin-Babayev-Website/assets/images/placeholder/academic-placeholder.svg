@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f6f1e9"/>
+  <rect x="120" y="120" width="560" height="280" rx="16" fill="#fff"/>
+  <path d="M140 180h520M140 240h520M140 300h380" stroke="#b29a6a" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="600" cy="300" r="60" fill="#7d101a" opacity="0.12"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5f0c14" letter-spacing="5">ACADEMIC</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4efe8"/>
+  <rect x="180" y="170" width="440" height="260" rx="18" fill="#fff"/>
+  <rect x="220" y="220" width="195" height="28" rx="14" fill="#d9c9af"/>
+  <rect x="220" y="270" width="350" height="18" rx="9" fill="#d9c9af" opacity="0.8"/>
+  <rect x="220" y="310" width="320" height="18" rx="9" fill="#d9c9af" opacity="0.8"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5f0c14" letter-spacing="5">ARCHIVE</text>
+</svg>

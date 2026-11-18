@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#efe9df"/>
+  <rect x="80" y="80" width="640" height="840" rx="22" fill="#d9c9af"/>
+  <circle cx="400" cy="360" r="170" fill="#f4eadc"/>
+  <rect x="240" y="500" width="320" height="220" rx="28" fill="#f4eadc"/>
+  <path d="M280 370c25-90 110-150 200-150s175 60 200 150" fill="none" stroke="#7d101a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M300 660c50-60 92-80 160-80 70 0 110 20 160 80v120H300Z" fill="#7d101a" opacity="0.12"/>
+  <text x="400" y="900" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#5f0c14" letter-spacing="6">PORTRAIT</text>
+</svg>

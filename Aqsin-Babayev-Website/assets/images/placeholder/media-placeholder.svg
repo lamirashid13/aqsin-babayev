@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f1ece4"/>
+  <rect x="70" y="120" width="660" height="340" rx="24" fill="#e8dcc0"/>
+  <circle cx="400" cy="290" r="120" fill="#fff" opacity="0.8"/>
+  <path d="M355 230l120 60-120 60Z" fill="#7d101a" opacity="0.9"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5f0c14" letter-spacing="6">RADIO</text>
+</svg>
