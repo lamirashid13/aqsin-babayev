@@ -453,12 +453,12 @@ window.siteData = {
     { text: 'Sənətkar üçün ən böyük xoşbəxtlik xalqın ürəyinə yol tapa bilməsidir.', source: 'Aqşin Babayev' }
   ],
   gallery: [
-    { title: 'Aqşin Babayevin portreti', category: 'Portret', src: 'assets/images/placeholder/portrait-placeholder.svg', alt: 'Aqşin Babayevin portreti' },
-    { title: 'Məktəb illəri', category: 'Həyat', src: 'assets/images/placeholder/scene-placeholder.svg', alt: 'Məktəb illəri' },
-    { title: 'Radio və televiziya', category: 'Media', src: 'assets/images/placeholder/media-placeholder.svg', alt: 'Radio və televiziya' },
-    { title: 'Akademik fəaliyyət', category: 'Elm', src: 'assets/images/placeholder/academic-placeholder.svg', alt: 'Akademik fəaliyyət' },
-    { title: 'Nâzım Hikmət irsi', category: 'Araşdırma', src: 'assets/images/placeholder/research-placeholder.svg', alt: 'Nâzım Hikmət irsi' },
-    { title: 'Arxiv materialı', category: 'Arxiv', src: 'assets/images/placeholder/archive-placeholder.svg', alt: 'Arxiv materialı' }
+    { title: 'Aqşin Babayevin portreti', category: 'Portret', src: 'assets/images/portret1.jpg', alt: 'Aqşin Babayevin portreti' },
+    { title: 'Məktəb illəri', category: 'Həyat', src: 'assets/images/gallery/pt1.jpg', alt: 'Məktəb illəri' },
+    { title: 'Radio və televiziya', category: 'Media', src: 'assets/images/gallery/pt15.jpg', alt: 'Azərbaycan Dövlət Televiziya və Radio Komitəsinin kollektivi' },
+    { title: 'Akademik fəaliyyət', category: 'Elm', src: 'assets/images/gallery/pt22.jpg', alt: 'Azərbaycan Dövlət Mədəniyyət və İncəsənət Universitetində' },
+    { title: 'Nâzım Hikmət irsi', category: 'Araşdırma', src: 'assets/images/kitablar/2012.png', alt: 'Nazim və Azərbaycan kitabının üz qabığı' },
+    { title: 'Arxiv materialı', category: 'Arxiv', src: 'assets/images/gallery/pt28.jpg', alt: 'Aqşin Babayevin arxiv fotoşəkli' }
   ],
   bibliography: [
     { title: 'Aqşin Babayev haqqında məqalə', type: 'Məqalə', author: 'Aqşin Babayev', publication: 'Azərbaycan mətbuatı', year: '—', note: 'Mənbə üzərində validasiya tələb olunur.' },

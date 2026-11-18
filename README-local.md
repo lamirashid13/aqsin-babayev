@@ -4,17 +4,18 @@ Bu layihə Aqşin Babayevin 90 illik yubileyi münasibətilə yaradılmış rəq
 
 ## Başlamaq
 
-1. Proyekt qovluğuna daxil olun.
+1. Repository-nin əsas qovluğuna daxil olun.
 2. Kompleks serveri işə salın:
    ```bash
-   cd C:\Users\PREDATOR\aqsin-babayev-90
    python -m http.server 8000
    ```
 3. Brauzerdə bu ünvanı açın: http://localhost:8000
 
 ## GitHub və Vercel
 
-- Əsas layihə qovluğu bu repository-nin root qovluğudur: `C:\Users\PREDATOR\aqsin-babayev-90`.
+- Vercel üçün əsas layihə qovluğu repository-nin root qovluğudur.
+- `Aqsin-Babayev-Website/` qovluğu ayrıca paylaşıla bilən sayt paketidir;
+  dəyişikliklər dərc edilməzdən əvvəl uyğun kök faylları ilə sinxronlaşdırılmalıdır.
 - GitHub repository: `lamirashid13/aqsin-babayev`, branch: `main`.
 - Vercel production saytı: `https://aqsin-babayev.vercel.app/`.
 - Vercel layihəsində Root Directory `.` olmalıdır; build command və output directory override edilməməlidir.
@@ -27,7 +28,9 @@ Bu layihə Aqşin Babayevin 90 illik yubileyi münasibətilə yaradılmış rəq
 - `style.css` — stil və dizayn sistemi
 - `app.js` — interaktivlik və filtrlər
 - `assets/js/site-data.js` — məlumatlar və fotoqalereya siyahısı
-- `assets/images/placeholder/` — yer tutucu qrafiklər
+- `assets/images/` — portretlər, kitab üzlükləri və qalereya şəkilləri
+- `assets/fonts/` — yerli şriftlər və onların lisenziyaları
+- `assets/mp3/` — audio arxivi
 
 ## Məzmunu dəyişmək
 
@@ -37,4 +40,5 @@ Bu layihə Aqşin Babayevin 90 illik yubileyi münasibətilə yaradılmış rəq
 
 ## Məhdudiyyətlər
 
-Layihədə istifadə olunan foto, audio və video materiallar hələ tam şəkildə təqdim olunmayıb. Düzgün arxiv şəkilləri əlavə edildikdə, `site-data.js` içindəki yollar dəyişdirilir.
+Sayt arxiv materiallarına görə təxminən 1 GB yer tutur; hostinq xidmətinin
+yükləmə və saxlama limitlərini əvvəlcədən yoxlayın.
