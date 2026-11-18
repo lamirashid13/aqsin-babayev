@@ -250,34 +250,38 @@ window.siteData = {
     {
       id: 'book-01',
       year: '1964',
+      publisher: 'Azərnəşr',
       src: 'assets/images/kitablar/1964.png',
       title: 'Cazibəli üfüqlər',
       category: 'Hekayələr toplusu',
-      description: `Aqşin Babayevin ilk hekayələr toplusu olan bu kitab insan münasibətlərini, həyatın müxtəlif çalarlarını və mənəvi axtarışları əks etdirir. Burada insanın daxili dünyası, keçmişə bağlılığı və ətrafında baş verən hadisələrə münasibəti ön plana çıxır. Müəllif gündəlik həyatda diqqətdən kənarda qalan hissləri və düşüncələri bədii dillə təqdim edir. Kitabda səmimiyyət, sevgi, axtarış və ümid mövzuları əsas yer tutur. Əsər yazıçının erkən yaradıcılıq üslubunu tanımaq üçün əhəmiyyətlidir.`
+      description: `1964-cü ildə Azərnəşrdə çap olunan toplu dörd hekayədən ibarətdir: “Cazibəli üfüqlər”, “Anamın baxışları”, “Onu axtarıram” və “Həmişəbahar”. Hekayələrin qəhrəmanları müasirlərimiz, yüksək arzularla yaşayan nəcib insanlardır; insan münasibətləri, mənəvi dəyərlər və cəmiyyət qarşısında məsuliyyət əsas mövzulardır. Adını kitaba verən hekayənin baş qəhrəmanı jurnalistdir: tikinti meydançasında baş verən yenilikləri izləmək və qələmə almaq onun işinin bir hissəsidir. “Həmişəbahar” hekayəsində isə böyük ailənin yaşlı başçısı həyatsevərliyi və insanlara faydalı olmaq istəyi ilə seçilir. Gələcəyə və inkişafa yönələn bu hekayələr toplusu haqqında Osman Mirzəyevin 1964-cü ildə ayrıca ədəbi-tənqidi məqaləsi dərc olunub.`
     },
     {
       id: 'book-02',
       year: '1967',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1967.png',
       title: 'Həmişəbahar',
       category: 'Hekayələr toplusu',
-      description: `Bu hekayələr toplusunda insan həyatının gözəlliyi, qayğıkeşlik və mənəvi dəyərlər əsas mövzulardır. Müəllif insanların bir-birinə göstərdiyi diqqəti, sevgini və xeyirxahlığı müxtəlif həyat hadisələri vasitəsilə təsvir edir. Kitabda təbiət, zəhmət, dostluq və insan münasibətləri xüsusi yer tutur. Hekayələr oxucunu sadə görünən hadisələrin arxasındakı dərin mənaları görməyə çağırır. Əsərin ümumi ruhunda həyat eşqi və insanlığa inam hiss olunur.`
+      description: `1967-ci ildə Bakıda Gənclik nəşriyyatında çap olunan kitab altı hekayəni birləşdirir: “Həmişəbahar”, “Qayğı”, “Göyərçinlər öpüşür”, “Çiçək və təbəssüm”, “Alın təri” və “Meşin dərili qapı”. Toplunun adında yenilənmə və həyat eşqi duyulur; hekayələrin adları isə qayğı, insan münasibətləri, zəhmət və gündəlik həyatın müxtəlif məqamlarına yönəldir. Nəşr yazıçının 1960-cı illərdəki nəsr yaradıcılığını və hekayə janrındakı ifadə imkanlarını göstərir. Vasif Nəsiboğlunun “Qayğı, məhəbbət” məqaləsi kitab haqqında 1968-ci ildə dərc olunub.`
     },
     {
       id: 'book-03',
       year: '1971',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1971.png',
       title: 'Bir parça həyat',
       category: 'Povest',
-      description: `Bu povest insan həyatının müxtəlif tərəflərini və gündəlik gerçəkliklərin arxasında gizlənən mənəvi məsələləri əks etdirir. Müəllif həyat hadisələrinə insan taleyi və cəmiyyət münasibətləri prizmasından yanaşır. Əsərdə insanın qarşılaşdığı çətinliklər, seçimləri və daxili düşüncələri mühüm əhəmiyyət daşıyır. Yazıçı adi həyat epizodlarından istifadə edərək oxucunu daha geniş düşüncələrə yönəldir. Kitab insan həyatının hər bir parçasının özünəməxsus dəyərə malik olduğunu xatırladır.`
+      description: `Bu povest 1971-ci ildə Gənclik nəşriyyatında ayrıca kitab kimi çap olunub; ondan parçalar 1969-cu ilin dekabrında “Azərbaycan gəncləri” qəzetində dərc edilmişdi. Həmin il əsər Azərbaycan Dövlət Televiziyasında tamaşaya qoyulmuş, quruluşu Ramiz Həsənoğlu hazırlamışdır. Tamaşada Ağasadıq Gəraybəyli, Müxlis Cənizadə və Əminə Yusifqızı iştirak ediblər. Nəşrdən sonra povest haqqında 1971–1972-ci illərdə müxtəlif qəzetlərdə rəylər dərc olunub. Sənəd bu əsərin televiziya tamaşasına çevrilməsi və ədəbi müzakirələrdə yer almasını onun yaradıcılıq tarixinin mühüm hissəsi kimi qeyd edir.`
     },
     {
       id: 'book-04',
       year: '1977',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1977.png',
       title: 'Ağ ulduzlar',
       category: 'Hekayələr toplusu',
-      description: `Aqşin Babayevin bu hekayələr kitabında müharibə, ailə, sevgi, həsrət və insanlıq mövzuları bir araya gəlir. Müəllif xüsusilə müharibənin insan talelərində buraxdığı izləri və ailə münasibətlərinin mənəvi gücünü təsvir edir. Hekayələrdə ana sevgisi, itkilər, xatirələr və ümid hissi diqqət çəkir. Müxtəlif obrazlar vasitəsilə insanın çətinliklər qarşısında göstərdiyi dözüm və mərhəmət nümayiş etdirilir. Kitabın əsas ideyası insan qəlbindəki işığın və yaxşılığın qorunmasıdır.`
+      description: `1977-ci ildə Bakıda Gənclik nəşriyyatında çap olunan hekayələr toplusuna “Qış hekayəti”, “Yandırın işıqları”, “Anamın əsgər oğlu”, “Qərənfil”, “Həsrət”, “Bircə dənə nərgiz”, “Qəlpə”, “Qırmızı şərf” hekayələri və “Yeni il novellaları” daxildir. Mündəricat müxtəlif həyat hadisələrini, insan talelərini və duyğuları əhatə edən nəsr nümunələrini bir araya gətirir. Kitab haqqında 1977-ci ildə Gülhüseyn Kazım, Ağalar Mirzəyev və Qasım Qasımzadə mətbuatda yazılar dərc etdiriblər. “Ağ ulduzlar” hekayəsi sonralar 2005-ci ildə nəşr olunan “Seçilmiş əsərlər”in birinci cildinə də daxil edilib.`
     },
     {
       id: 'book-05',
@@ -290,146 +294,163 @@ window.siteData = {
     {
       id: 'book-06',
       year: '1979',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1979.png',
       title: 'Bir ürəyin hərarəti',
       category: 'Hekayə və povestlər toplusu',
-      description: `Bu kitab insan qəlbinin istiliyini, mərhəməti və mənəvi zənginliyi əks etdirən hekayə və povestlərdən ibarətdir. Əsərlərdə ailə sevgisi, insanlıq, müharibənin ağrıları və həyatın çətin sınaqları təsvir olunur. Müəllif kiçik gündəlik hadisələr vasitəsilə böyük mənəvi həqiqətləri oxucuya çatdırır. Kitabda ata sevgisi, dostluq, vətən həsrəti və insanın yaşamaq mübarizəsi xüsusi yer tutur. Əsərin əsas qayəsi insanı insan edən duyğuların və mərhəmətin əhəmiyyətini göstərməkdir.`
+      description: `1979-cu ildə Bakıda Gənclik nəşriyyatında çap olunan bu hekayə və povestlər toplusuna Qasım Qasımzadə “Arifə bir işarə...” adlı müqəddimə yazıb. Hekayələr sırasında “Ata canı”, “Vida”, “Göyərçin nəğməsi”, “Çörək”, “Qara kağız”, “Günəş istəyirəm”, “Ahtamar”, “Yun köynək” və kitaba adını verən “Bir ürəyin hərarəti” var. Povestlər bölməsində “Mən də bir əsgərəm” və “Halal çörək” təqdim olunur. Beləliklə, nəşr müxtəlif illərdə yazılmış kiçik nəsr nümunələrini və povestləri bir araya gətirir; müəllifin həyat və insan talelərinə bədii münasibətini əks etdirir.`
     },
     {
       id: 'book-07',
       year: '1981',
+      publisher: 'Yazıçı',
       src: 'assets/images/kitablar/1981.png',
       title: 'Kişilər az yaşadı',
       category: 'Povest və hekayələr toplusu',
-      description: `Eyni adlı povest və müxtəlif hekayələrdən ibarət olan bu kitab insan talelərinə və həyatın ağır sınaqlarına həsr olunub. Müəllif insan ömrünün qısalığını, müharibənin yaratdığı faciələri və itkilərin insanların həyatında qoyduğu izləri əks etdirir. Əsərlərdə yaddaş, sədaqət, ailə, vətən və insanlıq mövzuları ön plana çıxır. Yazıçı hadisələri emosional və düşündürücü üslubda təqdim edərək oxucunu həyatın dəyəri haqqında düşünməyə vadar edir. Kitabın ümumi ruhunda itkilərə baxmayaraq insanlıq dəyərlərini qorumaq fikri dayanır.`
+      description: `1981-ci ildə Bakıda Yazıçı nəşriyyatında çap olunan povest və hekayələr toplusuna Mirzə İbrahimov müqəddimə yazıb. Adını verən povestdə Mina xanım həyat yoldaşı Adışirini müharibədə itirir və iki körpəsini tək böyüdür. Qızı Rəna da gənc yaşında dul qalır; başqa birinə olan sevgisi onu şəxsi xoşbəxtliyi ilə sədaqət anlayışı arasında çətin seçim qarşısında qoyur. Ana və qızın oxşar taleləri vasitəsilə əsər müharibənin ailələrdə buraxdığı uzunmüddətli izləri, sevgi, sədaqət və mənəvi məsuliyyət mövzularını araşdırır. Topluda “Yosunlu qaya”, “Sünbül ətri”, “Pərvanə” və başqa hekayələr də yer alır.`
     },
     {
       id: 'book-08',
       year: '1982',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1982.png',
       title: 'Ayrılıq',
       category: 'Povest və hekayələr toplusu',
-      description: `Bu kitabda ayrılıq, həsrət, vətən sevgisi və insan taleləri əsas mövzular kimi təqdim olunur. Eyni adlı povestlə yanaşı, "Xalqın oğlu" povesti və müxtəlif hekayələr insan münasibətlərinin mürəkkəbliyini açır. "Təbriz əfsanəsi", "Unutmaq olmur" və "Sabaha açılan pəncərə" kimi hekayələrdə yaddaş, ümid və keçmişə bağlılıq motivləri diqqət çəkir. Kitabda yumoristik hekayələrə də yer verilməsi əsərin mövzu müxtəlifliyini artırır. Müəllif həm düşündürür, həm də insan həyatının fərqli tərəflərini göstərir.`
+      description: `1982-ci ildə Bakıda Gənclik nəşriyyatında çap olunan topluda “Ayrılıq” və “Xalqın oğlu” povestləri, çoxsaylı hekayələr və yumoristik əsərlər bir araya gətirilib. “Təbriz əfsanəsi”, “Unutmaq olmur”, “Sabaha açılan pəncərə”, “Qərənfillər” və başqa hekayələrlə yanaşı, “Qar”, “Yuxu”, “Yalan” kimi yumoristik nümunələr də yer alır. Adını verən povestdə ayrılıq həm insanların uzaqlaşması, həm də münasibətlərdə yaranan mənəvi məsafə və talelərdəki dəyişikliklərlə əlaqələndirilir. Əsər insan münasibətləri, ailə və mənəvi dəyərlər haqqında düşünməyə yönəldir.`
     },
     {
       id: 'book-09',
-      year: '1982a',
+      year: '1982',
+      publisher: 'Elm',
       src: 'assets/images/kitablar/1982a.png',
-      title: 'Социальные мотивы в современной турецкой драматургии',
-      category: 'Povest və hekayələr toplusu',
-      description: `Bu kitab insanın həyata, yaxşılığa və mənəvi dəyərlərə inamını əks etdirən povest və hekayələr toplusudur. Əsərlərdə yaxşılıq, sədaqət, ailə, müharibə, qürbət və insan münasibətləri kimi mövzular işlənir. Müəllif insanların qarşılaşdığı çətinlikləri və bu çətinliklərə verdikləri reaksiyaları təsvir edir. Kitabın qürbət hekayələrində vətən həsrəti və yad mühitdə yaşamağın çətinlikləri xüsusi yer tutur. Əsərin əsas ideyası insanın yaxşılıq etdikcə dünyaya və həyata olan inamını qorumasıdır.`
+      title: 'Müasir türk dramaturgiyasının ictimai motivləri',
+      category: 'Monoqrafiya',
+      description: `1982-ci ildə Bakıda “Elm” nəşriyyatında rus dilində çap olunan monoqrafiya türk dramaturgiyasının inkişafını, mövzu dairəsini və ictimai məzmununu araşdırır. Tədqiqatda təxminən altmış illik dramaturji proses beş mərhələyə bölünür; müəllif 1860-cı ildə İbrahim Şinasinin “Şairin evlənməsi” əsərindən başlayaraq müxtəlif dövrləri nəzərdən keçirir. Əsərdə Avropa ədəbiyyatının təsiri, türk pyeslərində sosial-siyasi problemlərin əksi və Nazim Hikmət, Əziz Nesin, Haldun Taner, Necati Cumalı, Ədalət Ağaoğlu kimi dramaturqların yaradıcılığı təhlil olunur. Kitab türk ədəbiyyatı və teatrının elmi öyrənilməsinə həsr edilib.`
     },
     {
       id: 'book-10',
       year: '1986',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1986.png',
       title: 'Sünbül ətri',
       category: 'Povest və hekayələr toplusu',
-      description: `Bu povest və hekayələr toplusunda uşaqlıq xatirələri, ailə münasibətləri və insanın keçmişlə bağlı duyğuları əks olunur. "O illərin uşaqları" povesti kitabın əsas əsərlərindən biridir. Hekayələrdə ana və ata sevgisi, uşaqlıq dünyası, dostluq və insan yaddaşı kimi mövzulara toxunulur. Müəllif sadə həyat hadisələrindən istifadə edərək oxucuda nostalji və səmimiyyət hissi yaradır. Kitab insanın keçmişinə, köklərinə və onu formalaşdıran dəyərlərə bağlılığını ön plana çıxarır.`
+      description: `1986-cı ildə Bakıda Gənclik nəşriyyatında çap olunan povest və hekayələr toplusuna “O illərin uşaqları” povesti, “Tərəzi”, “Ana”, “Sünbül ətri”, “Ata canı”, “Göyərçin nəğməsi”, “Qara kağız”, “Yun köynək” və başqa hekayələr daxildir. Nəşr insan taleləri, ailə münasibətləri və mənəvi dəyərlərə həsr olunmuş nəsr nümunələrini bir araya gətirir. Kitabın adını daşıyan hekayədə insan həyatı, xatirələr və duyğular ön plana çıxır. “O illərin uşaqları” povesti və hekayələr toplunun mövzu və janr rəngarəngliyini göstərir.`
     },
     {
       id: 'book-11',
       year: '1989',
+      publisher: 'Yazıçı',
       src: 'assets/images/kitablar/1989.png',
       title: 'Söz gülləsi',
       category: 'Roman və povestlər toplusu',
-      description: `Roman və povestlərdən ibarət olan bu kitabda cəmiyyət, insan münasibətləri və həyatın ziddiyyətləri bədii şəkildə təqdim edilir. Topluda "Zəlzələ" romanı ilə yanaşı, "Kişilər az yaşadı" və "Söz gülləsi" povestləri yer alır. Müəllif insan xarakterlərini, ictimai hadisələri və mənəvi qarşıdurmaları əsərlərinin əsas xəttinə çevirir. Kitabın adı sözün gücünə, onun insanlara təsirinə və bəzən silah qədər kəskin ola bilməsinə işarə edir. Əsərlər oxucunu sözün məsuliyyəti və insan davranışları haqqında düşünməyə dəvət edir.`
+      description: `1989-cu ildə Bakıda Yazıçı nəşriyyatında çap olunan kitab Aqşin Babayevin roman və povestlərini bir araya gətirir. Toplunun tərkibində “Zəlzələ” romanı, “Kişilər az yaşadı” və kitaba adını verən “Söz gülləsi” povestləri var. “Kişilər az yaşadı” əvvəlki nəşrlərdən də tanınan əsərdir. Mənbə digər iki əsərin süjet və obrazları barədə əlavə məlumat vermədiyindən, bu təsvir kitabda göstərilən əsərlərin adları və janrları ilə məhdudlaşır.`
     },
     {
       id: 'book-12',
       year: '1992',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/1992.png',
       title: 'Dünyanın axırı',
       category: 'Roman, sənədli povest, povest və hekayələr toplusu',
-      description: `Bu kitabda eyni adlı roman, sənədli povest, povest və hekayələr toplanıb. Müəllif həyatın mürəkkəb tərəflərini, ictimai dəyişiklikləri və insanın çətin şəraitdə verdiyi qərarları təsvir edir. "Ceviz ağacı" sənədli povestində Nazim Hikmətin həyatı və mübarizəsi diqqət mərkəzindədir. Digər əsərlərdə insan xarakteri, qorxu, cəsarət və həyatın gözlənilməz hadisələri ön plana çıxır. Kitabın ümumi məzmunu insanın həm şəxsi, həm də ictimai sınaqlar qarşısında mövqeyini araşdırır.`
+      description: `1992-ci ildə Bakıda Gənclik nəşriyyatında çap olunan kitabın əsas əsəri eyniadlı romandır; topluya “Ceviz ağacı” sənədli povesti, “Dalan” povesti, “O bir nəfər” və “Qorxusuzluq” hekayələri də daxil edilib. Romanda 1990-cı illərin əvvəllərindəki ictimai-siyasi sarsıntılar adi insanların həyatı üzərindən göstərilir. Əsas obrazlardan sürücü Sərxan və ailəsinin köhnə şəhər məhəlləsindəki yaşayışı, üzləşdikləri çətinliklər əsərin mərkəzindədir. Vəzifə ehtirası, bürokratizm, mənəvi aşınma, insan məsuliyyəti və dəyişən cəmiyyətdə insani dəyərlərin qorunması ön plana çıxır.`
     },
     {
       id: 'book-13',
-      year: '1995',
+      year: '1994',
+      publisher: 'Azərnəşr',
       src: 'assets/images/kitablar/1995.png',
       title: 'Başımıza gələnlər',
-      category: 'Sənədli povest',
-      description: `Bu sənədli povest Qarabağ problemi və Azərbaycan xalqının üzləşdiyi faciəli hadisələrə həsr olunub. Müəllif baş verənləri sənədli yanaşma ilə təqdim edərək xalqın yaşadığı ağrıları və tarixi reallıqları əks etdirir. Kitabda milli yaddaş, vətən sevgisi və torpaq itkisi əsas mövzular kimi çıxış edir. Əsərə əlavə edilmiş portret cizgilərində Niyazi, Qara Qarayev və Fikrət Əmirov kimi görkəmli şəxsiyyətlər haqqında da məlumatlar yer alır. Kitab həm tarixi yaddaşın qorunmasına, həm də milli düşüncənin güclənməsinə xidmət edir.`
+      category: 'Sənədli povest və portret yazıları',
+      description: `1994-cü ildə Bakıda Azərnəşrdə çap olunan kitabın əsasını Qarabağ probleminə həsr edilmiş eyniadlı sənədli povest təşkil edir. Əsər münaqişənin yaratdığı faciələri və dövrün tarixi reallıqlarını sənədli-publisistik üslubda təqdim edir; müəllif yaşananları milli yaddaşda saxlamağa və gələcək nəsillərə çatdırmağa yönəlir. “Portret cizgiləri” bölməsində Niyazi, Qara Qarayev, Fikrət Əmirov, Rəşid Behbudov, Tahir Salahov, Vaqif Mustafazadə, Leyla Bədirbəyli, Mirzə İbrahimov, Rəsul Rza, İlyas Əfəndiyev və başqa şəxsiyyətlər haqqında yazılar yer alır. Eyniadlı povestinə görə Aqşin Babayev 2003-cü ildə “Yaddaş” Milli Mükafatına layiq görülüb.`
     },
     {
       id: 'book-14',
       year: '1998',
+      publisher: 'Hüquq ədəbiyyatı',
       src: 'assets/images/kitablar/1998.png',
       title: 'Azərbaycan və türk dünyası',
       category: 'Elmi-tədqiqat',
-      description: `Bu kitab Azərbaycan və Türkiyə arasında ədəbi-mədəni əlaqələrin araşdırılmasına həsr olunub. Müəllif XX əsr türk ədəbiyyatının Azərbaycanda tədqiqi məsələlərinə diqqət yetirir. Eyni zamanda, radionun türkcə verilişlərinin iki xalq arasındakı münasibətlərin inkişafındakı rolunu araşdırır. Kitabda ortaq dil, ədəbiyyat, mədəniyyət və tarixi bağlar əsas istiqamətləri təşkil edir. Əsər Azərbaycan və türk dünyasının mənəvi yaxınlığını elmi baxımdan təqdim edən dəyərli tədqiqatdır.`
+      description: `1998-ci ildə Bakıda “Hüquq ədəbiyyatı” nəşriyyatında çap olunan tədqiqat Azərbaycan və Türkiyə arasında ədəbi, mədəni və elmi əlaqələrə həsr edilib. Kitabda XX əsr türk ədəbiyyatının Azərbaycanda öyrənilməsi və bu sahədəki araşdırmalar nəzərdən keçirilir. Digər əsas istiqamət Azərbaycan radiosunun türkcə verilişlərinin iki xalq arasında ünsiyyətə və mədəni yaxınlığa təsiridir. Nəşr ortaq ədəbi irsi və Azərbaycan-Türkiyə münasibətlərini araşdırır.`
     },
     {
       id: 'book-15',
       year: '1999',
+      publisher: 'Hüquq ədəbiyyatı',
       src: 'assets/images/kitablar/1999.png',
       title: 'Yanan zürafə',
-      category: 'Elmi-tədqiqat',
-      description: `Bu elmi əsər türk ədəbiyyatında dramaturgiyanın formalaşması və inkişafı prosesini araşdırır. Kitabda müasir türk dramaturgiyasının mövzu dairəsi və bədii xüsusiyyətləri təhlil olunur. Nazim Hikmət, Əziz Nesin, Haldun Taner və Necati Cumalı kimi dramaturqların yaradıcılığına xüsusi diqqət yetirilir. Müəllif onların əsərləri vasitəsilə türk teatrının inkişaf istiqamətlərini və dramaturji yeniliklərini izah edir. Kitab türk dramaturgiyasını öyrənən tələbələr, tədqiqatçılar və ədəbiyyatsevərlər üçün əhəmiyyətli mənbədir.`
+      category: 'Xatirələr',
+      description: `1999-cu ildə Bakıda “Hüquq ədəbiyyatı” nəşriyyatında çap olunan bu xatirə kitabının ön söz müəllifi Vaqif Bəhmənlidir. Aqşin Babayev burada həyat yoluna, yaddaşında iz qoymuş insanlara, görüşlərə və yaşantılara qayıdaraq şəxsi müşahidələrini və təcrübəsini bölüşür. Nəşr keçmiş hadisələrin müəllif yaddaşında buraxdığı izləri və müxtəlif dövrlərdə qurulmuş insan münasibətlərini əhatə edir. Kitab haqqında həmin il mətbuatda Musa Nəbioğlunun və Esmiranın yazıları dərc olunub.`
     },
     {
       id: 'book-16',
       year: '2000',
+      publisher: 'Təhsil mərkəzi',
       src: 'assets/images/kitablar/2000.png',
       title: '100 yaşlı Nazim Hikmət',
-      category: 'Xatirələr',
-      description: `"Yanan zürafə" Aqşin Babayevin xatirələr janrında qələmə aldığı əsərdir. Kitab müəllifin şəxsi yaddaşını, həyat təcrübəsini və müxtəlif dövrlərdə qarşılaşdığı insanlarla bağlı xatirələrini əks etdirir. Burada onun dünyagörüşünün formalaşmasına təsir edən hadisələr və mənəvi düşüncələri ön plana çıxır. Əsər yazıçının həyatına və şəxsiyyətinə daha yaxından nəzər salmaq imkanı yaradır. Kitabın əsas dəyəri şəxsi xatirələr vasitəsilə bir dövrün və insanların yaddaşını yaşatmasıdır.`
+      category: 'Ədəbi-tədqiqat və xatirələr',
+      description: `2000-ci ildə Bakıda “Təhsil” mərkəzində nəşr olunan kitab Nazim Hikmətin həyatına, yaradıcılığına və Azərbaycanla ədəbi-mədəni əlaqələrinə həsr edilib. Tədqiqatçı Aqşin Babayevin şairlə bağlı şəxsi xatirələri, o cümlədən ilk görüşləri və araşdırmalarının formalaşma mərhələləri geniş yer tutur. Ayrı-ayrı bölmələrdə Nazim Hikmətin Rəsul Rza, Süleyman Rüstəm və Səməd Vurğunla əlaqələri, yaradıcılığında Azərbaycanın yeri, pyeslərinin Azərbaycandakı səhnə taleyi və kino ilə münasibəti araşdırılır. Nəşr bioqrafik xatirələri ədəbi tədqiqatla birləşdirir.`
     },
     {
       id: 'book-17',
       year: '2005',
+      publisher: 'Səda',
       src: 'assets/images/kitablar/2005.png',
       title: 'Seçilmiş əsərlər',
-      category: 'Metodik vəsait',
-      description: `Bu kitab kino sənətinin əsasını təşkil edən ssenari yaradıcılığına həsr olunmuş metodik vəsaitdir. Müəllif ssenarinin mahiyyəti, quruluşu və ekran əsərinin hazırlanmasındakı əhəmiyyətini izah edir. Kitabda Aqşin Babayevin "Ürəkdən ürəyə yollar görünür", "Pikasso", "Vida", "Bir parça həyat" və "Azərbaycandan ayrı" ssenariləri təqdim olunur. Nəzəri məlumatlarla yanaşı, müəllifin öz yaradıcılıq nümunələri də oxucuya praktiki təsəvvür qazandırır. Nəşr kino və ssenari sənəti ilə maraqlananlar üçün faydalı mənbədir.`
+      category: 'Seçilmiş əsərlər · I cild',
+      description: `2005-ci ildə Səda nəşriyyatında çap olunmuş “Seçilmiş əsərlər”in birinci cildinə Aqşin Babayevin müxtəlif illərdə yazdığı hekayələr daxildir. Mündəricatda “Ağ ulduzlar” hekayəsi də yer alır. Sənəddə bu cildin digər əsərlərinin tam siyahısı verilmədiyindən, təsvir mənbədə göstərilən məlumatlarla məhdudlaşır.`
     },
     {
       id: 'book-18',
       year: '2011',
+      publisher: 'Elm və təhsil',
       src: 'assets/images/kitablar/2011.png',
-      title: 'Həyatı, yaradıcılığı',
-      category: 'Kino sənəti haqqında publisistik yazılar',
-      description: `Bu kitab Azərbaycan və türk kino sənətinin tanınmış nümayəndələrinə, onların yaradıcılığına və sənətdəki xidmətlərinə həsr olunub. Müəllif kino tarixini ayrı-ayrı sənətkarların həyat və fəaliyyətləri vasitəsilə təqdim edir. Kitabda Eldar Quliyev, Kamil Rüstəmbəyov, Eldəniz Zeynalov və Türkan Şoray kimi sənət adamları haqqında yazılar yer alır. Teatr və kino sənətinin qarşılıqlı əlaqələri, rejissor üslubu və aktyor sənətkarlığı da diqqət mərkəzindədir. Əsər kino mədəniyyətinin inkişafına töhfə vermiş şəxsiyyətlərin yaradıcılıq irsini tanıdır.`
+      title: 'Aqşin Babayev. Həyatı, yaradıcılığı',
+      category: 'Bioqrafik tədqiqat',
+      description: `Sevinc Abasovanın 2011-ci ildə Bakıda “Elm və təhsil” nəşriyyatında çap olunmuş kitabı yazıçı, dramaturq, jurnalist və alim Aqşin Babayevin həyat və yaradıcılıq yolunu araşdırır. “Tikdim ki, izim qala”, “60–70-ci illərdə ədəbiyyat – sənətkar və zaman problemi”, “Kiçik janrın ibrət dərsləri” və “Povestlərdən düşən işıq” bölmələri onun bədii irsinə, hekayə və povestlərinə həsr edilib. “Bir parça həyat” və “Dünyanın axırı” haqqında bölmələrlə yanaşı, nəşr dramaturgiya, televiziya, radio, jurnalistika, humanitar elm və pedaqoji fəaliyyət sahələrini də əhatə edir.`
     },
     {
       id: 'book-19',
       year: '2012',
       src: 'assets/images/kitablar/2012.png',
       title: 'Nazim və Azərbaycan',
-      category: 'Ədəbi-tədqiqat və xatirələr',
-      description: `Bu kitab böyük türk şairi Nazim Hikmətin həyatını və yaradıcılığını əhatə edən geniş tədqiqat və xatirələr toplusudur. Aqşin Babayev şairlə bağlı şəxsi görüşlərini, onun haqqında apardığı araşdırmaları və müxtəlif sənət adamlarının xatirələrini oxucuya çatdırır. Əsərdə Nazim Hikmətin Azərbaycanla əlaqələri, dostluqları, ədəbi fəaliyyəti və əsərlərinin müxtəlif ölkələrdəki taleyi araşdırılır. Şairin yaradıcılığının kino, teatr və musiqi ilə əlaqələri də geniş şəkildə təqdim olunur. Kitab Nazim Hikmətin həyatını və ədəbi irsini dərindən öyrənmək istəyənlər üçün mühüm mənbədir.`
+      category: 'Elmi-tədqiqat',
+      description: `Aqşin Babayevin Nazim Hikmətə həsr etdiyi elmi əsərlər sırasına daxil olan “Nazim və Azərbaycan” 2012-ci ildə İzmirdə nəşr olunub. Kitab şairin Azərbaycanla ədəbi-mədəni əlaqələri mövzusunda müəllifin uzunmüddətli tədqiqatlarının bir hissəsidir. Mənbə nəşrin İzmirdə çap olunduğunu bildirir, lakin nəşriyyatın adını göstərmir.`
     },
     {
       id: 'book-20',
       year: '2015',
+      publisher: 'Gənclik',
       src: 'assets/images/kitablar/2015.png',
-      title: 'Azərbaycanın elm və mədəniyyət xadimləri (biblioqrafiya)',
-      category: 'Elmi-tədqiqat',
-      description: `Aydın Kazımzadə ilə birlikdə yazılmış bu kitab Azərbaycan ədəbiyyatı ilə kino sənəti arasındakı əlaqələri araşdırır. Müəlliflər müxtəlif yazıçıların əsərlərinin ekranlaşdırılmasını və ədəbi mətnlərin kino dilində necə ifadə olunduğunu təhlil edirlər. Kitabda Abdulla Şaiq, Anar, Bəxtiyar Vahabzadə, İlyas Əfəndiyev, Cəfər Cabbarlı və digər ədiblərin yaradıcılığına müraciət olunur. Əsərdə ədəbiyyat və kino münasibətləri tarixilik və müasirlik baxımından nəzərdən keçirilir. Nəşr Azərbaycan kino tarixini və ədəbi əsərlərin ekran taleyini araşdıranlar üçün dəyərli tədqiqatdır.`
+      title: 'Aqşin Babayev',
+      category: 'Biblioqrafiya',
+      description: `2015-ci ildə Bakıda Gənclik nəşriyyatında “Azərbaycanın elm və mədəniyyət xadimləri” seriyasından çap olunan “Aqşin Babayev” biblioqrafiyası yazıçı, dramaturq və alimin həyat və yaradıcılığına həsr edilib. Nəşr onun ədəbi və elmi irsini, yaradıcılıq fəaliyyətini izləmək üçün biblioqrafik məlumatları sistemləşdirir. Kitab tədqiqatçılar, ədəbiyyatşünaslar, tələbələr və geniş oxucu auditoriyası üçün məlumat mənbəyi kimi təqdim olunur.`
     },
     {
       id: 'book-21',
       year: '2016',
+      publisher: 'Şərq-Qərb',
       src: 'assets/images/kitablar/2016.png',
-      title: 'Efir / Səhnə / Ekran',
-      category: 'Ədəbi müntəxəbat',
-      description: `Bu kitab türk ədəbiyyatının müxtəlif dövrlərini və görkəmli nümayəndələrini əhatə edən ədəbi müntəxəbatdır. Burada qədim türk ədəbiyyatından başlayaraq müasir dövrə qədər uzanan zəngin ədəbi inkişaf yolu təqdim olunur. Yunus Əmrə, Cəlaləddin Rumi, Namiq Kamal, Tofiq Fikrət, Nazim Hikmət və digər tanınmış müəlliflər haqqında məlumat verilir. Kitab türk ədəbiyyatının janrlarını, ədəbi cərəyanlarını və əsas nümayəndələrini tanımaq üçün hazırlanıb. Əsər tələbələr və türk ədəbiyyatına maraq göstərən oxucular üçün maarifləndirici mənbədir.`
+      title: 'Səhnə. Ekran. Efir.',
+      category: 'Pyeslər toplusu',
+      description: `2016-cı ildə Bakıda Şərq-Qərb nəşriyyatında, Mədəniyyət və Turizm Nazirliyinin dəstəyi ilə çap olunan 424 səhifəlik kitab Aqşin Babayevin teatr, televiziya və radio üçün yazdığı dram əsərlərini birləşdirir. “Səhnə” bölməsində “Xilaskar”, “Ceviz ağacı”, “Oğul” və başqa pyeslər; “Ekran” bölməsində “Bir parça həyat”, “Sevgililər” və “Premyera”; “Efir” bölməsində isə “Köhnə məhəllə”, “Söz gülləsi” və başqa əsərlər yer alır. “Xilaskar” Heydər Əliyevin obrazına həsr olunub və müxtəlif teatr səhnələrində tamaşaya qoyulub. “Ceviz ağacı” Nazim Hikmətin həyatını, taleyini və mübarizəsini dramaturji şəkildə təqdim edir.`
     },
     {
       id: 'book-22',
-      year: '2016a',
+      year: '2016',
+      publisher: 'Elm və təhsil',
       src: 'assets/images/kitablar/2016a.png',
       title: 'O biri dünyanın astanasında',
-      category: 'Publisistik yazılar və radio-jurnalistika',
-      description: `Bu kitab Aqşin Babayevin jurnalistika və radio sahəsindəki çoxillik təcrübəsini əks etdirən publisistik yazılar toplusudur. Müəllif Azərbaycan radiosunun inkişafı, informasiya fəaliyyəti və jurnalistikanın cəmiyyətdəki rolu haqqında fikirlərini bölüşür. Kitabda "Körpü" radio verilişinin yaranması, Azərbaycan radiosunun janr xüsusiyyətləri və milli musiqinin təbliği kimi mövzulara geniş yer verilir. Müsahibələr və yol qeydləri vasitəsilə müəllifin peşəkar fəaliyyəti və müxtəlif görüşlərdən aldığı təəssüratlar təqdim olunur. Əsər jurnalistika və radio tarixini öyrənmək istəyənlər üçün əhəmiyyətli mənbədir.`
+      category: 'Avtobioqrafik roman',
+      description: `2016-cı ildə “Elm və təhsil” nəşriyyatında çap olunan, 276 səhifəlik avtobioqrafik roman şəxsi xatirələri Azərbaycanın ictimai, siyasi və mədəni həyatının mənzərəsi ilə birləşdirir. Aqşin Babayev uşaqlıq, təhsil, yaradıcılıq yolu, Azərbaycan televiziyasında keçirdiyi 32 il və Milli Məclisin mətbuat katibi olduğu dövrlə bağlı yaşantılarını bölüşür. Nazim Hikmətlə görüşlər, Türkiyə təəssüratları, qürbətdəki azərbaycanlıların taleyi, dostluq, sədaqət və vətən sevgisi əsərin məzmun qatları arasındadır. Həyat və ölüm, keçmiş və gələcək, xeyir və şər kimi mövzular real hadisələr və müəllifin şəxsi müşahidələri fonunda işlənir.`
     },
     {
       id: 'book-23',
-      year: '2016b',
+      year: '2016',
+      publisher: 'Elm və təhsil',
       src: 'assets/images/kitablar/2016b.png',
-      title: 'Bir yolda gözüm qaldı...',
+      title: 'Bir yolda gözüm qaldı',
       category: 'Şeirlər toplusu',
-      description: `Bu kitab Aqşin Babayevin poetik düşüncələrini bir araya gətirən şeirlər toplusudur. Şeirlərdə Vətən sevgisi, məhəbbət, ayrılıq, qürbət, ailə və həyat haqqında fəlsəfi düşüncələr əsas yer tutur. Müəllif insanın daxili dünyasını, zamanın keçiciliyini və ömür boyu yaşadığı duyğuları səmimi poetik dillə ifadə edir. Bəzi şeirlərdə ictimai məsələlərə, milli dəyərlərə və insanın mənəvi məsuliyyətinə də toxunulur. Kitabın ümumi ruhu insanın sevgi, ümid və mənəvi dayaq axtarışını əks etdirir.`
+      description: `2016-cı ildə “Elm və təhsil” nəşriyyatında çap olunan şeir toplusu Aqşin Babayevin illər ərzində qələmə aldığı poetik nümunələri bir araya gətirir. Kitabın iki hissəsi “Bir içim su istədim, gec verdilər içmədim” və “Bir yolda gözüm qaldı, qoymadılar keçmədim” misraları ilə adlandırılıb; ayrıca “İsveçrə şeirləri” bölməsi də var. “Azərbaycan!”, “Vətən, ay Vətən”, “Qürbət eldəki nəvəmə”, “Şuşaya bənzəyən dağlar” və başqa şeirlərdə sevgi, ayrılıq, ailə, Vətənə bağlılıq, qürbət və zaman haqqında düşüncələr yer alır. Şair şəxsi duyğuları və yaşantıları daha geniş mənəvi və ictimai məsələlərlə əlaqələndirir.`
     },
     {
       id: 'book-24',

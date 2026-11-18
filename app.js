@@ -850,7 +850,9 @@ document.addEventListener("DOMContentLoaded", () => {
     lastFocused = document.activeElement;
 
     modalTitle.textContent = book.title;
-    modalCategory.textContent = `${book.year} · ${book.category}`;
+    modalCategory.textContent = [book.year, book.publisher, book.category]
+      .filter(Boolean)
+      .join(" · ");
     modalDescription.textContent = book.description;
 
     modal.classList.add("is-open");
